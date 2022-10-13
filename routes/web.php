@@ -47,9 +47,7 @@ Route::get('/layout', function () {
     return view('layout');
 });
 
-Route::get('/nav', function () {
-    return view('nav');
-});
+
 
 Route::get('/leave', function () {
     return view('leave');
@@ -66,3 +64,7 @@ Route::get('/leavecalendar', function () {
 Route::get('/holidaycalendar', function () {
     return view('holidaycalendar');
 });
+
+
+
+

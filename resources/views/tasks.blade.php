@@ -20,11 +20,13 @@
             border-radius: 10px;
             margin-top: -2%;
             height: 80vh;
+            width: 97%;
+            margin-left: 0px;
 
         }
 
         .task {
-            margin-top: 180px;
+            margin-top: 130px;
         }
 
         #data {
@@ -34,8 +36,13 @@
 
         }
 
-        button{
-            margin-left: 40%
+        .btn{
+            margin-top: 10%;
+            margin-left: -10%;
+        }
+
+        #submit{
+            margin-left: 60%;
         }
 
         .form-control {
@@ -48,13 +55,21 @@
             display: inline-block;
         }
 
-        .modal-header{
-            background-color: rgb(155, 149, 149, 0.3)
-        }
 
         #priority{
             margin-left: 5%; margin-top:10px;margin-bottom:10px
 
+        }
+
+        @media (max-width:960px){
+            #content{
+                margin-left: 2px;
+            }
+
+            .btn{
+            margin-top: 10%;
+            margin-left: -20%;
+        }
         }
 
         @media (max-width:480px) {
@@ -66,6 +81,8 @@
             border-radius: 10px;
             margin-top: -2%;
             height: 80vh;
+            
+            margin-left: 5px;
 
         }
 
@@ -80,9 +97,10 @@
 
         }
 
-      button{
-        margin-left: 40%
-      }
+        .btn{
+            margin-top: 10%;
+            margin-left: -50%;
+        }
 
         .form-control {
 
@@ -94,9 +112,9 @@
             display: inline-block;
         }
 
-        .modal-header{
-            background-color: rgb(155, 149, 149, 0.3)
-        }
+     .btn-close{
+        margin-left: 0%;
+     }
 
        
 
@@ -121,100 +139,98 @@
                         checklist </p>
 
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        New Task
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"> Task</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="">
-
-
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingPassword"
-                                                placeholder="Task Name">
-                                            <label for="floatingPassword"> Task Name</label>
-                                        </div>
-
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingPassword"
-                                                placeholder=" Assignee ">
-                                            <label for="floatingPassword">Assignee</label>
-                                        </div>
-
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingPassword"
-                                                placeholder=" Checklist ">
-                                            <label for="floatingPassword">Checklist</label>
-                                        </div>
-
-                                        <div class="form-floating">
-                                            <input type="date" class="form-control" id="floatingPassword"
-                                                placeholder="Due Date">
-                                            <label for="floatingPassword">Due Date</label>
-                                        </div>
-
-
-                                        <label for="priority" id="mode"> Priority </label>
-                                        <div class="form-check" id="priority">
-
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    Low
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" checked>
-                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                    Medium
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" checked>
-                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                    High
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingPassword"
-                                                placeholder=" Tags ">
-                                            <label for="floatingPassword"> Tags </label>
-                                        </div>
-
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                            <label for="floatingTextarea"> Description </label>
-                                        </div>
-
-
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                        <div class="navbar navbar-light" style="margin-top:-4%;margin-left:50%;">
+                            <div class="container-fluid">
+                                <button class="btn btn-primary " type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                                    Add Task
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                                    aria-labelledby="offcanvasNavbarLabel">
+                                    <div class="offcanvas-header">
+        
+                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body" style="margin-left:5%">
+                                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        
+                                            <form action="">
+        
+        
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="floatingPassword"
+                                                        placeholder="Task Name">
+                                                    <label for="floatingPassword"> Task Name</label>
+                                                </div>
+        
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="floatingPassword"
+                                                        placeholder=" Assignee ">
+                                                    <label for="floatingPassword">Assignee</label>
+                                                </div>
+        
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="floatingPassword"
+                                                        placeholder=" Checklist ">
+                                                    <label for="floatingPassword">Checklist</label>
+                                                </div>
+        
+                                                <div class="form-floating">
+                                                    <input type="date" class="form-control" id="floatingPassword"
+                                                        placeholder="Due Date">
+                                                    <label for="floatingPassword">Due Date</label>
+                                                </div>
+        
+        
+                                                <label for="priority" id="mode"> Priority </label>
+                                                <div class="form-check" id="priority">
+        
+        
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                            id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            Low
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                            id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            Medium
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                            id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            High
+                                                        </label>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="floatingPassword"
+                                                        placeholder=" Tags ">
+                                                    <label for="floatingPassword"> Tags </label>
+                                                </div>
+        
+                                                <div class="form-floating">
+                                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                                    <label for="floatingTextarea"> Description </label>
+                                                </div>
+        
+                                                <button id="submit" type="submit" class="btn btn-primary">Save changes</button>
+                                            </form>
+                                        
+                                       
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
 
                 </div>
             </div>

@@ -17,6 +17,7 @@
     <style>
         body {
             background-color: whitesmoke;
+            
         }
 
         .info {
@@ -30,6 +31,7 @@
             font-size: 25px;
             font-weight: 600;
             margin-bottom: 1%;
+         
         }
 
         p {
@@ -41,6 +43,10 @@
             padding: 10px;
             display: flex;
             margin: 10px;
+        }
+        h5{
+
+            margin-left: 10px;
         }
 
         .docs>p {
@@ -70,12 +76,16 @@
         .pending >p {
             color: rgb(29, 25, 25);
         }
+        .content{
+            margin-left: 20px;
+        }
     </style>
 
 </head>
 
 <body>
     <div class="main_container">
+        <div class="content">
 
     <div class="row">
         <div class="col-md-12">
@@ -160,6 +170,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 </body>

@@ -46,11 +46,13 @@
             height: 100vh;
             padding: 5px;
             position: fixed;
-            margin-top: -18.2%;
+            margin-top: -18.4%;
 
 
 
         }
+
+       
 
         .side-bar .menu {
             width: 100%;
@@ -142,6 +144,10 @@
             padding: 5px;
             transition: all 0.3s ease;
             margin-top: -10%
+        }
+
+        .item{
+            cursor: pointer;
         }
 
 

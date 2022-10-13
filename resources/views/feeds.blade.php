@@ -82,13 +82,13 @@
 
 
         #links {
-            background-color: white;
+            background-color: rgb(255, 255, 255, 0.5);
             height: 725px;
             padding-top: 5%;
-            border: 1px solid rgb(0, 0, 0, 0.2);
+            box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
             position: fixed;
             width: 220px;
-            margin-left: 8px;
+            margin-left: 8.2px;
             margin-top: -4.2%;
         }
 
@@ -97,10 +97,10 @@
             margin-top: -4.2%;
             margin-left: 14%;
             position: fixed;
-            background-color: white;
+            background-color:  rgb(255, 255, 255, 0.5);
             width: 100%;
             padding: 3px;
-            border: 1px solid rgb(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
         }
 
         #feed {
@@ -124,35 +124,43 @@
             width: 140px;
         }
 
+        
+
         .spanone {
             margin-left: -55px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         .spantwo {
             margin-left: -60px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         .spanthree {
-            margin-left: -80px;
-            font-size: 16px;
+            margin-left: -75px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         .spanfour {
             margin-left: -18px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         .spanfive {
             margin-left: -25px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         
         .spansix {
             margin-left: -25px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
 
@@ -160,7 +168,7 @@
 
 
             #links {
-                background-color: white;
+                background-color: rgb(255, 255, 255, 0.5);
                 height: 725px;
                 padding-top: 15%;
                 border: 1px solid rgb(0, 0, 0, 0.2);
@@ -174,7 +182,7 @@
                 margin-top: -2.2%;
                 margin-left: 22.5%;
                 position: fixed;
-                background-color: white;
+                background-color: rgb(255, 255, 255, 0.5);
                 width: 100%;
                 padding: 3px;
                 border: 1px solid rgb(0, 0, 0, 0.1);
@@ -203,33 +211,39 @@
 
             .spanone {
             margin-left: -55px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         .spantwo {
             margin-left: -60px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         .spanthree {
             margin-left: -80px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         .spanfour {
             margin-left: -22px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         .spanfive {
             margin-left: -25px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         
         .spansix {
             margin-left: -25px;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 550;
         }
 
         }
@@ -283,7 +297,7 @@
 
             
         #links {
-            background-color: white;
+            background-color: rgb(255, 255, 255, 0.5);
             height: 725px;
             padding-top: 18%;
             border: 1px solid rgb(0, 0, 0, 0.2);
@@ -294,10 +308,10 @@
 
 
         #title {
-            margin-top: -2%;
+            margin-top: -2.2%;
             margin-left: 28%;
             position: fixed;
-            background-color: white;
+            background-color: rgb(255, 255, 255, 0.5);
             width: 80%;
             padding: 3px;
             border: 1px solid rgb(0, 0, 0, 0.1);
@@ -327,6 +341,8 @@
         .spanone {
             margin-left: -30px;
             font-size: 14px;
+            
+            
         }
 
         .spantwo {

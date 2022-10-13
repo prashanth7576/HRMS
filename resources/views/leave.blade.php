@@ -18,27 +18,35 @@
         <style>
            
             #spanone {
-                margin-left: -100px;
-                font-weight: 600;
+                margin-left: -90px;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             #spantwo {
                 margin-left: -10px;
-                font-weight: 600;
+                font-weight: 550;
+            font-size: 14px;
             }
 
             #spanthree {
-                margin-left: -50px;
-                font-weight: 600;
+                margin-left: -40px;
+                font-weight: 550;
+            font-size: 14px;
             }
 
             #spanfour {
-                margin-left: -30px;
-                font-weight: 600;
+                margin-left: -27px;
+                font-weight: 550;
+            font-size: 14px;
+               
             }
 
             .nav-link {
                 margin-left: 20px;
+                color: rgb(114, 108, 108);
+            font-weight: 550;
+            font-size: 14px;
             }
 
 
@@ -46,14 +54,14 @@
 
 
             #links {
-                background-color: white;
+                background-color: rgb(255, 255, 255, 0.5);
+                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                 height: 729px;
-                border: 1px solid rgba(99, 97, 97, 0.2);
                 border-radius: 5px;
                 position: fixed;
                 width: 230px;
                 padding-top: 100px;
-                margin-top: -4.2%;
+                margin-top: -4.5%;
                 margin-left: 8px;
             }
 
@@ -191,10 +199,10 @@
 
 
                 #links {
-                    background-color: white;
+                    background-color: rgb(255, 255, 255, 0.5);
+                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                     height: 725px;
                     padding-top: 15%;
-                    border: 1px solid rgb(0, 0, 0, 0.2);
                     position: fixed;
                     width: 155px;
                     margin-top: -2.2%;
@@ -211,22 +219,26 @@
 
                 #spanone {
                     margin-left: -50px;
-                    font-size: 14px;
+                    font-weight: 550;
+            font-size: 14px;
                 }
 
                 #spantwo {
                     margin-left: -20px;
-                    font-size: 14px;
+                    font-weight: 550;
+            font-size: 14px;
                 }
 
                 #spanthree {
                     margin-right: 30px;
-                    font-size: 14px;
+                    font-weight: 550;
+            font-size: 14px;
                 }
 
                 #spanfour {
                     margin-left: -30px;
-                    font-size: 14px;
+                    font-weight: 550;
+            font-size: 14px;
                 }
 
                 .nav-link{
@@ -363,10 +375,10 @@
 
 
                 #links {
-                    background-color: white;
+                    background-color: rgb(255, 255, 255, 0.5);
+                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                     height: 120vh;
                     padding-top: 15%;
-                    border: 1px solid rgb(0, 0, 0, 0.2);
                     position: fixed;
                     width: 120px;
                     margin-top: -1.4%;
@@ -654,8 +666,8 @@
 
                                             <div class="form-floating mb-3">
                                                 <label id="fromdate" for="form-check-label"> From date* </label>
-                                                <input type="date" class="form-control" id="floatingInput"
-                                                    placeholder="">
+                                                <input type="date" class="form-control date" id="floatingInput"
+                                                    placeholder="" >
                                                 <label for="form-check-label"> Select date</label>
 
                                             </div>

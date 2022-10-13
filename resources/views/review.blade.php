@@ -79,42 +79,50 @@
 
             #spanone {
                 margin-right: 60px;
-                font-weight: 600;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             #spantwo {
                 margin-right: 60px;
-                font-weight: 600;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             #spanthree {
                 margin-right: 70px;
-                font-weight: 600;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             #spanfour {
                 margin-right: 110px;
-                font-weight: 600;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             #spanfive {
-                margin-left: -50px;
-                font-weight: 600;
+                margin-left: -60px;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             #spansix {
-                margin-right: 80px;
-                font-weight: 600;
+                margin-right: 85px;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             #spanseven {
-                margin-right: 15px;
-                font-weight: 600;
+                margin-right: 25px;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             #spaneight {
-                margin-right: 80px;
-                font-weight: 600;
+                margin-right: 90px;
+                font-weight: 550;
+                font-size: 14px;
             }
 
             .title {
@@ -124,16 +132,22 @@
             }
 
             #links {
-                background-color: white;
+                background-color: rgb(255, 255, 255, 0.5);
+                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                 height: 729px;
-                border: 1px solid rgba(99, 97, 97, 0.2);
                 border-radius: 5px;
                 position: fixed;
                 width: 210px;
                 margin-left: 8px;
-                margin-top: -4.2%
+                margin-top: -4.2%;
+                
             }
-
+            .nav-link {
+            color: rgb(114, 108, 108);
+            font-weight: 550;
+            font-size: 15px;
+            
+        }
 
 
 
@@ -184,6 +198,11 @@
                 border-radius: 5px;
             }
 
+            h3{
+                text-align: center;
+                margin-top: 3%
+            }
+
             .tab-content {
                 margin-top: -4.5%
             }
@@ -194,46 +213,62 @@
 
                 .nav-link {
                     width: 120px;
+                    color: rgb(114, 108, 108);
+            font-weight: 550;
+            font-size: 15px;
                 }
+
+                h3{
+                text-align: center;
+                margin-top: 3%
+            }
 
                 #spanone {
                     margin-left: -10px;
-                    font-size: 15px;
+                    font-weight: 550;
+                font-size: 14px;
                 }
 
                 #spantwo {
                     margin-left: -15px;
-                    font-size: 15px;
+                    font-weight: 550;
+                font-size: 14px;
                 }
 
                 #spanthree {
                     margin-left: -16px;
-                    font-size: 15px;
+                    font-weight: 550;
+                font-size: 14px;
                 }
 
                 #spanfour {
                     margin-left: -10px;
-                    font-size: 15px;
+                    font-weight: 550;
+                font-size: 14px;
                 }
 
                 #spanfive {
                     margin-left: -15px;
-                    font-size: 15px;
+                    font-weight: 550;
+                font-size: 14px;;
                 }
 
                 #spansix {
                     margin-left: -60px;
-                    font-size: 15px;
+                    font-weight: 550;
+                font-size: 14px;
                 }
 
                 #spanseven {
                     margin-left: -40px;
-                    font-size: 15px;
+                    font-weight: 550;
+                font-size: 14px;
                 }
 
                 #spaneight {
-                    margin-left: -20px;
-                    font-size: 15px;
+                    margin-left: -10px;
+                    font-weight: 550;
+                font-size: 14px;
                 }
 
                 .title {
@@ -243,9 +278,9 @@
                 }
 
                 #links {
-                    background-color: white;
+                    background-color: rgb(255, 255, 255, 0.5);
+                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                     height: 725px;
-                    border: 1px solid rgba(99, 97, 97, 0.2);
                     border-radius: 5px;
                     padding-top: 15%;
                     position: fixed;
@@ -317,7 +352,10 @@
 
 
 
-
+                h3{
+                text-align: center;
+                margin-top: 3%
+            }
                 .nav-link {
                     width: 100px;
                 }
@@ -370,9 +408,9 @@
                 }
 
                 #links {
-                    background-color: white;
+                    background-color: rgb(255, 255, 255, 0.5);
+                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                     height: 725px;
-                    border: 1px solid rgba(99, 97, 97, 0.2);
                     border-radius: 5px;
                     padding-top: 15%;
                     position: fixed;
@@ -561,7 +599,7 @@
 
                                 <div class="content">
 
-                                    <h1> Attendance Regularization </h1>
+                                    <h3> Attendance Regularization </h3>
 
                                 </div>
                             </div>
@@ -612,7 +650,7 @@
 
                                 <div class="content">
 
-                                    <h1> Resignation </h1>
+                                    <h3> Resignation </h3>
 
                                 </div>
                             </div>
@@ -662,7 +700,7 @@
 
                                 <div class="content">
 
-                                    <h1> confirmation </h1>
+                                    <h3> confirmation </h3>
 
                                 </div>
                             </div>
@@ -711,7 +749,7 @@
 
                                 <div class="content">
 
-                                    <h1> Home </h1>
+                                    <h3> Home </h3>
 
                                 </div>
                             </div>
@@ -759,7 +797,7 @@
 
                                 <div class="content">
 
-                                    <h1> Home </h1>
+                                    <h3> Leave Cancel </h3>
 
                                 </div>
                             </div>
@@ -808,7 +846,7 @@
 
                                 <div class="content">
 
-                                    <h1> Home </h1>
+                                    <h3> Home </h3>
 
                                 </div>
                             </div>
@@ -856,7 +894,7 @@
 
                                 <div class="content">
 
-                                    <h1> Home </h1>
+                                    <h3> Home </h3>
 
                                 </div>
                             </div>
@@ -905,7 +943,7 @@
 
                                 <div class="content">
 
-                                    <h1> Home </h1>
+                                    <h3> Home </h3>
 
                                 </div>
                             </div>

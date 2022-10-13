@@ -30,6 +30,9 @@
         #head{
             display: flex
         }
+        .content{
+            margin-left: 10px;
+        }
 
         #filter{
             margin-left: 50px;
@@ -90,11 +93,16 @@
         .body p {
             margin-left: 20px;
             color: rgb(86, 83, 83);
-            font-size: 18px;
-            font-weight: 600
+            font-size: 16px;
+            font-weight: 550
         }
         tbody{
             height: 100px;
+        }
+        th{
+            font-size: 14px !important;
+            font-weight: 550 !important;
+            
         }
 
         @media (max-width:960px) {
@@ -117,12 +125,19 @@
         .body p {
             margin-left: 20px;
             color: rgb(86, 83, 83);
-            font-size: 18px;
-            font-weight: 600
+            font-size: 16px;
+            font-weight: 500
         }
         table{
             height: 100px;
         }
+
+        th{
+            font-size: 14px !important;
+            font-weight: 550 !important;
+            
+        }
+
         }
 
  
@@ -166,12 +181,19 @@
         .body p {
             margin-left: 20px;
             color: rgb(86, 83, 83);
-            font-size: 18px;
-            font-weight: 600
+            font-size: 16px;
+            font-weight: 500
         }
         table{
             height: 100px;
         }
+
+        th{
+            font-size: 14px !important;
+            font-weight: 550 !important;
+            
+        }
+
 
       
 
@@ -211,6 +233,7 @@
 
 <body>
     <div class="main_container">
+        <div class="content">
 
     <div class="row">
         <div  id="head" class="col-md-12">
@@ -267,6 +290,7 @@
         </div>
     </div>
     </div>
+</div>
 </div>
 
 </body>
