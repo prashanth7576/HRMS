@@ -65,7 +65,15 @@ Route::get('/holidaycalendar', function () {
     return view('holidaycalendar');
 });
 
+Route::get('/sample', function () {
+    return view('sample');
+});
 
 
+Route::get('/onboard', function () {
+    return view('onboard');
+});
 
-
+Route::get('/demo', function () {
+    return view('demo');
+});
