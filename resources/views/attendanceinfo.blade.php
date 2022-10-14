@@ -74,7 +74,6 @@
 
             hr {
                 border: 0.1px solid rgb(113, 107, 107, 0.3);
-
             }
 
 
@@ -135,7 +134,7 @@
                 margin-left: auto
             }
 
-            .table {
+            #table {
                 margin-left: 20px;
             }
 
@@ -430,7 +429,7 @@
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                         <div class="table-responsive">
 
-                            <table class="table table-striped table-hover">
+                            <table id="table" class="table table-striped table-hover">
                                 <thead class="table-light">
                                     <tr>
                                         <th> General Details </th>
