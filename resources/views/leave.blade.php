@@ -740,7 +740,7 @@
                                         <div class="button">
 
                                             <button type="submit" class="btn btn-primary">Save</button>
-                                            <button type="button" class="btn btn-secondary">Close</button>
+                                            <button type="reset" class="btn btn-secondary">Close</button>
 
                                         </div>
                                     </form>
@@ -979,7 +979,7 @@
                                         <div class="button">
 
                                             <button type="submit" class="btn btn-primary">Save</button>
-                                            <button type="button" class="btn btn-secondary">Close</button>
+                                            <button type="reset" class="btn btn-secondary">Close</button>
 
                                         </div>
                                     </form>
