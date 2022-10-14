@@ -13,69 +13,69 @@
 
         <style>
             /* .row {
-                        margin-top: 2%;
-                    } */
+                                    margin-top: 2%;
+                                } */
 
 
 
 
             /* #title{
-                        margin-top: 0%;
-                        margin-left: 15.9%;
-                        position: fixed;
-                        background-color: white;
-                        width: 100%;
-                        padding: 3px;
-                        border: 1px solid rgb(0, 0, 0, 0.1);
-                    }
+                                    margin-top: 0%;
+                                    margin-left: 15.9%;
+                                    position: fixed;
+                                    background-color: white;
+                                    width: 100%;
+                                    padding: 3px;
+                                    border: 1px solid rgb(0, 0, 0, 0.1);
+                                }
 
-                    #feed{
-                        background-color: white;
-                        box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-                        border-radius: 10px;
-                        padding:10px;
-                        margin-top: 10%;
-                    }
+                                #feed{
+                                    background-color: white;
+                                    box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+                                    border-radius: 10px;
+                                    padding:10px;
+                                    margin-top: 10%;
+                                }
 
-                  
+                              
 
-                    #links {
-                        background-color: red;
-                        height: 725px;
-                        padding-top: 15%;
-                        border: 1px solid rgb(0, 0, 0, 0.2);
-                        position: fixed;
-                    }
+                                #links {
+                                    background-color: red;
+                                    height: 725px;
+                                    padding-top: 15%;
+                                    border: 1px solid rgb(0, 0, 0, 0.2);
+                                    position: fixed;
+                                }
 
-                    #head {
-                        background-color: white;
-                        height: 120px;
-                    }
+                                #head {
+                                    background-color: white;
+                                    height: 120px;
+                                }
 
-                    .list{
-                       
-                            margin-top:100px;
-                        
-                    }
+                                .list{
+                                   
+                                        margin-top:100px;
+                                    
+                                }
 
-                    li {
-                        cursor: pointer;
-                        list-style: none;
-                        margin-top: 15px;
-                        font-size: 17px;
-                        font-weight: 600;
-                        margin-left: -20px;
+                                li {
+                                    cursor: pointer;
+                                    list-style: none;
+                                    margin-top: 15px;
+                                    font-size: 17px;
+                                    font-weight: 600;
+                                    margin-left: -20px;
 
 
-                    }
+                                }
 
-                    li.selected {
-                        background-color: rgb(109, 123, 141, 0.5);
-                        padding: 10px;
-                        border-radius: 10px;
-                        color: white;
+                                li.selected {
+                                    background-color: rgb(109, 123, 141, 0.5);
+                                    padding: 10px;
+                                    border-radius: 10px;
+                                    color: white;
 
-                    } */
+                                } */
 
             #spanone {
                 margin-right: 60px;
@@ -140,14 +140,15 @@
                 width: 210px;
                 margin-left: 8px;
                 margin-top: -4.2%;
-                
+
             }
+
             .nav-link {
-            color: rgb(114, 108, 108);
-            font-weight: 550;
-            font-size: 15px;
-            
-        }
+                color: rgb(114, 108, 108);
+                font-weight: 550;
+                font-size: 15px;
+
+            }
 
 
 
@@ -198,7 +199,7 @@
                 border-radius: 5px;
             }
 
-            h3{
+            h3 {
                 text-align: center;
                 margin-top: 3%
             }
@@ -214,61 +215,62 @@
                 .nav-link {
                     width: 120px;
                     color: rgb(114, 108, 108);
-            font-weight: 550;
-            font-size: 15px;
+                    font-weight: 550;
+                    font-size: 15px;
                 }
 
-                h3{
-                text-align: center;
-                margin-top: 3%
-            }
+                h3 {
+                    text-align: center;
+                    margin-top: 3%
+                }
 
                 #spanone {
                     margin-left: -10px;
                     font-weight: 550;
-                font-size: 14px;
+                    font-size: 14px;
                 }
 
                 #spantwo {
                     margin-left: -15px;
                     font-weight: 550;
-                font-size: 14px;
+                    font-size: 14px;
                 }
 
                 #spanthree {
                     margin-left: -16px;
                     font-weight: 550;
-                font-size: 14px;
+                    font-size: 14px;
                 }
 
                 #spanfour {
                     margin-left: -10px;
                     font-weight: 550;
-                font-size: 14px;
+                    font-size: 14px;
                 }
 
                 #spanfive {
                     margin-left: -15px;
                     font-weight: 550;
-                font-size: 14px;;
+                    font-size: 14px;
+                    ;
                 }
 
                 #spansix {
                     margin-left: -60px;
                     font-weight: 550;
-                font-size: 14px;
+                    font-size: 14px;
                 }
 
                 #spanseven {
                     margin-left: -40px;
                     font-weight: 550;
-                font-size: 14px;
+                    font-size: 14px;
                 }
 
                 #spaneight {
                     margin-left: -10px;
                     font-weight: 550;
-                font-size: 14px;
+                    font-size: 14px;
                 }
 
                 .title {
@@ -279,7 +281,7 @@
 
                 #links {
                     background-color: rgb(255, 255, 255, 0.5);
-                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
+                    box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                     height: 725px;
                     border-radius: 5px;
                     padding-top: 15%;
@@ -352,10 +354,11 @@
 
 
 
-                h3{
-                text-align: center;
-                margin-top: 3%
-            }
+                h3 {
+                    text-align: center;
+                    margin-top: 3%
+                }
+
                 .nav-link {
                     width: 100px;
                 }
@@ -409,7 +412,7 @@
 
                 #links {
                     background-color: rgb(255, 255, 255, 0.5);
-                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
+                    box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                     height: 725px;
                     border-radius: 5px;
                     padding-top: 15%;
@@ -505,17 +508,20 @@
 
                             <p class="title"> EMPINFO </p>
 
+                            <button class="nav-link " id="v-pills-resignation-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-resignation" type="button" role="tab"
+                            aria-controls="v-pills-resignation" aria-selected="true"> <span id="spanthree"> Resignation
+                            </span> </button>
+
                             <button class="nav-link " id="v-pills-confirmation-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-confirmation" type="button" role="tab"
                                 aria-controls="v-pills-confirmation" aria-selected="true"> <span id="spantwo">
                                     Confirmation
                                 </span> </button>
-                            <button class="nav-link " id="v-pills-resignation-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-resignation" type="button" role="tab"
-                                aria-controls="v-pills-resignation" aria-selected="true"> <span id="spanthree"> Resignation
-                                </span> </button>
+                           
 
                             <p class="title"> Leave </p>
+
                             <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                                 aria-selected="true"> <span id="spanfour"> Leave </span></button>
@@ -580,28 +586,66 @@
                                     </ul>
                                 </div>
                                 <br>
-                                <div id="form">
+
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
 
 
 
-                                    <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput"
-                                            placeholder=" Select Date Range">
-                                        <label for="floatingInput"> Select Date Range</label>
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Attendance </h3>
+
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
-                                            placeholder=" Search Employee ">
-                                        <label for="floatingInput"> Search Employee</label>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
+
+
+
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Attendance Regularization </h3>
+
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="content">
-
-                                    <h3> Attendance Regularization </h3>
 
                                 </div>
+
                             </div>
                         </div>
 
@@ -611,6 +655,8 @@
                     <div class="tab-pane fade" id="v-pills-resignation" role="tabpanel"
                         aria-labelledby="v-pills-resignation-tab" tabindex="0">
 
+
+
                         <div class="row">
                             <div class="col-md-12">
 
@@ -619,38 +665,75 @@
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         <li id="active" class="nav-item" role="presentation">
                                             <button class="nav-link active" id="pills-active-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Active </button>
+                                                data-bs-target="#pills-active" type="button" role="tab"
+                                                aria-controls="pills-active" aria-selected="true"> Active </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> Closed </button>
+                                                data-bs-target="#pills-closed" type="button" role="tab"
+                                                aria-controls="pills-closed" aria-selected="false"> Closed </button>
                                         </li>
 
                                     </ul>
                                 </div>
                                 <br>
-                                <div id="form">
+
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-active" role="tabpanel"
+                                        aria-labelledby="pills-active-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
 
 
 
-                                    <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput"
-                                            placeholder=" Select Date Range">
-                                        <label for="floatingInput"> Select Date Range</label>
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Resignation </h3>
+
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
-                                            placeholder=" Search Employee ">
-                                        <label for="floatingInput"> Search Employee</label>
+                                    <div class="tab-pane fade" id="pills-closed" role="tabpanel"
+                                        aria-labelledby="pills-closed-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
+
+
+
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Resignations </h3>
+
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="content">
-
-                                    <h3> Resignation </h3>
 
                                 </div>
                             </div>
@@ -669,40 +752,78 @@
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         <li id="active" class="nav-item" role="presentation">
                                             <button class="nav-link active" id="pills-active-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Active </button>
+                                                data-bs-target="#pills-confirmation" type="button" role="tab"
+                                                aria-controls="pills-confirmation" aria-selected="true"> Active </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> Closed </button>
+                                                data-bs-target="#pills-confirmations" type="button" role="tab"
+                                                aria-controls="pills-confirmations" aria-selected="false"> Closed </button>
                                         </li>
 
                                     </ul>
                                 </div>
                                 <br>
-                                <div id="form">
+
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-confirmation" role="tabpanel"
+                                        aria-labelledby="pills-confirmation-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
 
 
 
-                                    <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput"
-                                            placeholder=" Select Date Range">
-                                        <label for="floatingInput"> Select Date Range</label>
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> confirmation </h3>
+
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
-                                            placeholder=" Search Employee ">
-                                        <label for="floatingInput"> Search Employee</label>
+                                    <div class="tab-pane fade" id="pills-confirmations" role="tabpanel"
+                                        aria-labelledby="pills-confirmations-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
+
+
+
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> confirmations </h3>
+
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="content">
-
-                                    <h3> confirmation </h3>
 
                                 </div>
+
                             </div>
                         </div>
 
@@ -718,40 +839,78 @@
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         <li id="active" class="nav-item" role="presentation">
                                             <button class="nav-link active" id="pills-active-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Active </button>
+                                                data-bs-target="#pills-leave" type="button" role="tab"
+                                                aria-controls="pills-leave" aria-selected="true"> Active </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> Closed </button>
+                                                data-bs-target="#pills-leaves" type="button" role="tab"
+                                                aria-controls="pills-leaves" aria-selected="false"> Closed </button>
                                         </li>
 
                                     </ul>
                                 </div>
                                 <br>
-                                <div id="form">
+                              
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-leave" role="tabpanel"
+                                        aria-labelledby="pills-leave-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
 
 
 
-                                    <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput"
-                                            placeholder=" Select Date Range">
-                                        <label for="floatingInput"> Select Date Range</label>
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Leave </h3>
+
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
-                                            placeholder=" Search Employee ">
-                                        <label for="floatingInput"> Search Employee</label>
+                                    <div class="tab-pane fade" id="pills-leaves" role="tabpanel"
+                                        aria-labelledby="pills-leaves-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
+
+
+
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Leaves </h3>
+
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="content">
-
-                                    <h3> Home </h3>
 
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -766,40 +925,78 @@
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         <li id="active" class="nav-item" role="presentation">
                                             <button class="nav-link active" id="pills-active-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Active </button>
+                                                data-bs-target="#pills-cancel" type="button" role="tab"
+                                                aria-controls="pills-cancel" aria-selected="true"> Active </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> Closed </button>
+                                                data-bs-target="#pills-cancelation" type="button" role="tab"
+                                                aria-controls="pills-cancelation" aria-selected="false"> Closed </button>
                                         </li>
 
                                     </ul>
                                 </div>
                                 <br>
-                                <div id="form">
+                          
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-cancel" role="tabpanel"
+                                        aria-labelledby="pills-cancel-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
 
 
 
-                                    <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput"
-                                            placeholder=" Select Date Range">
-                                        <label for="floatingInput"> Select Date Range</label>
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Leave Cancel </h3>
+
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
-                                            placeholder=" Search Employee ">
-                                        <label for="floatingInput"> Search Employee</label>
+                                    <div class="tab-pane fade" id="pills-cancelation" role="tabpanel"
+                                        aria-labelledby="pills-cancelation-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
+
+
+
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Leave Cancelation </h3>
+
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="content">
-
-                                    <h3> Leave Cancel </h3>
 
                                 </div>
+
                             </div>
                         </div>
 
@@ -815,40 +1012,78 @@
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         <li id="active" class="nav-item" role="presentation">
                                             <button class="nav-link active" id="pills-active-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Active </button>
+                                                data-bs-target="#pills-compoff" type="button" role="tab"
+                                                aria-controls="pills-compoff" aria-selected="true"> Active </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> Closed </button>
+                                                data-bs-target="#pills-compoffs" type="button" role="tab"
+                                                aria-controls="pills-compoffs" aria-selected="false"> Closed </button>
                                         </li>
 
                                     </ul>
                                 </div>
                                 <br>
-                                <div id="form">
+
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-compoff" role="tabpanel"
+                                        aria-labelledby="pills-compoff-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
 
 
 
-                                    <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput"
-                                            placeholder=" Select Date Range">
-                                        <label for="floatingInput"> Select Date Range</label>
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Comp Off </h3>
+
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
-                                            placeholder=" Search Employee ">
-                                        <label for="floatingInput"> Search Employee</label>
+                                    <div class="tab-pane fade" id="pills-compoffs" role="tabpanel"
+                                        aria-labelledby="pills-compoffs-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
+
+
+
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Comp-Off </h3>
+
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="content">
-
-                                    <h3> Home </h3>
 
                                 </div>
+                             
                             </div>
                         </div>
 
@@ -863,40 +1098,78 @@
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         <li id="active" class="nav-item" role="presentation">
                                             <button class="nav-link active" id="pills-active-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Active </button>
+                                                data-bs-target="#pills-restricted" type="button" role="tab"
+                                                aria-controls="pills-restricted" aria-selected="true"> Active </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> Closed </button>
+                                                data-bs-target="#pills-holiday" type="button" role="tab"
+                                                aria-controls="pills-holiday" aria-selected="false"> Closed </button>
                                         </li>
 
                                     </ul>
                                 </div>
                                 <br>
-                                <div id="form">
+                           
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-restricted" role="tabpanel"
+                                        aria-labelledby="pills-restricted-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
 
 
 
-                                    <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput"
-                                            placeholder=" Select Date Range">
-                                        <label for="floatingInput"> Select Date Range</label>
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Restricted Holiday </h3>
+
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
-                                            placeholder=" Search Employee ">
-                                        <label for="floatingInput"> Search Employee</label>
+                                    <div class="tab-pane fade" id="pills-holiday" role="tabpanel"
+                                        aria-labelledby="pills-holiday-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
+
+
+
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Restricted Holidays </h3>
+
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="content">
-
-                                    <h3> Home </h3>
 
                                 </div>
+
                             </div>
                         </div>
 
@@ -912,40 +1185,78 @@
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         <li id="active" class="nav-item" role="presentation">
                                             <button class="nav-link active" id="pills-active-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Active </button>
+                                                data-bs-target="#pills-helpdesk" type="button" role="tab"
+                                                aria-controls="pills-helpdesk" aria-selected="true"> Active </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> Closed </button>
+                                                data-bs-target="#pills-helpdesks" type="button" role="tab"
+                                                aria-controls="pills-helpdesks" aria-selected="false"> Closed </button>
                                         </li>
 
                                     </ul>
                                 </div>
                                 <br>
-                                <div id="form">
+                               
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-helpdesk" role="tabpanel"
+                                        aria-labelledby="pills-helpdesk-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
 
 
 
-                                    <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput"
-                                            placeholder=" Select Date Range">
-                                        <label for="floatingInput"> Select Date Range</label>
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Helpdesk </h3>
+
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
-                                            placeholder=" Search Employee ">
-                                        <label for="floatingInput"> Search Employee</label>
+                                    <div class="tab-pane fade" id="pills-helpdesks" role="tabpanel"
+                                        aria-labelledby="pills-helpdesks-tab">
+                                        <br>
+                                        <br>
+                                        <div id="form">
+
+
+
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control" id="floatingInput"
+                                                    placeholder=" Select Date Range">
+                                                <label for="floatingInput"> Select Date Range</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    placeholder=" Search Employee ">
+                                                <label for="floatingInput"> Search Employee</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+
+                                            <h3> Helpdesks </h3>
+
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="content">
-
-                                    <h3> Home </h3>
 
                                 </div>
+
                             </div>
                         </div>
 
