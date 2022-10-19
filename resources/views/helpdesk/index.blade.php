@@ -197,19 +197,20 @@ margin-left: 58%;
                                 <div class="offcanvas-body" style="margin-left:5%">
                                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
     
-                                        <form action="">
+                                        <form action="{{route('helpdesk.store')}}" method="POST">
 
+                                            @csrf
 
                                             <div>
                                                 <label for="Category"> Category</label>
     
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select class="form-select" aria-label="Default select example" name="category">
                                                     <option id="title" selected> Select Category..</option>
-                                                    <option value="1"> Employee Information</option>
-                                                    <option value="2"> Income Tax </option>
-                                                    <option value="3"> Loans </option>
-                                                    <option value="4"> Others </option>
-                                                    <option value="5"> Payslip </option>
+                                                    <option value="Employee Information"> Employee Information</option>
+                                                    <option value="Income Tax"> Income Tax </option>
+                                                    <option value="Loans"> Loans </option>
+                                                    <option value="Others"> Others </option>
+                                                    <option value="Payslip"> Payslip </option>
                                                 </select>
     
                                             </div>
@@ -217,14 +218,14 @@ margin-left: 58%;
                                             <label for="form-check-label"> Subject* </label>
                                             <div class="form-floating">
                                                 <label id="title" for="form-check-label"> Subject Line..</label>
-                                                <input type="text" class="form-control" id="floatingPassword" placeholder=" Subject Line..">
+                                                <input type="text" class="form-control" id="floatingPassword" placeholder=" Subject Line.." name="subjectline">
  
     
                                             </div>
                                             <br>
                                             <label for="floatingTextarea"> Description* </label>
                                             <div class="form-floating">
-                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="description"></textarea>
                                                 <label id="title" for="floatingTextarea"> Write here.. </label>
                                             </div>
                                             <br>
@@ -232,11 +233,11 @@ margin-left: 58%;
                                             <div>
                                                 <label for=" Prioriry"> Prioriry </label>
     
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select class="form-select" aria-label="Default select example" name="priority">
                                                     <option selected> Priority..</option>
-                                                    <option value="1"> High </option>
-                                                    <option value="2"> Medium </option>
-                                                    <option value="3"> Low </option>
+                                                    <option value="High"> High </option>
+                                                    <option value="Medium"> Medium </option>
+                                                    <option value="Low"> Low </option>
     
                                                 </select>
     

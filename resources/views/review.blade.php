@@ -13,69 +13,69 @@
 
         <style>
             /* .row {
-                                    margin-top: 2%;
-                                } */
+                                        margin-top: 2%;
+                                    } */
 
 
 
 
             /* #title{
-                                    margin-top: 0%;
-                                    margin-left: 15.9%;
-                                    position: fixed;
-                                    background-color: white;
-                                    width: 100%;
-                                    padding: 3px;
-                                    border: 1px solid rgb(0, 0, 0, 0.1);
-                                }
+                                        margin-top: 0%;
+                                        margin-left: 15.9%;
+                                        position: fixed;
+                                        background-color: white;
+                                        width: 100%;
+                                        padding: 3px;
+                                        border: 1px solid rgb(0, 0, 0, 0.1);
+                                    }
 
-                                #feed{
-                                    background-color: white;
-                                    box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-                                    border-radius: 10px;
-                                    padding:10px;
-                                    margin-top: 10%;
-                                }
+                                    #feed{
+                                        background-color: white;
+                                        box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+                                        border-radius: 10px;
+                                        padding:10px;
+                                        margin-top: 10%;
+                                    }
 
-                              
+                                  
 
-                                #links {
-                                    background-color: red;
-                                    height: 725px;
-                                    padding-top: 15%;
-                                    border: 1px solid rgb(0, 0, 0, 0.2);
-                                    position: fixed;
-                                }
+                                    #links {
+                                        background-color: red;
+                                        height: 725px;
+                                        padding-top: 15%;
+                                        border: 1px solid rgb(0, 0, 0, 0.2);
+                                        position: fixed;
+                                    }
 
-                                #head {
-                                    background-color: white;
-                                    height: 120px;
-                                }
+                                    #head {
+                                        background-color: white;
+                                        height: 120px;
+                                    }
 
-                                .list{
-                                   
-                                        margin-top:100px;
-                                    
-                                }
+                                    .list{
+                                       
+                                            margin-top:100px;
+                                        
+                                    }
 
-                                li {
-                                    cursor: pointer;
-                                    list-style: none;
-                                    margin-top: 15px;
-                                    font-size: 17px;
-                                    font-weight: 600;
-                                    margin-left: -20px;
+                                    li {
+                                        cursor: pointer;
+                                        list-style: none;
+                                        margin-top: 15px;
+                                        font-size: 17px;
+                                        font-weight: 600;
+                                        margin-left: -20px;
 
 
-                                }
+                                    }
 
-                                li.selected {
-                                    background-color: rgb(109, 123, 141, 0.5);
-                                    padding: 10px;
-                                    border-radius: 10px;
-                                    color: white;
+                                    li.selected {
+                                        background-color: rgb(109, 123, 141, 0.5);
+                                        padding: 10px;
+                                        border-radius: 10px;
+                                        color: white;
 
-                                } */
+                                    } */
 
             #spanone {
                 margin-right: 60px;
@@ -143,7 +143,7 @@
 
             }
 
-            .nav-link {
+            .tab {
                 color: rgb(114, 108, 108);
                 font-weight: 550;
                 font-size: 15px;
@@ -212,7 +212,7 @@
 
 
 
-                .nav-link {
+                .tab {
                     width: 120px;
                     color: rgb(114, 108, 108);
                     font-weight: 550;
@@ -284,7 +284,7 @@
                     box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
                     height: 725px;
                     border-radius: 5px;
-                    padding-top: 15%;
+                    padding-top: 5%;
                     position: fixed;
                     width: 160px;
                     margin-left: 8px;
@@ -359,7 +359,7 @@
                     margin-top: 3%
                 }
 
-                .nav-link {
+                .tab {
                     width: 100px;
                 }
 
@@ -501,45 +501,45 @@
 
                             <p class="title"> ATTENDANCE </p>
 
-                            <button class="nav-link active" id="v-pills-attendance-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link active" id="v-pills-attendance-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-attendance" type="button" role="tab"
                                 aria-controls="v-pills-confirmation" aria-selected="true"> <span id="spanone"> Attendance
                                 </span> </button>
 
                             <p class="title"> EMPINFO </p>
 
-                            <button class="nav-link " id="v-pills-resignation-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-resignation" type="button" role="tab"
-                            aria-controls="v-pills-resignation" aria-selected="true"> <span id="spanthree"> Resignation
-                            </span> </button>
+                            <button class="tab nav-link " id="v-pills-resignation-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-resignation" type="button" role="tab"
+                                aria-controls="v-pills-resignation" aria-selected="true"> <span id="spanthree"> Resignation
+                                </span> </button>
 
-                            <button class="nav-link " id="v-pills-confirmation-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link " id="v-pills-confirmation-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-confirmation" type="button" role="tab"
                                 aria-controls="v-pills-confirmation" aria-selected="true"> <span id="spantwo">
                                     Confirmation
                                 </span> </button>
-                           
+
 
                             <p class="title"> Leave </p>
 
-                            <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link " id="v-pills-home-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                                 aria-selected="true"> <span id="spanfour"> Leave </span></button>
-                            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-profile" type="button" role="tab"
                                 aria-controls="v-pills-profile" aria-selected="false"> <span id="spanfive"> Leave Cancel
                                 </span> </button>
-                            <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-disabled" type="button" role="tab"
                                 aria-controls="v-pills-disabled" aria-selected="false"> <span id="spansix"> Comp Off
                                 </span>
                             </button>
-                            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-messages" type="button" role="tab"
                                 aria-controls="v-pills-messages" aria-selected="false"> <span id="spanseven"> Restricted
                                     Holiday
                                 </span></button>
-                            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-settings" type="button" role="tab"
                                 aria-controls="v-pills-settings" aria-selected="false"> <span id="spaneight"> Helpdesk
                                 </span></button>
@@ -758,7 +758,8 @@
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill"
                                                 data-bs-target="#pills-confirmations" type="button" role="tab"
-                                                aria-controls="pills-confirmations" aria-selected="false"> Closed </button>
+                                                aria-controls="pills-confirmations" aria-selected="false"> Closed
+                                            </button>
                                         </li>
 
                                     </ul>
@@ -851,7 +852,7 @@
                                     </ul>
                                 </div>
                                 <br>
-                              
+
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-leave" role="tabpanel"
                                         aria-labelledby="pills-leave-tab">
@@ -937,7 +938,7 @@
                                     </ul>
                                 </div>
                                 <br>
-                          
+
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-cancel" role="tabpanel"
                                         aria-labelledby="pills-cancel-tab">
@@ -1083,7 +1084,7 @@
                                     </div>
 
                                 </div>
-                             
+
                             </div>
                         </div>
 
@@ -1110,7 +1111,7 @@
                                     </ul>
                                 </div>
                                 <br>
-                           
+
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-restricted" role="tabpanel"
                                         aria-labelledby="pills-restricted-tab">
@@ -1197,7 +1198,7 @@
                                     </ul>
                                 </div>
                                 <br>
-                               
+
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-helpdesk" role="tabpanel"
                                         aria-labelledby="pills-helpdesk-tab">

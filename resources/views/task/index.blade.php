@@ -18,7 +18,7 @@
             padding: 10%;
             border: 2px solid rgb(131, 137, 150, 0.3);
             border-radius: 10px;
-            margin-top: -2%;
+            margin-top: 0%;
             height: 80vh;
             width: 97%;
             margin-left: 0px;
@@ -61,6 +61,11 @@
 
         }
 
+        #select{
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
         @media (max-width:960px){
             #content{
                 margin-left: 2px;
@@ -84,6 +89,11 @@
             
             margin-left: 5px;
 
+        }
+
+        #select{
+            height: 60px;
+            margin-bottom: 10px;
         }
 
         .task {
@@ -155,69 +165,57 @@
                                     <div class="offcanvas-body" style="margin-left:5%">
                                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         
-                                            <form action="">
+                                            <form action="{{route('task.store')}}" method="POST">
+                                                @csrf
         
         
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control" id="floatingPassword"
-                                                        placeholder="Task Name">
+                                                        placeholder="Task Name" name="taskname">
                                                     <label for="floatingPassword"> Task Name</label>
                                                 </div>
         
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control" id="floatingPassword"
-                                                        placeholder=" Assignee ">
+                                                        placeholder=" Assignee " name="assignee">
                                                     <label for="floatingPassword">Assignee</label>
                                                 </div>
         
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control" id="floatingPassword"
-                                                        placeholder=" Checklist ">
+                                                        placeholder=" Checklist " name="checklist">
                                                     <label for="floatingPassword">Checklist</label>
                                                 </div>
         
                                                 <div class="form-floating">
                                                     <input type="date" class="form-control" id="floatingPassword"
-                                                        placeholder="Due Date">
+                                                        placeholder="Due Date" name="duedate">
                                                     <label for="floatingPassword">Due Date</label>
                                                 </div>
+
+                                                <div>
+                                                   
         
+                                                    <select id="select" class="form-select" aria-label="Default select example" name="priority">
+                                                        <option selected> Priority..</option>
+                                                        <option value="High"> High </option>
+                                                        <option value="Medium"> Medium </option>
+                                                        <option value="Low"> Low </option>
         
-                                                <label for="priority" id="mode"> Priority </label>
-                                                <div class="form-check" id="priority">
+                                                    </select>
         
-        
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                            id="flexRadioDefault1">
-                                                        <label class="form-check-label" for="flexRadioDefault1">
-                                                            Low
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                            id="flexRadioDefault2" checked>
-                                                        <label class="form-check-label" for="flexRadioDefault2">
-                                                            Medium
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                            id="flexRadioDefault2" checked>
-                                                        <label class="form-check-label" for="flexRadioDefault2">
-                                                            High
-                                                        </label>
-                                                    </div>
                                                 </div>
+        
+        
         
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control" id="floatingPassword"
-                                                        placeholder=" Tags ">
+                                                        placeholder=" Tags " name="tags">
                                                     <label for="floatingPassword"> Tags </label>
                                                 </div>
         
                                                 <div class="form-floating">
-                                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="description"></textarea>
                                                     <label for="floatingTextarea"> Description </label>
                                                 </div>
         

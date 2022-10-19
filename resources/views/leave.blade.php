@@ -42,7 +42,7 @@
                
             }
 
-            .nav-link {
+            .tab {
                 margin-left: 20px;
                 color: rgb(114, 108, 108);
             font-weight: 550;
@@ -61,7 +61,7 @@
                 position: fixed;
                 width: 230px;
                 padding-top: 100px;
-                margin-top: -4.5%;
+                margin-top: -4.2%;
                 margin-left: 8px;
             }
 
@@ -241,7 +241,7 @@
             font-size: 14px;
                 }
 
-                .nav-link{
+                .tab{
                     width: 100px;
                     margin-left: -10px
 
@@ -412,7 +412,7 @@
                     font-size: 14px;
                 }
 
-                .nav-link{
+                .tab{
                     width: 100px;
                     margin-left: -10px
 
@@ -563,19 +563,19 @@
                             aria-orientation="vertical">
 
 
-                            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                                 aria-selected="true"> <span id="spanone"> Leave </span></button>
-                            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-profile" type="button" role="tab"
                                 aria-controls="v-pills-profile" aria-selected="false"> <span id="spantwo"> Restricted
                                     Holiday </span> </button>
-                            <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-disabled" type="button" role="tab"
                                 aria-controls="v-pills-disabled" aria-selected="false"> <span id="spanthree"> Leave
                                     Cancel</span>
                             </button>
-                            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                            <button class="tab nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-messages" type="button" role="tab"
                                 aria-controls="v-pills-messages" aria-selected="false"> <span id="spanfour"> Comp Off Grant
                                 </span></button>

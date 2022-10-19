@@ -150,6 +150,8 @@
             cursor: pointer;
         }
 
+      
+
 
         @media (max-width:960px) {
 
@@ -340,9 +342,6 @@
                 background-color: whitesmoke;
             }
 
-          
-
-
             /*
 
 
@@ -393,7 +392,11 @@
     <div class="navone">
         <nav class="navbar navbar-expand-lg ">
 
+            
+
             <div class="log">
+
+                
                 <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                     <option selected>Quick Links</option>
                     <option value="1" style="font-size:12px;">Sign! You cannot 'Quick Link' this page
@@ -410,6 +413,9 @@
 
         </nav>
     </div>
+
+   
+      
 
     <div class="navtwo">
         <nav class="navbar navbar-expand-lg ">
@@ -451,7 +457,7 @@
                                 Tasks
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="tasks"> Tasks </a></li>
+                                <li><a class="dropdown-item" href="task"> Tasks </a></li>
                                 <li><a class="dropdown-item" href="review"> Review </a></li>
 
                             </ul>
@@ -543,13 +549,13 @@
             </div>
             <p style="margin-top:-8%;text-align:center;font-size:12px;color:blue;margin-right:20%">View My Info</p>
 
-            <div class="item"><a href=""><i class="fa fa-home"></i> Home </a></div>
+            <div class="item" id="home"><a href=""><i class="fa fa-home"></i> Home </a></div>
             <div class="item"><a href="/"><i class="fa fa-server"></i>Feeds</a></div>
             <div class="item">
                 <a class="sub-btn"><i class="fa fa-clipboard"></i>Tasks<i
                         class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="tasks" class="sub-item">Tasks</a>
+                    <a href="task" class="sub-item">Tasks</a>
                     <a href="review" class="sub-item">Review</a>
 
                 </div>

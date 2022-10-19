@@ -115,7 +115,7 @@
 
         }
 
-        .nav-link {
+        .tab {
             color: rgb(114, 108, 108);
             font-weight: 600;
             margin-top: 10px;
@@ -200,7 +200,7 @@
 
             }
 
-            .nav-link {
+            .tab {
                 color: rgb(114, 108, 108);
                 font-weight: 600;
                 margin-top: 10px;
@@ -308,8 +308,8 @@
 
 
         #title {
-            margin-top: -2.2%;
-            margin-left: 28%;
+            margin-top: -2%;
+            margin-left: 27.8%;
             position: fixed;
             background-color: rgb(255, 255, 255, 0.5);
             width: 80%;
@@ -329,7 +329,7 @@
 
         }
 
-        .nav-link {
+        .tab {
             color: rgb(114, 108, 108);
             font-weight: 600;
             margin-top: 10px;
@@ -386,25 +386,25 @@
 
             <div class="d-flex align-items-start">
                 <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                    <button class="tab nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                         aria-selected="true"> <span class="spanone"> All Feeds </span> </button>
-                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                    <button class="tab nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
                         aria-selected="false"> <span class="spantwo"> Everyone </span> </button>
-                    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                    <button class="tab nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-disabled" type="button" role="tab"
                         aria-controls="v-pills-disabled" aria-selected="false"> <span class="spanthree"> Events
                         </span> </button>
-                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                    <button class="tab nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-messages" type="button" role="tab"
                         aria-controls="v-pills-messages" aria-selected="false"> <span class="spanfour"> Company News </span>
                     </button>
-                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                    <button class="tab nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-settings" type="button" role="tab"
                         aria-controls="v-pills-settings" aria-selected="false"> <span class="spanfive"> Appreciations </span>
                     </button>
-                    <button class="nav-link" id="v-pills-buy-tab" data-bs-toggle="pill"
+                    <button class="tab nav-link" id="v-pills-buy-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-buy" type="button" role="tab"
                         aria-controls="v-pills-buy" aria-selected="false"> <span class="spansix"> Buy/Sell/Rent </span>
                     </button>
