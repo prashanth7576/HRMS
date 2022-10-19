@@ -656,7 +656,16 @@
 
             </div>
             <div class="item"><a><i class="fa fa-book"></i>Document Center</a></div>
-            <div class="item"><a><i class="fa fa-users"></i>People</a></div>
+           
+            <div class="item">
+                <a class="sub-btn"><i class="fa fa-users"></i>Employee<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="{{url('onboard')}}" class="sub-item">Onboard</a>
+
+                </div>
+
+            </div>
             <div class="item"><a><i class="fa fa-info-circle"></i>Help Desk</a></div>
             <div class="item"><a><i class="fa fa-bar-chart"></i>Workflow Delegates</a></div>
         </div>

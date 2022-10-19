@@ -168,7 +168,7 @@
                         <div style="display:flex">
                             <div class="card"
                                 style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);border-radius:10px;width:400px;font-size:13px">
-                                <h5 style="padding:10px;font-size:15px">Earnings</h5>
+                                <h5 style="padding:10px;font-size:15px;font-weight:700">Earnings</h5>
 
                                 <table class="table table-borderless" style="padding:10px">
                                     <thead style="background-color:#e6f7ff">
@@ -209,8 +209,8 @@
                                         </tr>
 
                                         <tr style="background-color:#ecf2f9">
-                                            <td>Total</td>
-                                            <td style="float:right">000.00</td>
+                                            <td style="font-weight:700">Total</td>
+                                            <td style="float:right;font-weight:700">000.00</td>
 
                                         </tr>
 
@@ -220,7 +220,7 @@
 
                             <div class="card"
                                 style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);border-radius:10px;width:300px;margin-left:3%;font-size:13px">
-                                <h5 style="padding:10px;font-size:15px">Deductions</h5>
+                                <h5 style="padding:10px;font-size:15px;font-weight:700">Deductions</h5>
 
                                 <table class="table table-borderless" style="padding:10px">
                                     <thead>
@@ -283,8 +283,8 @@
 
                                         <tr style="background-color:#ecf2f9;">
 
-                                            <td>Total</td>
-                                            <td style="float:right">000.00</td>
+                                            <td style="font-weight:700">Total</td>
+                                            <td style="float:right;font-weight:700">000.00</td>
 
                                         </tr>
 
@@ -294,10 +294,11 @@
 
 
                         </div>
-
+                        <br><br> 
                     </div>
+                   
                     <div class="col-md-4" style="background-color:#ffffe6;font-size:12px;padding:10px">
-                        <p style="font-size:15px;">Employee Detail</p>
+                        <p style="font-size:15px;font-weight:700">Employee Detail</p>
                         <table class="table table-borderless">
 
                             <tbody>

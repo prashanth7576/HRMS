@@ -137,11 +137,11 @@
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li id="active" class="nav-item" role="presentation">
                 <button class="nav-link active" id="pills-active-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                    type="button" role="tab" aria-controls="pills-home" aria-selected="true"> YTD STATEMENT </button>
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="font-size:13px"> YTD STATEMENT </button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-closed-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">PF YTD STATEMENT
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:13px">PF YTD STATEMENT
                 </button>
             </li>
 
@@ -172,7 +172,7 @@
 
                         <div style="display:flex">
 
-                            <table class="table table-borderless" style="font-size:13px;width:500px">
+                            <table class="table table-borderless" style="font-size:12px;width:500px;">
                                 <thead style="background-color:#e6f7ff;height:55px">
                                     <tr>
 
@@ -266,7 +266,7 @@
                             </table>
 
                             <div class="table-responsive">
-                                <table class="table table-borderless" style="font-size:13px;">
+                                <table class="table table-borderless" style="font-size:12px;">
                                     <thead style="background-color:#e6f7ff">
                                         <tr>
 
@@ -388,7 +388,7 @@
                                             <td>000.00</td>
                                         </tr>
                                         <tr>
-                                            <th scope="col" style="font-size:17px;height:60px"></th>
+                                            <th scope="col" style="font-size:13px;height:60px"></th>
                                         </tr>
 
                                         <tr>
@@ -439,7 +439,7 @@
                                         </tr>
 
                                         <tr>
-                                            <th scope="col" style="font-size:17px;height:60px"></th>
+                                            <th scope="col" style="font-size:13px;height:60px"></th>
                                         </tr>
                                         <tr>
                                             <td>000.00</td>
