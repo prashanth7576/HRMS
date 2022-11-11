@@ -22,13 +22,13 @@ class User
         }
 
         if(Auth::user()->role == 1){
-            return redirect()->route('admin');
+            return $next($request);
         }
 
         
         if(Auth::user()->role == 2){
-            
-            return $next($request);
+            return redirect()->route('home');
+           
         }
 
 

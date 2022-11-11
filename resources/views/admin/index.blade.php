@@ -36,7 +36,7 @@
     }
 
     #main-container{
-        margin-top: -20%
+        margin-top: -15%
     }
 
     body {
@@ -52,7 +52,7 @@
         height: 100vh;
         padding: 5px;
         position: fixed;
-        margin-top: -24%;
+        margin-top: -20.2%;
 
 
 
@@ -118,6 +118,7 @@
         padding: 8px;
         height:55px;
         border-top-right-radius: 10px;
+        z-index: 1;
 
     }
 
@@ -141,14 +142,16 @@
 
     .navtwo {
         visibility: hidden;
+        z-index: 0;
     }
 
     .main_container {
         width: (100% - 800px);
         margin-left: 19%;
         padding: 5px;
-        margin-top: -10%;
+        margin-top: 20%;
         transition: all 0.3s ease;
+        z-index: -1;
         
 
     }
@@ -241,7 +244,12 @@
             padding: 5px;
             transition: all 0.3s ease;
             z-index: 10;
+         
         }
+
+        #main-container{
+        margin-top: 0%
+    }
 
         /* .navtwo .navbar-toggler:active .main_container{
             width: (100% - 800px);
@@ -251,6 +259,104 @@
             transition: all 0.3s ease;
             z-index: 10;
         } */
+
+        
+    .card {
+        background-color: white;
+        box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+    }
+
+    .card.item {
+        position: relative;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .card .item a {
+        color: black;
+        display: block;
+        padding: 5px 20px;
+        line-height: 32px;
+    }
+
+    .card .item a:hover {
+        background: white;
+        transition: 0.3s ease;
+    }
+
+    .card .item i {
+        margin-right: 15px;
+    }
+
+    .card .item a .dropdown {
+        position: absolute;
+        margin: 10px;
+        right: 0;
+        transition: 0.3s ease;
+
+    }
+
+    .card .item .sub-menu {
+        background: white;
+
+        font-size: 13px;
+    }
+
+    .card .item .sub-menu .a {
+        padding-left: 80px;
+
+    }
+
+    #review{
+        width: 220px;
+        margin-left: -115px
+    }
+
+    #it{
+        width: 220px;
+        margin-left: -115px
+    }
+
+    #poi{
+        width: 220px;
+        margin-left: -115px
+    }
+
+    #swipes{
+        width: 280px;
+        margin-right: 0px;
+        margin-left: -22px
+    }
+
+    #payslip{
+        width: 280px;
+        margin-right: 0px;
+        margin-left: -22px
+    }
+
+
+    #holidays{
+        width: 220px;
+        margin-right: -100px;
+        margin-left: 90px
+    }
+
+    #access{
+        width: 220px;
+        margin-right: -100px;
+        margin-left: 90px
+    }
+
+    #track{
+        width: 220px;
+        margin-right: -100px;
+        margin-left: 90px
+    }
+
+    #salary{
+        margin-left: -30px;
+
+    }
 
     }
 
@@ -263,7 +369,7 @@
             position: relative;
             padding: 5px;
             transition: all 0.3s ease;
-            z-index: 10;
+            z-index: -1;
         }
 
         .side-bar {
@@ -279,6 +385,7 @@
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
             padding: 8px;
             border-top-right-radius: 10px;
+            z-index: 0;
 
         }
 
@@ -306,7 +413,7 @@
 
             height: auto;
             visibility: visible;
-
+z-index: 1;
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
 
         }
@@ -342,6 +449,8 @@
             background-color: whitesmoke;
         }
 
+        
+
 
 
 
@@ -376,6 +485,46 @@
             margin-top: 10px;
             margin-left: 30px;
         } */
+
+        #review{
+            margin-left: 5px;
+            width: 300px;
+        }
+
+        #it{
+            margin-left: 5px;
+            width: 300px;
+        }
+
+        #poi{
+            margin-left: 5px;
+            width: 300px;
+        }
+
+        #swipes{
+            margin-left: 5px;
+            width: 300px;
+        }
+
+        #payslip{
+            margin-left: 5px;
+            width: 300px;
+        }
+
+        #holidays{
+            margin-left: 5px;
+            width: 300px;
+        }
+
+        #access{
+            margin-left: 5px;
+            width: 300px;
+        }
+
+        #track{
+            margin-left: 5px;
+            width: 300px;
+        }
 
     }
 
@@ -433,6 +582,8 @@
 
 
     <div id="main-container" class="main_container" style="background-color:smokewhite">
+
+       
         <h3>Good Morning</h3>
         <div class="flex">
             <div class="two">
@@ -468,7 +619,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="card"
+                    <div id="review" class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">Review</h5>
                         <br>
@@ -481,7 +632,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="card"
+                    <div id="it" class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">IT Declaration</h5>
                         <div style="display:flex">
@@ -492,7 +643,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="card"
+                    <div id="poi" class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">POI</h5>
                         <div style="display:flex">
@@ -506,7 +657,7 @@
                     <br>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card"
+                    <div id="swipes" class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">10 October 2022</h5>
                         <div style="display:flex">
@@ -576,7 +727,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="card"
+                    <div id="payslip" class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <div>
                             <h5 style="font-weight:600">Payslip</h5>
@@ -605,14 +756,14 @@
                                 <p><i class="fa fa-inr" aria-hidden="true"></i>*</p>
                                 <p><i class="fa fa-inr" aria-hidden="true"></i>*</p>
                                 <br><br>
-                                <p style="color:blue">Show Salary</p>
+                                <p id="salary" style="color:blue">Show Salary</p>
                             </ul>
                         </div>
                     </div>
                     <br>
                 </div>
                 <div class="col-sm-3">
-                    <div class="card"
+                    <div id="holidays" class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <div>
                             <h5 style="font-weight:600">Upcoming Holidays</h5>
@@ -629,7 +780,7 @@
 
                     </div>
                     <br>
-                    <div class="card"
+                    <div id="access" class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">Quick Access</h5>
                         <br>
@@ -649,7 +800,7 @@
                     </div>
                     <br>
 
-                    <div class="card"
+                    <div id="track" class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">Track</h5>
                         <div style="text-align:center">

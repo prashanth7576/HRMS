@@ -27,18 +27,24 @@
 
 
     <style>
+
+        .main_container{
+            margin-top: -12%
+        }
+
+            
         #head{
             display: flex
         }
         .content{
-            margin-left: 10px;
+            margin-left: 8px;
         }
 
         #filter{
             margin-left: 50px;
             color: rgb(122, 114, 114)
         }
-        .form-select{
+        #select{
             margin-left: 50px;
             width: 180px;
             font-size: 17px;
@@ -88,6 +94,8 @@
             border:1px solid rgb(109, 105, 105, 0.5);
             border-radius: 5px;
             margin-right: 40px;
+            width: 500px;
+            margin-left: 10px
         }
 
         .body p {
@@ -113,12 +121,17 @@
             margin-top: 20px;
         }
 
+        .main_container{
+            margin-top: 2%
+        }
+
         .body{
             border:1px solid rgb(109, 105, 105, 0.5);
             border-radius: 5px;
             margin-top: 10px;
             margin-right: 0px;
             margin-left: 20px;
+            width: 700px;
             
         }
 
@@ -153,15 +166,15 @@
             margin-left: 20px;
             color: rgb(122, 114, 114)
         }
-        .form-select{
-            margin-left: 20px;
+        #select{
+            margin-left: 10px;
             width: 120px;
             font-size: 17px;
             font-weight: 600
 
         }
         .btn {
-            margin-left: 25%;
+            margin-left: 20%;
             width: 120px;
             height: 45px;
             margin-top: 20px;
@@ -174,7 +187,8 @@
             border-radius: 5px;
             margin-top: 10px;
             margin-right: 0px;
-            margin-left: 20px;
+            margin-left: 10px;
+            width: 350px;
             
         }
 
@@ -242,7 +256,7 @@
             <div>
                 <label id="filter" for="Category"> Filter Type</label>
 
-                <select class="form-select" aria-label="Default select example">
+                <select id="select" class="form-select" aria-label="Default select example">
                    
                     <option selected value="1"> Me </option>
                     <option value="1"> My Team </option>

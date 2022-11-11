@@ -88,13 +88,13 @@
             box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
             position: fixed;
             width: 220px;
-            margin-left: 8.2px;
-            margin-top: -4.2%;
+            margin-left: 6.2px;
+            margin-top: -14.2%;
         }
 
 
         #title {
-            margin-top: -4.2%;
+            margin-top: -14.1%;
             margin-left: 14%;
             position: fixed;
             background-color:  rgb(255, 255, 255, 0.5);
@@ -108,7 +108,7 @@
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
             border-radius: 10px;
             padding: 10px;
-            margin-top: 10%;
+            margin-top: 0%;
             margin-left: 25%;
             margin-right: 10%;
             width: 700px;
@@ -174,12 +174,12 @@
                 border: 1px solid rgb(0, 0, 0, 0.2);
                 position: fixed;
                 width: 177px;
-                margin-top: -2.2%
+                margin-top: -0.2%
             }
 
 
             #title {
-                margin-top: -2.2%;
+                margin-top: -0.2%;
                 margin-left: 22.5%;
                 position: fixed;
                 background-color: rgb(255, 255, 255, 0.5);
@@ -193,7 +193,7 @@
                 box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
                 border-radius: 10px;
                 padding: 10px;
-                margin-top: 10%;
+                margin-top: 15%;
                 margin-left: 25%;
                 margin-right: 10%;
                 width: 520px;
@@ -303,13 +303,13 @@
             border: 1px solid rgb(0, 0, 0, 0.2);
             position: fixed;
             width: 130px;
-            margin-top: -2%
+            margin-top: -0%
         }
 
 
         #title {
-            margin-top: -2%;
-            margin-left: 27.8%;
+            margin-top: -0%;
+            margin-left: 27.2%;
             position: fixed;
             background-color: rgb(255, 255, 255, 0.5);
             width: 80%;
@@ -322,7 +322,7 @@
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
             border-radius: 10px;
             padding: 10px;
-            margin-top: 20%;
+            margin-top: 25%;
             margin-left: 40%;
             margin-right: 10%;
             width: 300px;

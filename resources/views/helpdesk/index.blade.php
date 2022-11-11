@@ -15,6 +15,10 @@
 
         <style>
 
+.side-bar{
+                margin-top: -19%
+            }
+
             #title{
                 font-size: 15px;
                 color: black
@@ -75,7 +79,7 @@
             }
             .content{
                 margin-left: 20px;
-                margin-top: -20px;
+                margin-top: -14%;
             }
             body{
                 overflow-x: hidden;
@@ -89,7 +93,7 @@
         @media (max-width:960px) {
             .content{
                 margin-left: 0px;
-                margin-top: 0px;
+                margin-top: 10px;
             
             }
 

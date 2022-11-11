@@ -11,9 +11,17 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
 
+          <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
         
 
         <style>
+
+            .side-bar{
+                margin-top: -7.5%
+            }
             h1 {
                 font-size: 20px;
                 margin-left: 17%;
@@ -66,6 +74,10 @@
 
             @media screen and (max-width : 960px) {
 
+
+                .main_container{
+                    margin-top: 2%
+                }
 
                 .form-group.c1 {
                     display: inline-block;
@@ -154,6 +166,12 @@
 
         <div class="main_container">
 
+            {{-- @if (Session::has('success'))
+            <div style="width: 700px; margin-left:350px ">
+                <p>{{ $message }}</p>
+            </div>
+        @endif --}}
+
 
 
             <div class="row">
@@ -161,7 +179,7 @@
                     <div id="content">
 
 
-                        <form action=" {{ route('onboard.store') }}" method="post" >
+                        <form action=" {{ route('onboard.store') }}" method="post"  class="row g-3 needs-validation" novalidate >
                             @csrf
                             <div>
 
@@ -174,11 +192,10 @@
                                     <div class=" ">
                                         <label for="First Name"> First Name</label>
                                         <input type="text" class="form-control"  placeholder="First Name" name="firstname"
-                                            style="font-size:15px;" >
-
-                                          
-
-
+                                            style="font-size:15px;" required >
+                                            <div class="invalid-feedback">
+                                                Please Provide a First Name
+                                              </div>
                                     </div>
                                 </div>
 
@@ -196,9 +213,11 @@
                                     <div class=" ">
                                         <label for="Last Name"> Last Name</label>
                                         <input type="text" class="form-control" placeholder="Last Name" name="lastname"
-                                            style="font-size:15px;" >
+                                            style="font-size:15px;" required>
 
-                     
+                                            <div class="invalid-feedback">
+                                                Please Provide a Last Name
+                                              </div>
 
                                     </div>
                                 </div>
@@ -208,7 +227,11 @@
                                     <div class="">
                                         <label for="JOb Title">Job Title </label>
                                         <input type="text" class="form-control" placeholder="Job Title" name="jobtitle"
-                                            style=" font-size:15px;">
+                                            style=" font-size:15px;" required>
+
+                                            <div class="invalid-feedback">
+                                                Please Provide a Job Title
+                                              </div>
 
 
                                     </div>
@@ -228,7 +251,11 @@
                                     <div class="">
                                         <label for="JOb Title"> Employee ID </label>
                                         <input type="text" class="form-control" placeholder=" Employee ID"
-                                            name="employeeid" style=" font-size:15px;">
+                                            name="employeeid" style=" font-size:15px;" required>
+
+                                            <div class="invalid-feedback">
+                                                Please Provide a Employee ID
+                                              </div>
 
 
                                     </div>
@@ -239,8 +266,12 @@
                                 <div class="form-group c2">
                                     <div class=" ">
                                         <label for=" Mobile"> Mobile Number </label>
-                                        <input type="text" class="form-control" placeholder=" Mobile Number"
-                                            name="mobile" style="font-size:15px;">
+                                        <input type="number" class="form-control" placeholder=" Mobile Number"
+                                            name="mobile" style="font-size:15px;" required>
+
+                                            <div class="invalid-feedback">
+                                                Please Enter Mobile Number
+                                              </div>
 
 
                                     </div>
@@ -249,24 +280,67 @@
                                 <div class="form-group c1">
                                     <div class=" ">
                                         <label for="Email"> Email </label>
-                                        <input type="text" class="form-control" placeholder=" Email" name="email"
-                                            style=" font-size:15px;">
+                                        <input type="email" class="form-control" placeholder=" Email" name="email"
+                                            style=" font-size:15px;" required>
+
+                                            <div class="invalid-feedback">
+                                                Please Provide a Email
+                                              </div>
 
                                     </div>
                                 </div>
 
+                                
+
                                 <div class="form-group c2">
                                     <label for=" Prioriry"> Gender </label>
 
-                                    <select class="form-select" aria-label="Default select example" name="gender">
-                                        
-                                        <option selected value="1"> Male </option>
-                                        <option value="2"> Female </option>
+                                    <select class="form-select" aria-label="Default select example" name="gender" required>
+                                        <option selected disabled value=""> Select Gender</option>
+
+                                        <option  value="Male"> Male </option>
+                                        <option value="Female"> Female </option>
  
 
                                     </select>
 
+                                    <div class="invalid-feedback">
+                                        Please Select gender
+                                      </div>
+
                                 </div>
+
+                                <div class="form-group c1">
+                                    <div class="">
+                                        <label for=" Location "> Location  </label>
+                                        <input type="text" class="form-control" placeholder=" Location "
+                                            name="location" style=" font-size:15px;" required>
+
+                                            {{-- <div class="invalid-feedback">
+                                                Please Provide a Employee ID
+                                              </div> --}}
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group c2">
+                                    <div class="">
+                                        <label for=" Extension "> Extension </label>
+                                        <input type="text" class="form-control" placeholder=" Extension"
+                                            name="extension" style=" font-size:15px;" >
+
+                                            {{-- <div class="invalid-feedback">
+                                                Please Provide a Employee ID
+                                              </div> --}}
+
+
+                                    </div>
+                                </div>
+
+
 
                                 {{-- <div class="form-group c2">
                                     <label for=" Prioriry"> Gender </label>
@@ -425,9 +499,13 @@
 
                                 <div class="form-group c1">
                                     <div class="">
-                                        <label for=" dob"> DOB </label>
+                                        <label for=" dob"> Date Of Birth </label>
                                         <input type="date" class="form-control" placeholder=" DOB" name="dateofbirth"
-                                            style=" font-size:15px;">
+                                            style=" font-size:15px;" required>
+
+                                            <div class="invalid-feedback">
+                                                Please Enter Date Of Birth
+                                              </div>
 
                                     </div>
                                 </div>
@@ -458,7 +536,8 @@
 
                                     <select class="form-select" aria-label="Default select example" name="bloodgroup">
 
-                                        <option selected value="A+"> A+ </option>
+                                        <option selected disabled value=""> Select Blood Group</option>
+                                        <option  value="A+"> A+ </option>
                                         <option value="A-"> A- </option>
                                         <option value="B+"> B+ </option>
                                         <option value="B-"> B- </option>
@@ -480,7 +559,8 @@
 
                                     <select class="form-select" aria-label="Default select example" name="maritalstatus">
 
-                                        <option selected value="married"> Married </option>
+                                        <option selected disabled value=""> Select Marital Status</option>
+                                        <option value="married"> Married </option>
                                         <option value="Unmarried"> Unmarried </option>
 
                                     </select>
@@ -510,12 +590,17 @@
                                 <div class="form-group c2">
                                     <label for=" nationality "> Nationality </label>
 
-                                    <select class="form-select" aria-label="Default select example" name="nationality">
+                                    <select class="form-select" aria-label="Default select example" name="nationality" required>
 
-                                        <option selected value="Indian"> Indian </option>
+                                        <option selected disabled value=""> Select Nationality</option>
+                                        <option  value="Indian"> Indian </option>
                                         <option value="Other"> Other </option>
 
                                     </select>
+
+                                    <div class="invalid-feedback">
+                                        Please Select Nationality
+                                      </div>
 
                                 </div>
 
@@ -532,13 +617,18 @@
                                     <label for=" Residential Status"> Residential Status </label>
 
                                     <select class="form-select" aria-label="Default select example"
-                                        name="residentialstatus">
+                                        name="residentialstatus" required>
 
-                                        <option selected value="Resident"> Resident </option>
+                                        <option selected disabled value=""> Select Residential Status </option>
+                                        <option  value="Resident"> Resident </option>
                                         <option value="Non-Resident"> Non-Resident </option>
 
 
                                     </select>
+
+                                    <div class="invalid-feedback">
+                                        Please Select Residential Status
+                                      </div>
 
                                 </div>
 
@@ -577,13 +667,18 @@
                                     <label for=" internationalemployee"> International Employee </label>
 
                                     <select class="form-select" aria-label="Default select example"
-                                        name="internationalemployee">
+                                        name="internationalemployee" required>
 
-                                        <option selected value="No"> No </option>
+                                        <option selected disabled value=""> Select Employee Status </option>
+                                        <option  value="No"> No </option>
                                         <option value="Yes"> Yes </option>
 
 
                                     </select>
+
+                                    <div class="invalid-feedback">
+                                        Please Select Emplyee Status
+                                      </div>
 
                                 </div>
 
@@ -591,13 +686,18 @@
                                     <label for=" physicallychallenged"> Physically Challenged </label>
 
                                     <select class="form-select" aria-label="Default select example"
-                                        name="physicallychallenged">
+                                        name="physicallychallenged" required>
 
-                                        <option selected value="No"> No </option>
+                                        <option selected disabled value=""> Select PH </option>
+                                        <option  value="No"> No </option>
                                         <option value="Yes"> Yes </option>
 
 
                                     </select>
+
+                                    <div class="invalid-feedback">
+                                        Please Select PH
+                                      </div>
 
                                 </div>
 
@@ -615,7 +715,11 @@
                                     <div class="">
                                         <label for=" joiningdate"> Joining Date </label>
                                         <input type="date" class="form-control" placeholder=" Joining Date"
-                                            name="joiningdate" style=" font-size:15px;">
+                                            name="joiningdate" style=" font-size:15px;" required>
+
+                                            <div class="invalid-feedback">
+                                                Please Enter Joining Date
+                                              </div>
 
                                     </div>
                                 </div>
@@ -624,9 +728,15 @@
                                     <div class=" ">
                                         <label for="confirmationdate"> Confirmation Date </label>
                                         <input type="date" class="form-control" placeholder=" Confirmation Date"
-                                            name="confirmationdate" style="font-size:15px;">
+                                            name="confirmationdate" style="font-size:15px;" required>
+
+                                            <div class="invalid-feedback">
+                                                Please Enter Confirmation Date
+                                              </div>
 
                                     </div>
+
+                                  
                                 </div>
 
             
@@ -634,13 +744,17 @@
                                 <div class="form-group c1">
                                     <label for=" status"> Status </label>
 
-                                    <select class="form-select" aria-label="Default select example" name="status">
+                                    <select class="form-select" aria-label="Default select example" name="status" required>
                                         
                                         <option selected value="Approved"> Approved </option>
                                         <option value="Pending"> Pending </option>
  
 
                                     </select>
+
+                                    <div class="invalid-feedback">
+                                        Please Select Status
+                                      </div>
 
                                 </div>
 
@@ -700,7 +814,7 @@
                             <div>
                                 <br>
 
-                                <h1> Employee Position </h1>
+                                <h1> Employment & Job </h1>
 
                                 <br>
 
@@ -708,7 +822,7 @@
                                     <div class="">
                                         <label for=" Designation"> Designation </label>
                                         <input type="text" class="form-control" placeholder=" Designation"
-                                            name="designation" style=" font-size:15px;">
+                                            name="designation" style=" font-size:15px;" required>
 
                                     </div>
                                 </div>
@@ -726,7 +840,7 @@
                                     <div class="">
                                         <label for=" Location"> Location</label>
                                         <input type="text" class="form-control" placeholder=" Location "
-                                            name="location" style=" font-size:15px;">
+                                            name="officelocation" style=" font-size:15px;">
 
                                     </div>
                                 </div>
@@ -738,6 +852,27 @@
                                         <label for=" Attendance Scheme"> Attendance Scheme </label>
                                         <input type="text" class="form-control" placeholder=" Attendance Scheme "
                                             name="attendancescheme" style=" font-size:15px;">
+
+                                    </div>
+                                </div>
+
+                                
+                                <div class="form-group c1">
+                                    <div class="">
+                                        <label for=" Costcenter "> Costcenter</label>
+                                        <input type="text" class="form-control" placeholder=" CostCenter "
+                                            name="costcenter" style=" font-size:15px;">
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group c2">
+                                    <div class=" ">
+                                        <label for=" Division"> Division </label>
+                                        <input type="text" class="form-control" placeholder=" Division  "
+                                            name="division" style=" font-size:15px;">
 
                                     </div>
                                 </div>
@@ -770,6 +905,62 @@
                                 <h1> Additional Information </h1>
 
                                 <br>
+
+                                
+                                <div class="form-group c1">
+                                    <div class="">
+                                        <label for=" Bank Name "> Bank Name </label>
+                                        <input type="text" class="form-control" placeholder=" Bank Name"
+                                            name="bankname" style=" font-size:15px;">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group c2">
+                                    <div class=" ">
+                                        <label for=" Bank Branch"> Bank Branch </label>
+                                        <input type="text" class="form-control" placeholder=" Bank Branch "
+                                            name="bankbranch" style="font-size:15px;">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group c1">
+                                    <div class="">
+                                        <label for=" Account Type "> Account Type </label>
+                                        <input type="text" class="form-control" placeholder=" Account Type"
+                                            name="accounttype" style=" font-size:15px;">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group c2">
+                                    <div class=" ">
+                                        <label for=" Payment Type "> Payment Type </label>
+                                        <input type="text" class="form-control" placeholder=" Payment Type "
+                                            name="paymenttype" style="font-size:15px;">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group c1">
+                                    <div class="">
+                                        <label for=" DD Payable At "> DD Payable At </label>
+                                        <input type="text" class="form-control" placeholder=" DD Payable At"
+                                            name="ddpayableat" style=" font-size:15px;">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group c2">
+                                    <div class=" ">
+                                        <label for=" Name As Per Bank Records "> Name As Per Bank Records </label>
+                                        <input type="text" class="form-control" placeholder="  Name As Per Bank Records "
+                                            name="nameasperbankrecords" style="font-size:15px;">
+
+                                    </div>
+                                </div>
+
 
                                 <div class="form-group c1">
                                     <div class="">
@@ -828,6 +1019,33 @@
 
                             </div>
 
+                            <div>
+                                <br>
+
+                                <h1> Access Card Information </h1>
+
+                                <br>
+
+                                <div class="form-group c1">
+                                    <div class="">
+                                        <label for=" Card No "> Access Card Number </label>
+                                        <input type="text" class="form-control" placeholder=" Access Card Number"
+                                            name="accesscardnumber" style=" font-size:15px;">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group c2">
+                                    <div class=" ">
+                                        <label for=" Validity "> Validity  </label>
+                                        <input type="date" class="form-control" placeholder=" Validity "
+                                            name="accesscardvalidity" style="font-size:15px;">
+
+                                    </div>
+                                </div>
+
+                            </div>
+
 
 
                             <br>
@@ -857,5 +1075,27 @@
     </body>
 
     </html>
+
+    <script>
+        (function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
 
 @endsection
