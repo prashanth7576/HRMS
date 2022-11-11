@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Onboard;
+use App\Models\User;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class OnboardController extends Controller
 {
@@ -55,6 +58,8 @@ class OnboardController extends Controller
             'mobile' => 'required',
             'email' => 'required',
             'gender' => 'required',
+            'location' => 'required',
+            'extension' => 'required',
 
             
             'dateofbirth' => 'required',
@@ -88,23 +93,34 @@ class OnboardController extends Controller
             // 'emergencycontactnumber' => 'required',
             'designation' => 'required',
             'department' => 'required',
-            'location' => 'required',
+            'officelocation' => 'required',
             'attendancescheme' => 'required',
+            'costcenter' => 'required',
+            'division' => 'required',
             'grade' => 'required',
             'reportingmanager' => 'required',
+            'bankname' => 'required',
+            'bankbranch' => 'required',
+            'accounttype' => 'required',
+            'paymenttype' => 'required',
+            'ddpayableat' => 'required',
+            'nameasperbankrecords' => 'required',
             'pannumber' => 'required',
             'uannumber' => 'required',
             'aadhaarnumber' => 'required',
             'bankaccountnumber' => 'required',
             'ifsccode' => 'required',
             'branchcode' => 'required',
+            'accesscardnumber' => 'required',
+            'accesscardvalidity' => 'required',
           
            
            
         ]);
 
         $onboard = Onboard::create($onboarding);
-        return redirect('/');
+
+        return back()->with('success', 'Onboard Successfull');
     }
 
     /**

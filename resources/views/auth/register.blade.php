@@ -1,3 +1,6 @@
+@extends('layouts.apps')
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,39 +9,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Montserrat&family=Quintessential&family=Ubuntu+Mono&display=swap"
-        rel="stylesheet">
+    
 
+   
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>XSILICA HRMS</title>
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <style>
+
+.side-bar{
+                margin-top: -8%
+            }
+        .main_container{
+            margin-top: -8%
+        }
+
+        @media (max-width:960px) {
+            
+        .main_container{
+            margin-top: -6%
+        }
+
+        }
+
+    </style>
+
 
 </head>
 
 <body style="font-family: 'Montserrat', sans-serif;">
 
 
+    <div class="main_container">
+<br>
+
     <div class="row justify-content-center">
 
 
         <div class="col-md-6"
-            style="margin-top: 9%;background-color:white;width:500px;margin-bottom:5%;border-radius:10px; box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);">
+            style="margin-top: 5%;background-color:white;width:500px;margin-bottom:0%;border-radius:10px; box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);">
             <div class="" style="padding-top:4%;padding-bottom:4%;border-radius:25px">
                 <div class="flex justify-center">
                     <img src="https://imagizer.imageshack.com/img923/5138/bRZo8P.png" alt="logo" height="170px"
@@ -72,6 +82,42 @@
                             @csrf
                             
 
+                            <div class="mb-4">
+                                <label for="Employee ID"> Employee ID </label>
+                                <input type="text" name="employeeid" id="employeeid" placeholder="Enter Employee Id"
+                                    class="bg-gray-100 border-2 w-full p-2 rounded-lg @error('employeeid') border-red-500 @enderror"
+                                    value="{{ old('employeeid') }}">
+
+                                @error('employeeid')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="First Name"> First Name</label>
+                                <input type="text" name="firstname" id="firstname" placeholder="Enter First Name "
+                                    class="bg-gray-100 border-2 w-full p-2 rounded-lg @error('firstname') border-red-500 @enderror">
+
+                                @error('firstname')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="Last Name"> Last Name</label>
+                                <input type="text" name="lastname" id="lastname" placeholder="Enter Last Name "
+                                    class="bg-gray-100 border-2 w-full p-2 rounded-lg @error('lastname') border-red-500 @enderror">
+
+                                @error('lastname')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
                             
 
                             <div class="mb-4">
@@ -119,8 +165,7 @@
                             </div>
 
                           
-                            <br>
-                            <br>
+                          
 
 
 
@@ -140,7 +185,10 @@
             </div>
         </div>
     </div>
+    </div>
 
 </body>
 
 </html>
+
+@endsection

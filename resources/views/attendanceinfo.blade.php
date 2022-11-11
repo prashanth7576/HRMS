@@ -24,6 +24,12 @@
 
 
         <style>
+
+.main_container{
+    margin-top: -10%
+}
+
+
             .btn {
                 margin-left: 80%;
             }
@@ -138,6 +144,11 @@
             }
 
             @media (max-width:960px) {
+
+                .main_container{
+    margin-top: 2%
+}
+
                 .content {
                     margin-top: 0%;
                 }

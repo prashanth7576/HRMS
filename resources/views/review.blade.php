@@ -11,71 +11,75 @@
         <title>Document</title>
 
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
         <style>
             /* .row {
-                                        margin-top: 2%;
-                                    } */
+                                            margin-top: 2%;
+                                        } */
 
 
 
 
             /* #title{
-                                        margin-top: 0%;
-                                        margin-left: 15.9%;
-                                        position: fixed;
-                                        background-color: white;
-                                        width: 100%;
-                                        padding: 3px;
-                                        border: 1px solid rgb(0, 0, 0, 0.1);
-                                    }
+                                            margin-top: 0%;
+                                            margin-left: 15.9%;
+                                            position: fixed;
+                                            background-color: white;
+                                            width: 100%;
+                                            padding: 3px;
+                                            border: 1px solid rgb(0, 0, 0, 0.1);
+                                        }
 
-                                    #feed{
-                                        background-color: white;
-                                        box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-                                        border-radius: 10px;
-                                        padding:10px;
-                                        margin-top: 10%;
-                                    }
+                                        #feed{
+                                            background-color: white;
+                                            box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+                                            border-radius: 10px;
+                                            padding:10px;
+                                            margin-top: 10%;
+                                        }
 
-                                  
+                                      
 
-                                    #links {
-                                        background-color: red;
-                                        height: 725px;
-                                        padding-top: 15%;
-                                        border: 1px solid rgb(0, 0, 0, 0.2);
-                                        position: fixed;
-                                    }
+                                        #links {
+                                            background-color: red;
+                                            height: 725px;
+                                            padding-top: 15%;
+                                            border: 1px solid rgb(0, 0, 0, 0.2);
+                                            position: fixed;
+                                        }
 
-                                    #head {
-                                        background-color: white;
-                                        height: 120px;
-                                    }
+                                        #head {
+                                            background-color: white;
+                                            height: 120px;
+                                        }
 
-                                    .list{
-                                       
-                                            margin-top:100px;
-                                        
-                                    }
+                                        .list{
+                                           
+                                                margin-top:100px;
+                                            
+                                        }
 
-                                    li {
-                                        cursor: pointer;
-                                        list-style: none;
-                                        margin-top: 15px;
-                                        font-size: 17px;
-                                        font-weight: 600;
-                                        margin-left: -20px;
+                                        li {
+                                            cursor: pointer;
+                                            list-style: none;
+                                            margin-top: 15px;
+                                            font-size: 17px;
+                                            font-weight: 600;
+                                            margin-left: -20px;
 
 
-                                    }
+                                        }
 
-                                    li.selected {
-                                        background-color: rgb(109, 123, 141, 0.5);
-                                        padding: 10px;
-                                        border-radius: 10px;
-                                        color: white;
+                                        li.selected {
+                                            background-color: rgb(109, 123, 141, 0.5);
+                                            padding: 10px;
+                                            border-radius: 10px;
+                                            color: white;
 
-                                    } */
+                                        } */
 
             #spanone {
                 margin-right: 60px;
@@ -102,19 +106,19 @@
             }
 
             #spanfive {
-                margin-left: -60px;
+                margin-left: -7px;
                 font-weight: 550;
                 font-size: 14px;
             }
 
             #spansix {
-                margin-right: 85px;
+                margin-left: -30px;
                 font-weight: 550;
                 font-size: 14px;
             }
 
             #spanseven {
-                margin-right: 25px;
+                margin-left: -30px;
                 font-weight: 550;
                 font-size: 14px;
             }
@@ -139,7 +143,7 @@
                 position: fixed;
                 width: 210px;
                 margin-left: 8px;
-                margin-top: -4.2%;
+                margin-top: -14.1%;
 
             }
 
@@ -186,18 +190,28 @@
                 border: 1px solid rgb(109, 123, 141, 0.5);
             }
 
+            #pills-active-tab:hover{
+                border: 1px solid  rgb(76, 67, 247);
+            } 
+
+            
+            #pills-closed-tab:hover{
+                border: 1px solid  rgb(76, 67, 247);
+            } 
+
             .status {
                 margin-left: 40%;
+                margin-top: -18%
             }
 
-            .content {
-                margin-left: 22.5%;
-                border: 1px solid rgb(132, 127, 127, 0.5);
-                height: 60vh;
-                width: 130vh;
-                background-color: white;
-                border-radius: 5px;
-            }
+            /* .content {
+                    margin-left: 20.5%;
+                    border: 1px solid rgb(132, 127, 127, 0.5);
+                    height: 60vh;
+                    width: 130vh;
+                    background-color: white;
+                    border-radius: 5px;
+                } */
 
             h3 {
                 text-align: center;
@@ -205,12 +219,130 @@
             }
 
             .tab-content {
-                margin-top: -4.5%
+                margin-top: 0%
+            }
+
+            /* .side-bar {
+                    margin-top: -9%
+                } */
+
+            .content {
+                /* border: 1px solid lightgray;
+                    border-radius: 5px;
+                    background-color: white;
+                    margin-left: -5%; */
+
+                margin-left: 18.5%;
+                border: 1px solid rgb(132, 127, 127, 0.5);
+
+                width: 140vh;
+                background-color: white;
+                border-radius: 5px;
+
+            }
+
+            .content:hover{
+                border: 1px solid rgb(65, 147, 248);
+            }
+
+            .flex {
+                display: flex;
+
+            }
+
+
+            .content>.flex>h1 {
+                font-size: 18px;
+
+            }
+
+            p {
+                margin-left: 20px;
+                font-size: 16px;
+                font-weight: 550
+            }
+
+            .approve {
+                display: flex
+            }
+
+
+
+            .approve>.date {
+                margin-top: 30px;
+                margin-left: -87px;
+
+            }
+
+            button {
+                width: 120px;
+                height: 45px;
+                margin-left: 10px;
+
+            }
+
+            #btn {
+                margin-left: 40%
+            }
+
+            a {
+                text-decoration: none;
+
+            }
+
+            a:hover {
+                color: white;
+            }
+
+            .user {
+                margin-left: 15%
+            }
+
+            .leave {
+                margin-left: 15%
+            }
+
+            .period {
+                margin-left: 15%
+            }
+
+            .employeid {
+                margin-left: 15%
+            }
+
+            .leavetype {
+                margin-left: 21%
+            }
+
+            .perioddate {
+                margin-left: 15%
+            }
+
+            .approve>a {
+                text-decoration: none;
+                color: white
+            }
+
+            .approve>a:hover {
+                color: white
+            }
+
+            #status {
+                margin-left: 85%;
+                margin-top: -5%;
             }
 
             @media (max-width:960px) {
 
 
+                #pills-active-tab:hover{
+                border: 1px solid  rgb(76, 67, 247);
+            } 
+
+            
+            #pills-closed-tab:hover{
+                border: 1px solid  rgb(76, 67, 247);
+            } 
 
                 .tab {
                     width: 120px;
@@ -288,7 +420,7 @@
                     position: fixed;
                     width: 160px;
                     margin-left: 8px;
-                    margin-top: -2.2%;
+                    margin-top: 0%;
                 }
 
 
@@ -330,21 +462,129 @@
 
                 .status {
                     margin-left: 40%;
+                    margin-top: 5%
                 }
 
-                .content {
-                    margin-left: 22.5%;
-                    border: 1px solid rgb(132, 127, 127, 0.5);
-                    height: 60vh;
-                    width: 80vh;
-                    background-color: white;
-                    border-radius: 5px;
-                }
+                /* .content {
+                        margin-left: 22.5%;
+                        border: 1px solid rgb(132, 127, 127, 0.5);
+                        height: 60vh;
+                        width: 80vh;
+                        background-color: white;
+                        border-radius: 5px;
+                    } */
 
                 .tab-content {
                     margin-top: -4.5%
                 }
 
+                .content {
+                    /* border: 1px solid lightgray;
+                        border-radius: 5px;
+                        background-color: white;
+                        margin-left: 0%; */
+
+
+                    margin-left: 21.5%;
+                    border: 1px solid lightgray;
+
+                    width: 80vh;
+                    background-color: white;
+                    border-radius: 5px;
+
+                }
+
+                .flex {
+                    display: flex;
+
+                    margin-left: -50px
+                }
+
+                .content>.flex>h1 {
+                    font-size: 16px;
+
+                }
+
+                p {
+                    margin-left: 20px;
+                    font-size: 16px;
+                    font-weight: 550
+                }
+
+                .approve {
+                    display: flex
+                }
+
+                .approve>.date {
+                    margin-top: 50px;
+                    margin-left: -83px;
+                    display: inline
+                }
+
+                button {
+                    width: 120px;
+                    height: 50px;
+                    margin-left: 10px;
+
+                }
+
+                #btn {
+                    margin-left: 2%
+                }
+
+                a {
+                    text-decoration: none;
+
+                }
+
+                a:hover {
+                    color: white;
+                }
+
+                .user {
+                    margin-left: 15%
+                }
+
+                .leave {
+                    margin-left: 15%
+                }
+
+                .period {
+                    margin-left: 15%
+                }
+
+                .employeid {
+                    margin-left: 15%
+                }
+
+                .leavetype {
+                    margin-left: 23%
+                }
+
+                .perioddate {
+                    margin-left: 15%
+                }
+
+                .approve>a {
+                    text-decoration: none;
+                    color: white
+                }
+
+                .approve>a:hover {
+                    color: white
+                }
+
+                .main_container {
+                    z-index: -1;
+                }
+
+                .navone {
+                    z-index: 0;
+                }
+
+                .navtwo {
+                    z-index: 0;
+                }
 
 
             }
@@ -352,6 +592,14 @@
 
             @media (max-width:480px) {
 
+                #pills-active-tab:hover{
+                border: 1px solid  rgb(76, 67, 247);
+            } 
+
+            
+            #pills-closed-tab:hover{
+                border: 1px solid  rgb(76, 67, 247);
+            } 
 
 
                 h3 {
@@ -419,7 +667,7 @@
                     position: fixed;
                     width: 115px;
                     margin-left: 8px;
-                    margin-top: -1.2%;
+                    margin-top: 0%;
                 }
 
 
@@ -463,14 +711,14 @@
                     margin-left: 35%;
                 }
 
-                .content {
-                    margin-left: 32.5%;
-                    border: 1px solid rgb(132, 127, 127, 0.5);
-                    height: 60vh;
-                    width: 32vh;
-                    background-color: white;
-                    border-radius: 5px;
-                }
+                /* .content {
+                        margin-left: 32.5%;
+                        border: 1px solid rgb(132, 127, 127, 0.5);
+                        height: 60vh;
+                        width: 32vh;
+                        background-color: white;
+                        border-radius: 5px;
+                    } */
 
                 .tab-content {
                     margin-top: -4.5%
@@ -478,7 +726,90 @@
 
 
 
+                .content {
+                    /* border: 1px solid lightgray;
+                        border-radius: 5px;
+                        background-color: white;
+                        margin-top: 0px; */
 
+                    margin-left: 32.5%;
+                    border: 1px solid rgb(132, 127, 127, 0.5);
+
+                    width: 60vh;
+                    background-color: white;
+                    border-radius: 5px;
+                }
+
+                .content>.flex {
+                    margin-left: -20px
+                }
+
+                .content>.flex>h1 {
+                    font-size: 15px;
+
+                }
+
+                .flex {
+                    display: flex;
+                    justify-content: space-evenly
+                }
+
+                p {
+                    margin-left: 20px;
+                    font-size: 12px;
+                    font-weight: 550
+                }
+
+                .approve {
+                    display: flex;
+                    margin: 2px
+                }
+
+                .approve>.date {
+                    margin-top: 40px;
+                    margin-left: -60px;
+                    font-size: 12px
+                }
+
+                button {
+                    width: 80px;
+                    height: 53px;
+                    margin-left: 2px;
+
+
+                }
+
+                .btn>span {
+                    font-size: 12px;
+                    text-align: center;
+
+                }
+
+                #btn {
+                    margin-left: 20%
+                }
+
+                .applied {
+                    font-size: 12px
+                }
+
+                a {
+                    text-decoration: none;
+
+                }
+
+                a:hover {
+                    color: white;
+                }
+
+                .approve>a {
+                    text-decoration: none;
+                    color: white
+                }
+
+                .approve>a:hover {
+                    color: white
+                }
 
 
 
@@ -603,10 +934,11 @@
                                             </div>
 
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInput"
-                                                    placeholder=" Search Employee ">
+                                                <input type="text" class="form-control" id="term"
+                                                    placeholder=" Search Employee " name="term">
                                                 <label for="floatingInput"> Search Employee</label>
                                             </div>
+
                                         </div>
 
                                         <div class="content">
@@ -875,9 +1207,65 @@
                                             </div>
                                         </div>
 
-                                        <div class="content">
+                                        <div>
 
-                                            <h3> Leave </h3>
+                                            @foreach ($leave as $i)
+                                                @if ($i->status == 'Pending')
+                                                    <div class="content">
+                                                        <div class="flex" style="padding-top: 6px">
+                                                            <h1 class="user">{{ auth()->user()->firstname }}
+                                                                {{ auth()->user()->lastname }}</h1>
+                                                            <h1 class="leave" style="color: rgb(113, 111, 111)">Leave
+                                                                Type</h1>
+                                                            <h1 class="period" style="color: rgb(113, 111, 111)">Period
+                                                            </h1>
+                                                        </div>
+
+                                                        <div class="flex">
+                                                            <h1 class="employeid" style="color: rgb(113, 111, 111)">
+                                                                #{{ $i->employeid }}</h1>
+                                                            <h1 class="leavetype"> {{ $i->leavetype }}</h1>
+                                                            <h1 class="perioddate">
+                                                                {{ Carbon\Carbon::parse($i->fromdate)->format('d-m-Y') }}
+                                                            </h1>
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <p style="color: rgb(113, 111, 111)">No.of Days: <span
+                                                                style="color: black; font-size:17px;
+                                                    font-weight:550">
+                                                                {{ $i->days }} </span></p>
+                                                        <p style="color: rgb(113, 111, 111)">Balance:</p>
+
+                                                        <hr>
+
+                                                        <div class="approve">
+                                                            <p class="applied" style="color: rgb(113, 111, 111)">Applied
+                                                                on:</p>
+
+                                                            <p class="date">
+                                                                {{ Carbon\Carbon::parse($i->created_at)->format('d-m-Y') }}
+                                                            </p>
+
+                                                            <button id="btn" class="btn btn-outline-primary"> <a
+                                                                    href="{{url('pending/'. $i->id)}}"> <span>View
+                                                                        Details</span>
+                                                                </a> </button>
+                                                            <button class="btn btn-outline-primary"> <span>Forward</span>
+                                                            </button>
+                                                            <button class="btn btn-outline-primary"> <a
+                                                                    href="{{ url('canceled', $i->id) }}">
+                                                                    <span>Reject</span> </a> </button>
+                                                            <button class="btn btn-primary"> <a
+                                                                    href="{{ url('approved', $i->id) }}"
+                                                                    style="color: white"> <span>Approve</span> </a>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                @endif
+                                            @endforeach
 
                                         </div>
                                     </div>
@@ -903,9 +1291,69 @@
                                             </div>
                                         </div>
 
-                                        <div class="content">
+                                        <div>
 
-                                            <h3> Leaves </h3>
+                                            @foreach ($leave as $i)
+
+                                            @if ($i->status != 'Pending')
+                                                
+                                           
+                                                <div class="content">
+
+                                                    
+                                                        <div class="flex" style="padding-top: 7px">
+                                                            <h1 class="user">{{ auth()->user()->firstname }}
+                                                                {{ auth()->user()->lastname }}</h1>
+                                                            <h1 class="leave" style="color: rgb(113, 111, 111)">Leave
+                                                                Type</h1>
+                                                            <h1 class="period" style="color: rgb(113, 111, 111)">Period
+                                                            </h1>
+                                                        </div>
+
+                                                        <div class="flex" style="padding-bottom: 7px">
+                                                            <h1 class="employeid" style="color: rgb(113, 111, 111)">
+                                                                #{{ $i->employeid }}</h1>
+                                                            <h1 class="leavetype"> {{ $i->leavetype }}</h1>
+                                                            <h1 class="perioddate">
+                                                                {{ Carbon\Carbon::parse($i->fromdate)->format('d-m-Y') }}
+                                                            </h1>
+                                                        </div>
+
+                                                        <h5 id="status"
+                                                            style="color: rgb(83, 190, 83); font-size:20px; font-weight:500">
+                                                            {{ $i->status }}</h5>
+
+                                                       
+                                                    
+                                                    
+                                                    
+                                                        <hr>
+
+                                                        <p style="color: rgb(113, 111, 111)">No.of Days: <span
+                                                                style="color: black; font-size:17px;
+                                                     font-weight:550">
+                                                                {{ $i['days'] }} </span></p>
+                                                        <p style="color: rgb(113, 111, 111)">Reason: <span
+                                                                style="color: black; font-size:17px; font-weight:550">
+                                                                {{ $i->reason }} </span></p>
+
+                                                        <hr>
+
+                                                        <div class="approve">
+                                                            <p class="applied" style="color: rgb(113, 111, 111)">Applied
+                                                                on:</p>
+
+                                                            <p class="date">
+                                                                {{ Carbon\Carbon::parse($i->created_at)->format('d-m-Y') }}
+                                                            </p>
+
+
+                                                        </div>
+                                                   
+                                                </div>
+                                                <br>
+                                                @endif
+                                            @endforeach
 
                                         </div>
                                     </div>
@@ -1272,4 +1720,6 @@
     </body>
 
     </html>
+
+
 @endsection

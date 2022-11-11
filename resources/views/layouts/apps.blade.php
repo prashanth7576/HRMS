@@ -36,6 +36,10 @@
 
     }
 
+    .item{
+        cursor: pointer;
+    }
+
     .side-bar {
         background-color: white;
         box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
@@ -43,7 +47,7 @@
         height: 100vh;
         padding: 5px;
         position: fixed;
-        margin-top: -9%;
+        margin-top: -18.2%;
 
 
 
@@ -443,7 +447,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-server"
+                            <a class="nav-link active" aria-current="page" href="feeds"><i class="fa fa-server"
                                     style="font-size:20px;margin-right:8%"></i>Feeds</a>
                         </li>
 
@@ -455,13 +459,13 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border:none">
 
-                                <li><a class="dropdown-item" href="#">Tasks</a>
+                                <li><a class="dropdown-item" href="task">Tasks</a>
 
 
 
                                 </li>
 
-                                <li><a class="dropdown-item" href="#"> Review </a>
+                                <li><a class="dropdown-item" href="review"> Review </a>
 
 
 
@@ -528,13 +532,13 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border:none">
 
-                                <li><a class="dropdown-item" href="#">Leave Apply</a>
+                                <li><a class="dropdown-item" href="leave">Leave Apply</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Leave Balances</a>
+                                <li><a class="dropdown-item" href="leavebalance">Leave Balances</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Leave Calendar</a>
+                                <li><a class="dropdown-item" href="leavecalendar">Leave Calendar</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Holiday Calendar</a>
+                                <li><a class="dropdown-item" href="holidays">Holiday Calendar</a>
                                 </li>
 
 
@@ -555,7 +559,7 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border:none">
 
-                                <li><a class="dropdown-item" href="#">Attendance Info</a>
+                                <li><a class="dropdown-item" href="attendanceinfo">Attendance Info</a>
 
                                 </li>
                             </ul>
@@ -563,7 +567,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-book"
+                            <a class="nav-link active" aria-current="page" href="documentcenter"><i class="fa fa-book"
                                     style="font-size:20px;margin-right:8%"></i>Document Center</a>
                         </li>
 
@@ -573,7 +577,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-info-circle"
+                            <a class="nav-link active" aria-current="page" href="helpdesk"><i class="fa fa-info-circle"
                                     style="font-size:20px;margin-right:8%"></i> Help Desk</a>
                         </li>
 
@@ -611,12 +615,12 @@
             <p style="margin-top:-8%;text-align:center;font-size:12px;color:blue;margin-right:20%">View My Info</p></a>
 
             <div class="item"><a href="{{url('home')}}"><i class="fa fa-home"></i> Home </a></div>
-            <div class="item"><a><i class="fa fa-server"></i>Feeds</a></div>
+            <div class="item"><a href="feeds"><i class="fa fa-server"></i>Feeds</a></div>
             <div class="item">
                 <a class="sub-btn"><i class="fa fa-clipboard"></i>Tasks<i class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="tasks" class="sub-item">Tasks</a>
-                    <a href="#" class="sub-item">Review</a>
+                    <a href="task" class="sub-item">Tasks</a>
+                    <a href="review" class="sub-item">Review</a>
 
                 </div>
             </div>
@@ -638,10 +642,10 @@
             <div class="item">
                 <a class="sub-btn"><i class="fa fa-calendar"></i>Leave<i class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="#" class="sub-item">Leave Apply</a>
-                    <a href="#" class="sub-item">Leave Balances</a>
-                    <a href="#" class="sub-item">Leave Calendar</a>
-                    <a href="#" class="sub-item">Holiday Calendar</a>
+                    <a href="leave" class="sub-item">Leave Apply</a>
+                    <a href="leavebalance" class="sub-item">Leave Balances</a>
+                    <a href="leavecalendar" class="sub-item">Leave Calendar</a>
+                    <a href="holidays" class="sub-item">Holiday Calendar</a>
                 </div>
 
             </div>
@@ -650,24 +654,27 @@
                 <a class="sub-btn"><i class="fa fa-check-square"></i>Attendance<i
                         class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="#" class="sub-item">Attendance Info</a>
+                    <a href="attendanceinfo" class="sub-item">Attendance Info</a>
 
                 </div>
 
             </div>
-            <div class="item"><a><i class="fa fa-book"></i>Document Center</a></div>
+            <div class="item"><a href="documentcenter"><i class="fa fa-book"></i>Document Center</a></div>
            
             <div class="item">
                 <a class="sub-btn"><i class="fa fa-users"></i>Employee<i
                         class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
                     <a href="{{url('onboard')}}" class="sub-item">Onboard</a>
+                    <a href="{{url('register')}}" class="sub-item"> Employee Registration </a>
 
                 </div>
 
             </div>
-            <div class="item"><a><i class="fa fa-info-circle"></i>Help Desk</a></div>
+            <div class="item"><a href="helpdesk"><i class="fa fa-info-circle"></i>Help Desk</a></div>
             <div class="item"><a><i class="fa fa-bar-chart"></i>Workflow Delegates</a></div>
+
+            <div class="item"><a href="{{url('leaveshow')}}"><i class="fa fa-bar-chart"></i> Show Leaves</a></div>
         </div>
     </div>
 

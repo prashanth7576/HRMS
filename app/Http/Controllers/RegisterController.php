@@ -29,14 +29,17 @@ class RegisterController extends Controller
 
         $this->validate($request, [
 
-        
-           
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'employeeid' => 'required',
             'email' => 'required|email|max:150',
             'password' => 'required|confirmed'
         ]);
 
         user::create([
-        
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+        'employeeid' => $request->employeeid,
         'email' => $request->email,
         'password'  => Hash::make($request->password),
        
@@ -51,7 +54,7 @@ class RegisterController extends Controller
 
 
 
-        return redirect()->route('login')->withSuccessMessage('Registration Successfull');
+        return redirect('/admin')->withSuccessMessage('Registration Successfull');
 
 
     }
