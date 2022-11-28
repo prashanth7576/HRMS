@@ -15,7 +15,7 @@ use App\Http\Controllers\EmployementController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\SearchController;
-
+use App\Http\Controllers\SigninController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -169,6 +169,7 @@ Route::get('/leavehistory', function () {
 
 Route::get('/leavehistory', [LeaveController::class, 'leavehistory']);
 
-
-
+Route::get('/admin.create', [SigninController::class, 'index']) ->name('admin.create');
+Route::post('/admin.create', [SigninController::class, 'in'])->name('admin') ;
+Route::post('/signout', [SigninController::class, 'out']) ->name('signout');
 
