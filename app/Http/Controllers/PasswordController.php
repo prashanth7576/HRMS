@@ -6,14 +6,22 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 Use Auth;
+<<<<<<< HEAD
 use RealRashid\SweetAlert\Facades\Alert;
+=======
+
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
 
 class PasswordController extends Controller
 {
 
     public function index()
     {
+<<<<<<< HEAD
       
+=======
+        
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
          return view('change-password');
     }
 
@@ -38,7 +46,11 @@ class PasswordController extends Controller
             'password' => Hash::make($request->new_password)
 
         ]);
+<<<<<<< HEAD
         return redirect('/')->withSuccessMessage('Password Changed Successfully');
+=======
+        return redirect()->route('login');
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
     }
     
 }

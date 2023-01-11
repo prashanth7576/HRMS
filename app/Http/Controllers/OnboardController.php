@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Onboard;
+<<<<<<< HEAD
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Models\Shifts;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Console\View\Components\Alert;
+=======
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
 
 class OnboardController extends Controller
 {
@@ -43,10 +46,22 @@ class OnboardController extends Controller
     public function store(Request $request)
     {
 
+<<<<<<< HEAD
         $request->validate(['profilepicture' => 'required|mimes:png,jpg,|max:1024']);
        
          $Profileimage =  $request->employeeid. '-'  . 'Profile' . '.' . $request->profilepicture->extension();
         $request->profilepicture->move('public/profiles', $Profileimage);
+=======
+            'firstname' => 'required',
+            'middlename' => 'required',
+            'lastname' => 'required',
+            'jobtitle' => 'required',
+            // 'employenumber' => 'required',
+            'employeeid' => 'required',
+            'mobile' => 'required',
+            'email' => 'required',
+            'gender' => 'required',
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
 
         $onboard = new Onboard();
         $onboard->firstname = $request->firstname;
@@ -71,6 +86,7 @@ class OnboardController extends Controller
 
         $onboard->save();
 
+<<<<<<< HEAD
         // $onboarding = $request->validate([
         
         //     'firstname' => 'required',
@@ -92,12 +108,36 @@ class OnboardController extends Controller
         //     'attendancescheme' => 'required',
         //     'reportingmanager' => 'required',
         //     'profilepicture' => 'required',
+=======
+            // 'confirmationdate' => 'required',
+            // 'title' => 'required',
+            // // 'email' => 'required',
+            // 'mobilenumber' => 'required',
+            // 'emergencycontactnumber' => 'required',
+            'designation' => 'required',
+            'department' => 'required',
+            'location' => 'required',
+            'attendancescheme' => 'required',
+            'grade' => 'required',
+            'reportingmanager' => 'required',
+            'pannumber' => 'required',
+            'uannumber' => 'required',
+            'aadhaarnumber' => 'required',
+            'bankaccountnumber' => 'required',
+            'ifsccode' => 'required',
+            'branchcode' => 'required',
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
           
         // ]);
 
+<<<<<<< HEAD
         // $onboard = Onboard::create($onboarding);
        
         return redirect()->route('onboard.index')->with('success', 'Employee Onboarded successfully!');
+=======
+        $onboard = Onboard::create($onboarding);
+        return redirect('/');
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
     }
 
     /**
@@ -171,6 +211,7 @@ class OnboardController extends Controller
     {
         //
     }
+<<<<<<< HEAD
 
     public function display($id){
         $employe = Onboard::find($id);
@@ -186,3 +227,6 @@ return redirect('employeshifts')->with('success', 'shift updated successfully');
     }
 
 }
+=======
+}
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f

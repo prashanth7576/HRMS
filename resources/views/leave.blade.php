@@ -1,95 +1,87 @@
 @extends('layouts.app')
 
 @section('content')
-    <!DOCTYPE html>
-    <html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+    
+    .one {
+        background-color: white;
+        box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+        padding: 10px;
+        decoration: none;
+    }
 
+    .one.item {
+        position: relative;
+        cursor: pointer;
+        font-size: 18px;
+    }
 
-        <style>
-            #spanone {
-                margin-left: -75px;
-                font-weight: 550;
-                font-size: 14px;
-            }
+    .one .item p {
+        color: black;
 
-            #spantwo {
-                margin-left: -32px;
-                font-weight: 550;
-                font-size: 14px;
-            }
-
-            #spanthree {
-                margin-left: -30px;
-                font-weight: 550;
-                font-size: 14px;
-            }
-
-            #spanfour {
-                margin-left: -17px;
-                font-weight: 550;
-                font-size: 14px;
-
-            }
-
-            .tab {
-                margin-left: 20px;
-                color: rgb(114, 108, 108);
-                font-weight: 550;
-                font-size: 14px;
-            }
+        display: block;
 
 
 
+    }
+
+    .one .item p:hover {
+        background: white;
+        transition: 0.3s ease;
+    }
+
+    .one .item i {
+        margin-right: 15px;
+    }
+
+    .one .item p .dropdown {
+        float: right;
+        margin: 10px;
+        right: 0;
+        transition: 0.3s ease;
+
+    }
+
+    .one .item .sub-menu {
+        background: white;
+
+        font-size: 13px;
+    }
+
+    .one .item .sub-menu .p {
+        padding-left: 80px;
+
+    }
+
+    li {
+        list-style: none;
+    }
+
+//
+</style>
 
 
-            #links {
-                background-color: rgb(255, 255, 255, 0.5);
-                box-shadow: 0px 10px 10px rgba(173, 170, 170, 0.2);
-                height: 729px;
-                border-radius: 5px;
-                position: fixed;
-                width: 230px;
-                padding-top: 100px;
-                margin-top: -14.1%;
-                margin-left: 8px;
-            }
+</head>
+
+<body style="background-color: whitesmoke">
+
+    <div class="main_container">
+        <div class="flex" style="display:flex">
 
 
-
-
-
-
-
-            #pills-apply-tab {
-                border: 1px solid rgb(109, 123, 141, 0.5);
-                border-radius: 0%;
-                width: 150px;
-                height: 40px;
-                border-bottom-left-radius: 10px;
-                border-top-left-radius: 10px;
-                margin-left: 10%;
-
-            }
-
-            #pills-pending-tab {
-                border: 1px solid rgb(109, 123, 141, 0.5);
-                border-radius: 0%;
-                width: 150px;
-                height: 40px;
-
-                margin-left: 10%;
-
+<<<<<<< HEAD
             }
 
             #pills-history-tab {
@@ -914,33 +906,55 @@
         @include('flash-message')
 
         <div class="main_container">
+=======
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
             <div class="row">
-                <div id="links" class="col-md-2">
-
-
+                <div id="links" class="col-md-4" style="width:250px">
                     <div class="d-flex align-items-start">
                         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
-                            aria-orientation="vertical">
+                            aria-orientation="vertical" >
 
 
-                            <button class="tab nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-                                aria-selected="true"> <span id="spanone"> Leave </span></button>
-                            <button class="tab nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-profile" type="button" role="tab"
-                                aria-controls="v-pills-profile" aria-selected="false"> <span id="spantwo"> Restricted
-                                    Holiday </span> </button>
-                            <button class="tab nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-disabled" type="button" role="tab"
-                                aria-controls="v-pills-disabled" aria-selected="false"> <span id="spanthree"> Leave
-                                    Cancel</span>
-                            </button>
-                            <button class="tab nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-messages" type="button" role="tab"
-                                aria-controls="v-pills-messages" aria-selected="false"> <span id="spanfour"> Comp Off Grant
-                                </span></button>
-
-                        </div>
+                            <ul >
+                                <li>
+                                    <button class="btn btn-link  active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#v-pills-home" type="button" role="tab"
+                                        aria-controls="v-pills-home" aria-selected="true"
+                                        style="text-decoration:none;color:black;"> <span id="spanone"> Personal
+                                        </span></button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-link " id="v-pills-profile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#v-pills-profile" type="button" role="tab"
+                                        aria-controls="v-pills-profile" aria-selected="false"
+                                        style="text-decoration:none;color:black;"> <span id="spantwo"> Accounts $
+                                            Salary </span> </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-link " id="v-pills-disabled-tab" data-bs-toggle="pill"
+                                        data-bs-target="#v-pills-disabled" type="button" role="tab"
+                                        aria-controls="v-pills-disabled" aria-selected="false"
+                                        style="text-decoration:none;color:black;"> <span id="spanthree"> Family
+                                        </span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-link " id="v-pills-messages-tab" data-bs-toggle="pill"
+                                        data-bs-target="#v-pills-messages" type="button" role="tab"
+                                        aria-controls="v-pills-messages" aria-selected="false"
+                                        style="text-decoration:none;color:black;"> <span id="spanfour"> Employment
+                                            $ Job
+                                        </span></button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-link " id="v-pills-message-tab" data-bs-toggle="pill"
+                                        data-bs-target="#v-pills-message" type="button" role="tab"
+                                        aria-controls="v-pills-message" aria-selected="false"
+                                        style="text-decoration:none;color:black;"> <span id="spanfour"> Assets
+                                        </span></button>
+                                </li>
+                            </ul>
+                   </div>
 
                     </div>
                 </div>
@@ -950,10 +964,8 @@
 
             </div>
 
-            <div>
-
-
-
+            <div class="row">
+<div class="col-md-10">
 
                 <br>
 
@@ -965,78 +977,52 @@
                     <div class="tab-pane fade show active " id="v-pills-home" role="tabpanel"
                         aria-labelledby="v-pills-home-tab" tabindex="0">
                         <div class="row">
-                            <div class="col-md-12">
-
-                                <div class="status">
-
-                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                        <li id="active" class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="pills-apply-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-apply" type="button" role="tab"
-                                                aria-controls="pills-apply" aria-selected="true"> Apply </button>
-                                        </li>
-
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-pending-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-pending" type="button" role="tab"
-                                                aria-controls="pills-pending" aria-selected="false"> Pending </button>
-                                        </li>
+                            <div class="col-md-10" >
 
 
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-history-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-history" type="button" role="tab"
-                                                aria-controls="pills-history" aria-selected="false"> History </button>
-                                        </li>
-
-                                    </ul>
-                                </div>
                                 <br>
 
 
-
-
-                                <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-apply" role="tabpanel"
-                                        aria-labelledby="pills-apply-tab">
-
-                                        <div class="content">
-                                            <div class="title">
-                                                <p> Leave is earned by an employee and granted by the employer to take time
-                                                    off
-                                                    work. The employee is free to avail this leave in accordance with the
-                                                    company
-                                                    policy.</p>
-                                            </div>
-
-                                            <p class="head"> Applying for Leave </p>
-
-                                            <form action="leave" method="post">
-                                                @csrf
+                                
 
 
 
-                                                <div id="employeid" class="form-floating mb-3">
 
-                                                    <input type="text" class="form-control date" id="floatingInput"
-                                                        placeholder="" name="employeid"
-                                                        value="{{ auth()->user()->employeeid }}">
+                                <div class="one">
 
 
-                                                </div>
-                                                <div>
-                                                    <label for="Category"> Leave type*</label>
 
-                                                    <select class="form-select" aria-label="Default select example"
-                                                        name="leavetype">
-                                                        <option selected> Select type..</option>
-                                                        <option value="Comp-Off"> Comp - Off</option>
-                                                        <option value="Sick Leave"> Sick Leave </option>
-                                                        <option value="Casual Leave"> Casual Leave </option>
-                                                        <option value="LOP"> LOP </option>
+<div class="item">
+    <p class="sub-btn"></i>PROFILE<i class="fas fa-angle-right dropdown"></i>
+    </p>
+    <div class="sub-menu">
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <p class="sub-item"><i class="fa fa-user"
+                        style="font-size:65px"></i></p>
+                <p class="sub-item">Location</p>
+            </div>
+            <div class="col-md-5">
+                <p>Name</p>
+                <p class="sub-item">Employee ID</p>
+                <p class="sub-item">Primary Contact No</p>
+            </div>
+            <div class="col-md-4">
 
-                                                    </select>
+                <p class="sub-item">Extension</p>
+                <p class="sub-item">Company Email</p>
 
+            </div>
+        </div>
+        <br><br>
+
+
+
+    </div>
+
+
+<<<<<<< HEAD
                                                 </div>
                                                 <br>
 
@@ -1244,71 +1230,31 @@
                                                 <p style="color: rgb(113, 111, 111)">Reason: <span
                                                         style="color: rgb(69, 67, 67); font-size:14px;">
                                                         {{ $i->reason }} </span></p>
+=======
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
 </div>
-                                                <hr>
-
-                                                <div class="approve">
-                                                    <p class="applied" style="color: rgb(113, 111, 111)">Applied
-                                                        on:</p>
-
-                                                    <p class="date">
-                                                        {{ Carbon\Carbon::parse($i->created_at)->format('d-m-Y') }}
-                                                    </p>
+</div>
+<br>
 
 
-                                                </div>
-                                           
-                                        </div>
-                                        <br>
-                                        @endif
-                                    @endforeach
-
-
-                                    </div>
-
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
+
+
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                         aria-labelledby="v-pills-profile-tab" tabindex="0">
 
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-10">
 
-                                <div class="status">
 
-                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                        <li id="active" class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="pills-apply-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Apply </button>
-                                        </li>
-
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-pending-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-pending" type="button" role="tab"
-                                                aria-controls="pills-pending" aria-selected="false"> Pending </button>
-                                        </li>
-
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-history-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> History </button>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <br>
 
 
                                 <div class="content">
 
-                                    <div class="title">
-                                        <p> Restricted Holidays (RH) are a set of holidays allocated by the company that are
-                                            optional for the employee to utilize. The company sets a limit on the amount of
-                                            holidays that can be used.</p>
-                                    </div>
+
 
                                     <p class="head"> Applying for Restricted Holiday </p>
 
@@ -1323,39 +1269,12 @@
                         <div class="row">
                             <div class="col-md-12">
 
-                                <div class="status">
 
-                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                        <li id="active" class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="pills-apply-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Apply </button>
-                                        </li>
-
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-pending-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-pending" type="button" role="tab"
-                                                aria-controls="pills-pending" aria-selected="false"> Pending </button>
-                                        </li>
-
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-history-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> History </button>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <br>
 
 
                                 <div class="content">
 
-                                    <div class="title">
-                                        <p> Leave Cancel enables you to apply for cancellation of approved leave
-                                            applications.
-                                            Please select a leave type to get started.</p>
-                                    </div>
+
 
                                     <p class="head"> Appliying for Leave Cancel </p>
 
@@ -1369,141 +1288,15 @@
                         <div class="row">
                             <div class="col-md-12">
 
-                                <div class="status">
 
-                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                        <li id="active" class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="pills-apply-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true"> Apply </button>
-                                        </li>
-
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-pending-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-pending" type="button" role="tab"
-                                                aria-controls="pills-pending" aria-selected="false"> Pending </button>
-                                        </li>
-
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-history-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false"> History </button>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <br>
 
 
                                 <div class="content">
 
-                                    <div class="title">
-                                        <p> Compensatory Off is additional leave granted as a compensation for working
-                                            overtime
-                                            or on an off day.</p>
-                                    </div>
+
 
                                     <p class="head"> Appliying for Comp. Off Grant </p>
 
-                                    <form action="" method="post">
-
-
-
-                                        <div>
-                                            <label for="Category"> Leave type*</label>
-
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected> Select type..</option>
-                                                <option value="1"> Comp - Off</option>
-
-                                            </select>
-
-                                        </div>
-                                        <br>
-
-                                        <div class="form-input">
-
-
-                                            <div class="form-floating mb-3">
-                                                <label id="fromdate" for="form-check-label"> From date* </label>
-                                                <input type="date" class="form-control" id="floatingInput"
-                                                    placeholder="">
-                                               
-
-                                            </div>
-                                            <label id="session" for="Category"> Session*</label>
-                                            <div>
-
-
-                                                <select id="selectInput" class="form-select"
-                                                    aria-label="Default select example">
-                                                    {{-- <option selected> Select type..</option> --}}
-                                                    <option selected value="1"> Session 1 </option>
-                                                    <option value="2"> Session 2 </option>
-
-                                                </select>
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <br>
-
-                                        <div class="form-input">
-
-
-                                            <div class="form-floating mb-3">
-                                                <label id="fromdate" for="form-check-label"> From date* </label>
-                                                <input type="date" class="form-control" id="floatingInput"
-                                                    placeholder="">
- 
-
-                                            </div>
-
-                                            <label id="session" for="Category"> Session*</label>
-
-                                            <div>
-
-
-                                                <select id="selectInput" class="form-select"
-                                                    aria-label="Default select example">
-                                                    {{-- <option selected> Select type..</option> --}}
-                                                    <option selected value="1"> Session 1 </option>
-                                                    <option value="2"> Session 2 </option>
-
-                                                </select>
-                                            </div>
-
-
-
-                                        </div>
-
-
-
-                                        <div>
-                                            <label for="floatingInput"> Days*</label>
-                                            <input type="number" class="form-control " id="floatinginput"
-                                                placeholder=" Number of Days">
-                                        </div>
-
-
-
-                                        <br>
-
-                                        <div>
-                                            <label for="floatingTextarea"> Description* </label>
-                                            <textarea class="form-control" placeholder=" Enter a reason" id="floatingTextarea"></textarea>
-
-                                        </div>
-
-                                        <div class="button">
-
-                                            <button type="submit" class="btn btn-primary">Save</button>
-                                            <button type="reset" class="btn btn-secondary">Close</button>
-
-                                        </div>
-                                    </form>
 
                                 </div>
                             </div>
@@ -1512,16 +1305,22 @@
                     </div>
 
 
-
+</div>
                 </div>
-
             </div>
         </div>
+    </div>
 
 
-    </body>
+</body>
 
+<<<<<<< HEAD
     </html>
 
    
 @endsection
+=======
+</html>
+
+@endsection
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f

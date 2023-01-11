@@ -21,34 +21,39 @@
 
     }
 
+    #bank {
+        margin-top: -2%;
+
+    }
+
     #family {
-        margin-top: -48%;
+        margin-top: -73%;
         margin-left: 10%
     }
 
     #employement {
-        margin-top: -49%;
+        margin-top: -75%;
         margin-left: 1%
     }
 
     #asset {
-        margin-top: -2%
+        margin-top: -20%
     }
 
-    .card {
+    .one {
         background-color: white;
         box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
         padding: 10px;
         decoration: none;
     }
 
-    .card.item {
+    .one.item {
         position: relative;
         cursor: pointer;
         font-size: 18px;
     }
 
-    .card .item p {
+    .one .item p {
         color: black;
 
         display: block;
@@ -57,30 +62,30 @@
 
     }
 
-    .card .item p:hover {
+    .one .item p:hover {
         background: white;
         transition: 0.3s ease;
     }
 
-    .card .item i {
+    .one .item i {
         margin-right: 15px;
     }
 
-    .card .item p .dropdown {
-        position: absolute;
+    .one .item p .dropdown {
+        float: right;
         margin: 10px;
         right: 0;
         transition: 0.3s ease;
 
     }
 
-    .card .item .sub-menu {
+    .one .item .sub-menu {
         background: white;
 
         font-size: 13px;
     }
 
-    .card .item .sub-menu .p {
+    .one .item .sub-menu .p {
         padding-left: 80px;
 
     }
@@ -109,17 +114,17 @@
 
     @media (max-width:480px) {
         #family {
-            margin-top: -450px;
+            margin-top: -890px;
 
         }
 
         #employement {
-            margin-top: -450px;
-            margin-left: 1%
+            margin-top: -800px;
+            margin-left: 1%;
         }
 
         #asset {
-            margin-top: -800px
+            margin-top: -500%;
         }
     }
     </style>
@@ -127,7 +132,7 @@
 
 </head>
 
-<body style="background-color: whitesmoke">
+<body style="background-color: whitesmoke;font-family: 'Montserrat', sans-serif;">
 
     <div class="main_container">
         <div class="flex" style="display:flex">
@@ -141,21 +146,21 @@
 
                             <ul>
                                 <li>
-                                    <button class="btn btn-link  active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                    <button class="nav-link  active" id="v-pills-home-tab" data-bs-toggle="pill"
                                         data-bs-target="#v-pills-home" type="button" role="tab"
                                         aria-controls="v-pills-home" aria-selected="true"
                                         style="text-decoration:none;color:black;"> <span id="spanone"> Personal
                                         </span></button>
                                 </li>
                                 <li>
-                                    <button class="btn btn-link " id="v-pills-profile-tab" data-bs-toggle="pill"
+                                    <button class="nav-link " id="v-pills-profile-tab" data-bs-toggle="pill"
                                         data-bs-target="#v-pills-profile" type="button" role="tab"
                                         aria-controls="v-pills-profile" aria-selected="false"
                                         style="text-decoration:none;color:black;"> <span id="spantwo"> Accounts $
                                             Salary </span> </button>
                                 </li>
                                 <li>
-                                    <button class="btn btn-link " id="v-pills-disabled-tab" data-bs-toggle="pill"
+                                    <button class="nav-link " id="v-pills-disabled-tab" data-bs-toggle="pill"
                                         data-bs-target="#v-pills-disabled" type="button" role="tab"
                                         aria-controls="v-pills-disabled" aria-selected="false"
                                         style="text-decoration:none;color:black;"> <span id="spanthree"> Family
@@ -163,7 +168,7 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <button class="btn btn-link " id="v-pills-messages-tab" data-bs-toggle="pill"
+                                    <button class="nav-link " id="v-pills-messages-tab" data-bs-toggle="pill"
                                         data-bs-target="#v-pills-messages" type="button" role="tab"
                                         aria-controls="v-pills-messages" aria-selected="false"
                                         style="text-decoration:none;color:black;"> <span id="spanfour"> Employment
@@ -171,7 +176,7 @@
                                         </span></button>
                                 </li>
                                 <li>
-                                    <button class="btn btn-link " id="v-pills-message-tab" data-bs-toggle="pill"
+                                    <button class="nav-link " id="v-pills-message-tab" data-bs-toggle="pill"
                                         data-bs-target="#v-pills-message" type="button" role="tab"
                                         aria-controls="v-pills-message" aria-selected="false"
                                         style="text-decoration:none;color:black;"> <span id="spanfour"> Assets
@@ -210,10 +215,10 @@
                                 <div class="content">
 
 
-                                    <div class="card">
+                                    <div class="one">
 
 
-
+                                   
                                         <div class="item">
                                             <p class="sub-btn"></i>PROFILE<i class="fas fa-angle-right dropdown"></i>
                                             </p>
@@ -223,19 +228,32 @@
                                                     <div class="col-md-3">
                                                         <p class="sub-item"><i class="fa fa-user"
                                                                 style="font-size:65px"></i></p>
-                                                        <p class="sub-item">Location</p>
+                                                                @foreach ($data as $i)         
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Location</p>
+                                                        <p>{{ $i->location }}</p>
+                                                       
                                                     </div>
                                                     <div class="col-md-5">
-                                                        <p>Name</p>
-                                                        <p class="sub-item">Employee ID</p>
-                                                        <p class="sub-item">Primary Contact No</p>
+                                                   
+                                                    <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Name</p>
+                                                        <p>{{ $i->firstname }}</p>
+                                                       
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Employee ID</p>
+                                                        <p>{{ $i->employeeid }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Primary Contact No</p>
+                                                        <p>{{ $i->mobile }}</p>
+                                                        
                                                     </div>
                                                     <div class="col-md-4">
 
-                                                        <p class="sub-item">Extension</p>
-                                                        <p class="sub-item">Company Email</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Extension</p>
+                                                        <p>{{ $i->extension }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Company Email</p>
+                                                        <p>{{ $i->email }}</p>
 
                                                     </div>
+
+                                                    
                                                 </div>
                                                 <br><br>
 
@@ -245,9 +263,10 @@
 
 
                                         </div>
+                                        
                                     </div>
                                     <br>
-                                    <div class="card">
+                                    <div class="one">
 
 
 
@@ -258,26 +277,42 @@
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-4">
-                                                        <p class="sub-item">Blood Group</p>
-                                                        <p class="sub-item">Marital Status</p>
-                                                        <p class="sub-item">Place of Birth</p>
-                                                        <p class="sub-item">Religion</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Blood Group</p>
+                                                        <p>{{ $i->bloodgroup }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px" >Marital Status</p>
+                                                        <p>{{ $i->maritalstatus }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Place of Birth</p>
+                                                        <p>{{ $i->placeofbirth }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Religion</p>
+                                                        <p>{{ $i->religion }}</p>
                                                     </div>
+
+                                                    
                                                     <div class="col-md-4">
-                                                        <p class="sub-item">Date of Birth</p>
-                                                        <p class="sub-item">Marriage Date</p>
-                                                        <p class="sub-item">Residential Status</p>
-                                                        <p class="sub-item">Physically Challenged</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Date of Birth</p>
+                                                        <p>{{ $i->dateofbirth }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Marriage Date</p>
+                                                        <p>{{ $i->marriagedate }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Residential Status</p>
+                                                        <p>{{ $i->residentialstatus }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Physically Challenged</p>
+                                                        <p>{{ $i->physicallychallenged }}</p>
                                                     </div>
                                                     <div class="col-md-4">
 
-                                                        <p class="sub-item">Nationality</p>
-                                                        <p class="sub-item">Spouse</p>
-                                                        <p class="sub-item">Father Name</p>
-                                                        <p class="sub-item">International
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Nationality</p>
+                                                        <p>{{ $i->nationality }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Spouse</p>
+                                                        <p>{{ $i->spousename }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Father Name</p>
+                                                        <p>{{ $i->fathername }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">International
                                                             Employee</p>
+                                                            <p>{{ $i->internationalemployee }}</p>
 
                                                     </div>
+
+                                                   
                                                 </div>
                                                 <br><br>
 
@@ -289,7 +324,7 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="card">
+                                    <div class="one">
 
 
 
@@ -300,23 +335,65 @@
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-4">
-                                                        <p class="sub-item">Address</p>
-                                                        <p class="sub-item">Name</p>
-                                                        <p class="sub-item">Phone 1</p>
-                                                        <p class="sub-item">Extension</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px" >Address</p>
+                                                        <p>{{ $i->residentialstatus }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Name</p>
+                                                        <p>{{ $i->firstname }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px" >Phone 1</p>
+                                                        <p>{{ $i->mobile }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Extension</p>
+                                                        <p>{{ $i->extension }}</p>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <p class="sub-item">-</p>
                                                         <p class="sub-item">-</p>
-                                                        <p class="sub-item">Phone 2</p>
-                                                        <p class="sub-item">Fax</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Phone 2</p>
+                                                        <p>{{ $i->mobile }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Fax</p>
+                                                        <p>-</p>
                                                     </div>
                                                     <div class="col-md-4">
 
                                                         <p class="sub-item">-</p>
-                                                        <p class="sub-item">Email</p>
-                                                        <p class="sub-item">Mobile</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Email</p>
+                                                        <p>{{ $i->personalemail }}</p>
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Mobile</p>
+                                                        <p>{{ $i->mobile }}</p>
                                                         <p class="sub-item">-</p>
+
+                                                    </div>
+                                                    
+                                                </div>
+                                                <br><br>
+
+
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="one">
+
+
+
+                                        <div class="item">
+                                            <p class="sub-btn">EDUCATION</i><i class="fas fa-angle-right dropdown"></i>
+                                            </p>
+                                            <div class="sub-menu">
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">No Data Found</p>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+
+                                                    </div>
+                                                    <div class="col-md-4">
+
+
 
                                                     </div>
                                                 </div>
@@ -329,23 +406,6 @@
 
                                         </div>
                                     </div>
-                                    <br>
-                                    <div class="card">
-
-                                        <div class="item" style="display:flex;">
-
-                                            <div class="item">
-                                                <p class="sub-btn"></i>Education<i
-                                                        class="fas fa-angle-right dropdown"></i></p>
-                                                <div class="sub-menu">
-                                                    <p class="sub-item">NO data Found</p>
-
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
 
 
 
@@ -353,83 +413,137 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
-                        <div id="col" class="col-md-12">
+                        <div id="bank" class="col-md-10">
                             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                                 aria-labelledby="v-pills-profile-tab" tabindex="0">
 
-                                <div class="card">
 
-                                    <div class="item" style="display:flex;">
-
-                                        <div class="item">
-                                            <p class="sub-btn"></i>BANK ACCOUNT<i
-                                                    class="fas fa-angle-right dropdown"></i></p>
-                                            <div class="sub-menu" style="display:flex">
-                                                <p class="sub-item" style="padding:10px">Bank Name</p>
-                                                <p class="sub-item" style="padding:10px">Bank Account Number</p>
-                                                <p class="sub-item" style="padding:10px">Branch Name</p>
-                                                <p class="sub-item" style="padding:10px">More</p>
+                                <div class="one" >
 
 
+
+                                    <div class="item">
+                                        <p class="sub-btn">BANK ACCOUNT</i><i
+                                                class="fas fa-angle-right dropdown"></i>
+                                        </p>
+                                        <div class="sub-menu">
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Bank Name</p>
+                                                <p>{{ $i->bankname }}</p>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Bank Account Number</p>
+                                                <p>{{ $i->bankaccountnumber }}</p>
+                                                </div>
+                                                <div class="col-md-4">
+
+                                                <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Branch Name</p>
+                                                <p>{{ $i->bankbranch }}</p>
+
+                                                </div>
                                             </div>
+                                            <br><br>
+
+
+
                                         </div>
+
+
+                                    </div>
+                                </div>
+
+
+                                <br>
+                                <div class="one" >
+
+
+
+                                    <div class="item">
+                                        <p class="sub-btn">PF ACCOUNT</i><i
+                                                class="fas fa-angle-right dropdown"></i>
+                                        </p>
+                                        <div class="sub-menu">
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Not Covered Under PF</p>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                   
+                                                </div>
+                                                <div class="col-md-4">
+
+                                                    
+
+                                                </div>
+                                            </div>
+                                            <br><br>
+
+
+
+                                        </div>
+
 
                                     </div>
                                 </div>
                                 <br>
-
-                                <div class="card">
-
-                                    <div class="item" style="display:flex;">
-
-                                        <div class="item">
-                                            <p class="sub-btn"></i>PF ACCOUNT<i
-                                                    class="fas fa-angle-right dropdown"></i></p>
-                                            <div class="sub-menu">
-                                                <p class="sub-item">Not Covered Under PF</p>
+                                <div class="one" >
 
 
 
+                                    <div class="item">
+                                        <p class="sub-btn">OTHER ID'S</i><i
+                                                class="fas fa-angle-right dropdown"></i>
+                                        </p>
+                                        <div class="sub-menu">
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Bank Account Number</p>
+                                                <p>{{ $i->bankaccountnumber }}</p>
+
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Unverified</p>
+                                                </div>
+                                                <div class="col-md-4">
+
+                                                <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">More</p>
+
+                                                </div>
+                                                
                                             </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <br>
-
-                                <div class="card">
-
-                                    <div class="item" style="display:flex;">
-
-                                        <div class="item">
-                                            <p class="sub-btn"></i>OTHER IDS<i
-                                                    class="fas fa-angle-right dropdown"></i></p>
-                                                    <div class="sub-menu" style="display:flex;">
-
-<p class="sub-item" style="padding:10px">Bank Account Number</p>
-<p class="sub-item" style="padding:10px">Unverified</p>
-<p class="sub-item" style="padding:10px">More</p>
+                                            <br><br>
 
 
-</div>
 
                                         </div>
-                                    </div>
 
+
+                                    </div>
                                 </div>
 
-                                                            </div>
+
+
+                            </div>
                         </div>
 
                     </div>
+
                     <div class="row">
                         <div id="family" class="col-md-12">
                             <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
                                 aria-labelledby="v-pills-disabled-tab" tabindex="0">
 
 
-                                <h5>NO Data For Family</h5>
+                                <h5 >NO Data For Family</h5>
 
 
 
@@ -438,6 +552,8 @@
 
                     </div>
 
+
+                    
                     <div class="row">
                         <div id="employement" class="col-md-12">
                             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
@@ -446,12 +562,12 @@
 
                                 <h5>Employment & Job</h5>
                                 <br>
-                                <div class="card">
+                                <div class="one">
 
                                     <p>Jump to: Current Position</p>
                                 </div>
                                 <br><br>
-                                <div class="card" style="padding:7px;">
+                                <div class="one" style="padding:7px;">
 
                                     <div class="one" style="padding:5px;background-color:#fff2e6;border-radius:10px">
                                         <h5>Current Position</h5>
@@ -465,30 +581,31 @@
                                     <br>
                                     <div class="row" style="padding:10px">
                                         <div class="col-md-4">
-                                            <p>Cost Center</p>
-                                            <p>NA</p>
+                                            <p style="color: #868686;font-weight:700;font-size:15px">Cost Center</p>
+                                            <p>{{ $i->costcenter }}</p>
                                             <br>
-                                            <p>Division</p>
-                                            <p>NA</p>
+                                            <p style="color: #868686;font-weight:700;font-size:15px">Division</p>
+                                            <p>{{ $i->division }}</p>
                                             <br>
-                                            <p>Reporting To</p>
-                                            <p>NA</p>
+                                            <p style="color: #868686;font-weight:700;font-size:15px">Reporting To</p>
+                                            <p>{{ $i->reportingmanager }}</p>
                                         </div>
                                         <div class="col-md-4">
-                                            <p>Department</p>
-                                            <p>NA</p>
+                                            <p style="color: #868686;font-weight:700;font-size:15px">Department</p>
+                                            <p>{{ $i->department }}</p>
                                             <br>
-                                            <p>Grade</p>
-                                            <p>NA</p>
+                                            <p style="color: #868686;font-weight:700;font-size:15px">Grade</p>
+                                            <p>{{ $i->grade }}</p>
                                         </div>
                                         <div class="col-md-4">
-                                            <p>Designation</p>
-                                            <p>NA</p>
+                                            <p style="color: #868686;font-weight:700;font-size:15px">Designation</p>
+                                            <p>{{ $i->designation }}</p>
                                             <br>
-                                            <p>Location</p>
-                                            <p>NA</p>
+                                            <p style="color: #868686;font-weight:700;font-size:15px">Location</p>
+                                            <p>{{ $i->location }}</p>
                                         </div>
                                     </div>
+                                   
                                 </div>
 
 
@@ -500,30 +617,49 @@
 
 
                     <div class="row">
-                        <div id="asset" class="col-md-12">
+                        <div id="asset" class="col-md-10">
                             <div class="tab-pane fade" id="v-pills-message" role="tabpanel"
                                 aria-labelledby="v-pills-message-tab" tabindex="0">
 
 
-                                <div class="card" style="margin-top:-72%">
+                                <div class="one" style="margin-top:-72%">
 
 
 
                                     <div class="item">
-                                        <p class="sub-btn"></i>ACCESS CARD DETAILS<i
-                                                class="fas fa-angle-right dropdown"></i></p>
-                                        <div class="sub-menu" style="display:flex">
+                                        <p class="sub-btn">ACCESS CARD DETAILS</i><i
+                                                class="fas fa-angle-right dropdown"></i>
+                                        </p>
+                                        <div class="sub-menu">
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Card No</p>
+                                                    <p>{{ $i->accesscardnumber }}</p>
 
-                                            <p class="sub-item" style="padding:10px">Card No</p>
-                                            <p class="sub-item" style="padding:10px">validity</p>
-                                            <p class="sub-item" style="padding:10px">Previous</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Validity</p>
+                                                    <p>{{ $i->accesscardvalidity }}</p>
+                                                </div>
+                                                <div class="col-md-4">
 
+                                                    <p class="sub-item" style="color: #868686;font-weight:700;font-size:15px">Previous</p>
+                                                    <p>{{ $i->location }}</p>
 
+                                                </div>
+                                            </div>
+                                            <br><br>
+
+                                            @endforeach
 
                                         </div>
 
+
                                     </div>
                                 </div>
+
+
 
 
 

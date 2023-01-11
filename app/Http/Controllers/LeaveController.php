@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Leave;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class LeaveController extends Controller
 {
+<<<<<<< HEAD
     /**
      * Display a listing of the resource.
      *
@@ -146,4 +144,9 @@ class LeaveController extends Controller
 
 
    
+=======
+    public function index(){
+        return view('/leave');
+    }
+>>>>>>> c8245aba9cd17f1f760826371b9ffb0f48fecd9f
 }

@@ -11,7 +11,9 @@ use App\Models\Logins;
 use Session;
 use Carbon;
 
-class HomeController extends Controller
+
+
+class SigninController extends Controller
 {
     public function index()
     {
@@ -28,17 +30,18 @@ class HomeController extends Controller
         
         $dot = DB::table('logins')->whereDate('created_at',Carbon::today())->pluck('employeeid')->all();
         $dots = DB::table('employes')->whereNotIn('employeeid', $dot)->orderBy('employeeid')->count();
+        
         \DB::statement("SET SQL_MODE=''");
         $loginDetils = Logins::select('employeeid','firstname','lastname','logindate','signin',\DB::raw("round(TIME_TO_SEC(TIMEDIFF('10:00:00',signin))/60,2) as time_difference"))->where('logins.logindate',date_format(now(), 'd-m-y'))->groupBy('logins.employeeid')->orderBy('signin', 'ASC')->take(6)->get();
     
         $Details = Logins::select('employeeid','firstname','lastname','logindate','signin',\DB::raw("round(TIME_TO_SEC(TIMEDIFF(signin,'10:00:00'))/60,2) as time_difference"))->where('logins.logindate',date_format(now(), 'd-m-y'))->groupBy('logins.employeeid')->orderBy('signin', 'ASC')->take(6)->get();
+
         $login = Logins::select('employeeid','firstname','logindate','signin',\DB::raw("round(TIME_TO_SEC(TIMEDIFF('10:00:00',signin))/60,2) as time_difference"))->where('logins.logindate',date_format(now(), 'd-m-y'))->groupBy('logins.employeeid')->orderBy('signin', 'ASC')->count();
     
         $Detail = Logins::select('employeeid','firstname','logindate','signin',\DB::raw("round(TIME_TO_SEC(TIMEDIFF(signin,'10:00:00'))/60,2) as time_difference"))->where('logins.logindate',date_format(now(), 'd-m-y'))->groupBy('logins.employeeid')->orderBy('signin', 'ASC')->count();
     
-      
     
-        return view('/home',compact('user', 'latest','data','users','sample','hello','test','dots','loginDetils','login','Details','Detail'));
+        return view('admin.create',compact('user', 'latest','data','users','sample','hello','test','dots','loginDetils','login','Details','Detail'));
 
     }
 
@@ -70,7 +73,7 @@ class HomeController extends Controller
 
         DB::table('logins')->insert($in);
     
-    return redirect('/home');
+    return redirect('/admin.create');
     }
 
 
@@ -89,9 +92,9 @@ class HomeController extends Controller
             
         ]);
     
-    return redirect('/home');
+    return redirect('/admin.create');
     }
 
 
-
+    
 }

@@ -38,7 +38,7 @@ class LoginController extends Controller
            
                 
             case 1:
-               return redirect('/admin');
+               return redirect('/admin.create');
                 break;
             case 2:
                 return redirect('/home');
