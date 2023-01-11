@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Employement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EmployementController extends Controller
 {
@@ -37,31 +38,31 @@ class EmployementController extends Controller
     {
        
 
-        $request->validate(['permanentaddress' => 'required|mimes:png,docx,pdf,txt,jpg,|max:1024']);
+        $request->validate(['permanentaddress' => 'required|mimes:png,pdf,jpg,|max:1024']);
         // $extension = $file->getClientOriginalExtension();
         // $filname = time() . '.' . $extension;
         $PermanentAddress =  auth()->user()->employeeid . '-'  . 'PermanentAddress' . '.' . $request->permanentaddress->extension();
         $request->permanentaddress->move('public/folders', $PermanentAddress);
 
-        $request->validate(['presentaddress' => 'required|mimes:png,docx,pdf,txt,jpg,|max:1024']);
+        $request->validate(['presentaddress' => 'required|mimes:png,pdf,jpg,|max:1024']);
         // $extension = $file->getClientOriginalExtension();
         // $filname = time() . '.' . $extension;
         $PresentAddress =  auth()->user()->employeeid . '-'  . 'PresentAddress' . '.' . $request->presentaddress->extension();
         $request->presentaddress->move('public/folders', $PresentAddress);
 
 
-        $request->validate(['qualificationdetails' => 'required|mimes:png,docx,pdf,txt,jpg,|max:1024']);
+        $request->validate(['qualificationdetails' => 'required|mimes:png,pdf,jpg,|max:1024']);
         $Qualification =  auth()->user()->employeeid . '-'  . 'Qualification' . '.' . $request->qualificationdetails->extension();
         $request->qualificationdetails->move('public/folders', $Qualification);
 
 
 
-        $request->validate(['previousemployement' => 'required|mimes:png,docx,pdf,txt,jpg,|max:1024']);
+        $request->validate(['previousemployement' => 'required|mimes:png,pdf,jpg,|max:1024']);
         $Experience =  auth()->user()->employeeid . '-'  . 'Experience' . '.' . $request->previousemployement->extension();
         $request->previousemployement->move('public/folders', $Experience);
 
 
-        $request->validate(['bankaccount' => 'required|mimes:png,docx,pdf,txt,jpg,|max:1024']);
+        $request->validate(['bankaccount' => 'required|mimes:png,pdf,jpg,|max:1024']);
         $Bankdetails =  auth()->user()->employeeid . '-'  . 'Bank Details' . '.' . $request->bankaccount->extension();
         $request->bankaccount->move('public/folders', $Bankdetails);
 
@@ -70,13 +71,13 @@ class EmployementController extends Controller
         // $request->pancardnum->move('public/folders', $Pannumber);
 
 
-        $request->validate(['aadhaar' => 'required|mimes:png,docx,pdf,txt,jpg,|max:1024']);
+        $request->validate(['aadhaar' => 'required|mimes:png,pdf,jpg,|max:1024']);
         // $extension = $file->getClientOriginalExtension();
         // $filname = time() . '.' . $extension;
         $Aadhaar =  auth()->user()->employeeid . '-'  . 'Aadhaar' . '.' . $request->aadhaar->extension();
         $request->aadhaar->move('public/folders', $Aadhaar);
 
-        $request->validate(['passport' => 'required|mimes:png,docx,pdf,txt,jpg,|max:1024']);
+        $request->validate(['passport' => 'required|mimes:png,pdf,jpg,|max:1024']);
         // $extension = $file->getClientOriginalExtension();
         // $filname = time() . '.' . $extension;
         $Passport =  auth()->user()->employeeid . '-'  . 'Passport' . '.' . $request->passport->extension();
@@ -106,15 +107,50 @@ class EmployementController extends Controller
         $employement->district = $request->district;
         $employement->state = $request->state;
         $employement->pincode = $request->pincode;
-        $employement->startdate = $request->startdate;
-        $employement->enddate = $request->enddate;
-        $employement->institution = $request->institution;
-        $employement->qualification = $request->qualification;
-        $employement->companyname = $request->companyname;
-        $employement->designation = $request->designation;
-        $employement->fromDate = $request->fromDate;
-        $employement->todate = $request->todate;
-        $employement->companyaddress = $request->companyaddress;
+
+        
+
+        $employeid = $request->employeid;
+        $startdate = $request->startdate;
+        $enddate = $request->enddate;
+        $qualification = $request->qualification;
+        $institution = $request->institution;
+       
+
+        for ($i=0; $i < count($startdate); $i++){
+            $datasave = [
+                'employeid' => $employeid,
+                'startdate'  => $startdate[$i],
+                'enddate'  => $enddate[$i],
+                'qualification'  => $qualification[$i],
+                'institution'  => $institution[$i],
+               
+            ];
+            DB::table('empqualification')->insert($datasave);
+        }
+
+
+        $employeid = $request->employeid;
+        $companyname = $request->companyname;
+        $designation = $request->designation;
+        $fromdate = $request->fromdate;
+        $todate = $request->todate;
+        $companyaddress = $request->companyaddress;
+       
+
+        for ($i=0; $i < count($companyname); $i++){
+            $data = [
+                'employeid' => $employeid,
+                'companyname'  => $companyname[$i],
+                'designation'  => $designation[$i],
+                'fromdate'  => $fromdate[$i],
+                'todate'  => $todate[$i],
+                'companyaddress' => $companyaddress[$i],
+               
+            ];
+            DB::table('empexperience')->insert($data);
+        }
+       
         $employement->accountnumber = $request->accountnumber;
         $employement->confirmbankaccountnumber = $request->confirmbankaccountnumber;
         $employement->country = $request->country;
@@ -149,7 +185,8 @@ class EmployementController extends Controller
 
         $employement->save();
 
-        return back();
+
+        return back()->with('success', 'Details Submitted successfully!');
     }
 
     /**

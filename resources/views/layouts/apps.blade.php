@@ -23,143 +23,94 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
 
-    body {
-        min-height: 100vh;
-        overflow-x: hidden;
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
 
-    }
+        }
+        a{
+            text-decoration: none
+        }
 
-    .item{
-        cursor: pointer;
-    }
-
-    .side-bar {
-        background-color: white;
-        box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-        width: 230px;
-        height: 100vh;
-        padding: 5px;
-        position: fixed;
-        margin-top: -18.2%;
-
-
-
-    }
-
-    .side-bar .menu {
-        width: 100%;
-
-
-    }
-
-    .side-bar.menu.item {
-        position: relative;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .side-bar .menu .item a {
-
-        color: #909090;
-        display: block;
-        padding: 5px 20px;
-        line-height: 35px;
-        text-decoration: none;
-    }
-
-    .side-bar .menu .item a:hover {
-        background: white;
-        transition: 0.3s ease;
-    }
-
-    .side-bar .menu .item i {
-        margin-right: 15px;
-    }
-
-    .side-bar .menu .item a .dropdown {
-        position: absolute;
-        margin: 10px;
-        right: 0;
-        transition: 0.3s ease;
-
-    }
-
-    .side-bar .menu .item .sub-menu {
-        background: white;
-        display: none;
-        font-size: 13px;
-    }
-
-    .side-bar .menu .item .sub-menu .a {
-        padding-left: 80px;
-
-    }
-
-
-
-    .navone {
-        position: fixed;
-        width: 85%;
-        margin-left: 15%;
-        background-color: white;
-        box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-        padding: 8px;
-        border-top-right-radius: 10px;
-
-    }
-
-    nav>.log {
-        display: flex;
-        margin-left: auto;
-        margin-right: 30px;
-
-    }
-
-    nav>.log>select {
-        margin-left: 20px;
-        border: none;
-        width: 130px;
-    }
-
-    nav i {
-        margin-top: 10px;
-        margin-left: 30px;
-    }
-
-    .navtwo {
-        visibility: hidden;
-    }
-
-    .main_container {
-        width: (100% - 800px);
-        margin-left: 19%;
-        padding: 5px;
-        transition: all 0.3s ease;
-
-    }
-
-
-    @media (max-width:960px) {
-
-
+        .item {
+            cursor: pointer;
+        }
 
         .side-bar {
-            visibility: hidden;
+            background-color: white;
+            box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+            width: 230px;
+            height: 100vh;
+            padding: 5px;
+            position: fixed;
+            margin-top: -18.2%;
+
+
+
+        }
+
+        .side-bar .menu {
+            width: 100%;
+
+
+        }
+
+        .side-bar.menu.item {
+            position: relative;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .side-bar .menu .item a {
+
+            color: #909090;
+            display: block;
+            padding: 5px 20px;
+            line-height: 35px;
+            text-decoration: none;
+        }
+
+        .side-bar .menu .item a:hover {
+            background: white;
+            transition: 0.3s ease;
+        }
+
+        .side-bar .menu .item i {
+            margin-right: 15px;
+        }
+
+        .side-bar .menu .item a .dropdown {
+            position: absolute;
+            margin: 10px;
+            right: 0;
+            transition: 0.3s ease;
+
+        }
+
+        .side-bar .menu .item .sub-menu {
+            background: white;
+            display: none;
+            font-size: 13px;
+        }
+
+        .side-bar .menu .item .sub-menu .a {
+            padding-left: 80px;
+
         }
 
 
 
         .navone {
             position: fixed;
-            width: 100%;
-            margin-left: 0%;
+            width: 85%;
+            margin-left: 15%;
             background-color: white;
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
             padding: 8px;
@@ -167,75 +118,127 @@
 
         }
 
-        .navone>.log {
+        nav>.log {
             display: flex;
             margin-left: auto;
             margin-right: 30px;
 
         }
 
-        .navone>.log>select {
+        nav>.log>select {
             margin-left: 20px;
             border: none;
             width: 130px;
         }
 
-        .navone i {
+        nav i {
             margin-top: 10px;
             margin-left: 30px;
         }
 
-
         .navtwo {
-            width: 25%;
-            height: auto;
-            position: static;
-            visibility: visible;
-            box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-
-        }
-
-        .navtwo ul li a {
-            margin-top: 5%;
-        }
-
-        .navtwo .logo {
-            width: 130px;
-            height: 50px;
-
-        }
-
-        .navtwo .user {
-            height: 30px;
-            width: 25px;
-            border-radius: 50%;
-        }
-
-        .navtwo>img {
-            height: 40px;
-            width: 120px;
-            margin-top: 5%;
-        }
-
-        .navtwo ul .profile {
-            display: flex;
-
-        }
-
-        body {
-            background-color: whitesmoke;
+            visibility: hidden;
         }
 
         .main_container {
             width: (100% - 800px);
-            margin-left: 0%;
-            position: relative;
+            margin-left: 19%;
             padding: 5px;
             transition: all 0.3s ease;
-            z-index: 10;
+
         }
 
-        /* .navtwo .navbar-toggler:active .main_container{
+
+        @media (max-width:960px) {
+
+
+
+            .side-bar {
+                visibility: hidden;
+            }
+
+
+
+            .navone {
+                position: fixed;
+                width: 100%;
+                margin-left: 0%;
+                background-color: white;
+                box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+                padding: 8px;
+                border-top-right-radius: 10px;
+
+            }
+
+            .navone>.log {
+                display: flex;
+                margin-left: auto;
+                margin-right: 30px;
+
+            }
+
+            .navone>.log>select {
+                margin-left: 20px;
+                border: none;
+                width: 130px;
+            }
+
+            .navone i {
+                margin-top: 10px;
+                margin-left: 30px;
+            }
+
+
+            .navtwo {
+                width: 25%;
+                height: auto;
+                position: static;
+                visibility: visible;
+                box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+
+            }
+
+            .navtwo ul li a {
+                margin-top: 5%;
+            }
+
+            .navtwo .logo {
+                width: 130px;
+                height: 50px;
+
+            }
+
+            .navtwo .user {
+                height: 30px;
+                width: 25px;
+                border-radius: 50%;
+            }
+
+            .navtwo>img {
+                height: 40px;
+                width: 120px;
+                margin-top: 5%;
+            }
+
+            .navtwo ul .profile {
+                display: flex;
+
+            }
+
+            body {
+                background-color: whitesmoke;
+            }
+
+            .main_container {
+                width: (100% - 800px);
+                margin-left: 0%;
+                position: relative;
+                padding: 5px;
+                transition: all 0.3s ease;
+                z-index: 10;
+            }
+
+            /* .navtwo .navbar-toggler:active .main_container{
             width: (100% - 800px);
             margin-left: 10%;
             position: relative;
@@ -244,100 +247,100 @@
             z-index: 10;
         } */
 
-    }
-
-    @media (max-width:480px) {
-
-
-        .main_container {
-            width: (100% - 800px);
-            margin-left: 0%;
-            position: relative;
-            padding: 5px;
-            transition: all 0.3s ease;
-            z-index: 10;
         }
 
-        .side-bar {
-            visibility: hidden;
-        }
+        @media (max-width:480px) {
 
 
-        .navone {
-            position: fixed;
-            width: 100%;
-            margin-left: 0%;
-            background-color: white;
-            box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-            padding: 8px;
-            border-top-right-radius: 10px;
+            .main_container {
+                width: (100% - 800px);
+                margin-left: 0%;
+                position: relative;
+                padding: 5px;
+                transition: all 0.3s ease;
+                z-index: 10;
+            }
 
-        }
-
-        .navone>.log {
-            display: flex;
-            margin-left: auto;
-            margin-right: 30px;
-
-        }
-
-        .navone>.log>select {
-            margin-left: 20px;
-            border: none;
-            width: 130px;
-        }
-
-        .navone i {
-            margin-top: 10px;
-            margin-left: 30px;
-        }
+            .side-bar {
+                visibility: hidden;
+            }
 
 
-        .navtwo {
+            .navone {
+                position: fixed;
+                width: 100%;
+                margin-left: 0%;
+                background-color: white;
+                box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+                padding: 8px;
+                border-top-right-radius: 10px;
+
+            }
+
+            .navone>.log {
+                display: flex;
+                margin-left: auto;
+                margin-right: 30px;
+
+            }
+
+            .navone>.log>select {
+                margin-left: 20px;
+                border: none;
+                width: 130px;
+            }
+
+            .navone i {
+                margin-top: 10px;
+                margin-left: 30px;
+            }
 
 
-            height: auto;
-            visibility: visible;
-
-            box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-
-        }
-
-        .navtwo ul li a {
-            margin-top: 5%;
-        }
-
-        .navtwo .logo {
-            width: 130px;
-            height: 50px;
-
-        }
-
-        .navtwo .user {
-            height: 30px;
-            width: 25px;
-            border-radius: 50%;
-        }
-
-        .navtwo>img {
-            height: 40px;
-            width: 120px;
-            margin-top: 5%;
-        }
-
-        .navtwo ul .profile {
-            display: flex;
-
-        }
-
-        body {
-            background-color: whitesmoke;
-        }
+            .navtwo {
 
 
+                height: auto;
+                visibility: visible;
+
+                box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+
+            }
+
+            .navtwo ul li a {
+                margin-top: 5%;
+            }
+
+            .navtwo .logo {
+                width: 130px;
+                height: 50px;
+
+            }
+
+            .navtwo .user {
+                height: 30px;
+                width: 25px;
+                border-radius: 50%;
+            }
+
+            .navtwo>img {
+                height: 40px;
+                width: 120px;
+                margin-top: 5%;
+            }
+
+            .navtwo ul .profile {
+                display: flex;
+
+            }
+
+            body {
+                background-color: whitesmoke;
+            }
 
 
-        /*
+
+
+            /*
 
 
         .navone {
@@ -369,7 +372,7 @@
             margin-left: 30px;
         } */
 
-    }
+        }
     </style>
 </head>
 
@@ -390,16 +393,16 @@
                     <option value="3" style="font-size:12px">Review Workflow</option>
                 </select>
                 <i class="fa-solid fa-bell"></i>
-                
+
                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        
-                <i class="fas fa-sign-out"></i>
-</a>
-<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+
+                    <i class="fas fa-sign-out"></i>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
 
             </div>
 
@@ -430,20 +433,22 @@
                                     style=" height:40px;width:25px">
                                 <p style="margin-left:7%;margin-top:2%;font-weight:600">HI DYAGA</p>
 
-<a href="{{url('settings')}}">
-                                <i class="fa fa-cog" aria-hidden="true" style="margin-top:7%;margin-left:15%"></i></a>
+                                <a href="{{ url('settings') }}">
+                                    <i class="fa fa-cog" aria-hidden="true"
+                                        style="margin-top:7%;margin-left:15%"></i></a>
                             </div>
-                            <a href="{{url('info')}}">
-                            <p style="margin-top:-8%;text-align:center;font-size:12px;color:blue;margin-right:20%">View
-                                My Info
-                            </p>
-</a>
+                            <a href="{{ url('info') }}">
+                                <p style="margin-top:-8%;text-align:center;font-size:12px;color:blue;margin-right:20%">
+                                    View
+                                    My Info
+                                </p>
+                            </a>
                         </div>
                     </div>
                     <ul id="links" class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('home')}}"><i class="fa fa-home"
-                                    style="font-size:20px;margin-right:8%"></i>Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('home') }}"><i
+                                    class="fa fa-home" style="font-size:20px;margin-right:8%"></i>Home</a>
                         </li>
 
                         <li class="nav-item">
@@ -481,17 +486,17 @@
 
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link active dropdown-toggle" href="" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-money" style="font-size:20px;margin-right:8%"></i>Salary
                             </a>
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border:none">
 
-                                <li><a class="dropdown-item" href="{{url('payslip')}}">payslips</a>
+                                <li><a class="dropdown-item" href="{{ url('payslip') }}">payslips</a>
 
                                 </li>
-                                <li><a class="dropdown-item" href="{{url('ytd')}}">YTD Reports</a>
+                                <li><a class="dropdown-item" href="{{ url('ytd') }}">YTD Reports</a>
 
                                 </li>
                                 <li><a class="dropdown-item" href="#">IT Statement</a>
@@ -525,8 +530,8 @@
 
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-calendar-o" style="font-size:20px;margin-right:8%"></i>Leave
                             </a>
 
@@ -551,8 +556,8 @@
 
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-check-square-o" style="font-size:20px;margin-right:8%"></i>
                                 Attendance
                             </a>
@@ -567,8 +572,8 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="documentcenter"><i class="fa fa-book"
-                                    style="font-size:20px;margin-right:8%"></i>Document Center</a>
+                            <a class="nav-link active" aria-current="page" href="documentcenter"><i
+                                    class="fa fa-book" style="font-size:20px;margin-right:8%"></i>Document Center</a>
                         </li>
 
                         <li class="nav-item">
@@ -577,13 +582,15 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="helpdesk"><i class="fa fa-info-circle"
-                                    style="font-size:20px;margin-right:8%"></i> Help Desk</a>
+                            <a class="nav-link active" aria-current="page" href="helpdesk"><i
+                                    class="fa fa-info-circle" style="font-size:20px;margin-right:8%"></i> Help
+                                Desk</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-bar-chart-o"
-                                    style="font-size:20px;margin-right:8%"></i>Workflow Delegates</a>
+                            <a class="nav-link active" aria-current="page" href="#"><i
+                                    class="fa fa-bar-chart-o" style="font-size:20px;margin-right:8%"></i>Workflow
+                                Delegates</a>
                         </li>
                     </ul>
 
@@ -606,20 +613,22 @@
 
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEM9yrAx98tmTyjbwX9pqreHepJS2FnWEitrzkF-xxgBuGKdl88SBgUC4_U-8n_tUjWdE&usqp=CAU"
                     style=" height:40px;width:25px">
-                <p style="margin-left:10%;margin-top:2%;font-weight:600">HI DYAGA</p>
+                <p style="margin-left:10%;margin-top:2%;font-weight:600">HI </p>
 
-<a href="{{url('settings')}}">
-                <i class="fa fa-cog" aria-hidden="true" style="margin-top:7%;margin-left:15%"></i>
+                <a href="{{ url('settings') }}">
+                    <i class="fa fa-cog" aria-hidden="true" style="margin-top:7%;margin-left:15%"></i>
             </div>
-            <a href="{{url('info')}}">
-            <p style="margin-top:-8%;text-align:center;font-size:12px;color:blue;margin-right:20%">View My Info</p></a>
+            <a href="{{ url('info') }}">
+                <p style="margin-top:-8%;text-align:center;font-size:12px;color:blue;margin-right:20%">View My Info</p>
+            </a>
 
-            <div class="item"><a href="{{url('home')}}"><i class="fa fa-home"></i> Home </a></div>
+            <div class="item"><a href="{{ url('home') }}"><i class="fa fa-home"></i> Home </a></div>
             <div class="item"><a href="feeds"><i class="fa fa-server"></i>Feeds</a></div>
             <div class="item">
-                <a class="sub-btn"><i class="fa fa-clipboard"></i>Tasks<i class="fas fa-angle-right dropdown"></i></a>
+                <a class="sub-btn"><i class="fa fa-clipboard"></i>Tasks<i
+                        class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="task" class="sub-item">Tasks</a>
+                    <a href="{{route('task.index')}}" class="sub-item">Tasks</a>
                     <a href="review" class="sub-item">Review</a>
 
                 </div>
@@ -628,8 +637,8 @@
                 <a class="sub-btn"><i class="fa-solid fa-hand-holding-dollar"></i>Salary<i
                         class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="{{url('payslip')}}" class="sub-item">Payslips</a>
-                    <a href="{{url('ytd')}}" class="sub-item">YTD Reports</a>
+                    <a href="{{ url('payslip') }}" class="sub-item">Payslips</a>
+                    <a href="{{ url('ytd') }}" class="sub-item">YTD Reports</a>
                     <a href="#" class="sub-item">IT Statement</a>
                     <a href="#" class="sub-item">IT Declaration</a>
                     <a href="#" class="sub-item">Loans and Advances</a>
@@ -660,13 +669,23 @@
 
             </div>
             <div class="item"><a href="documentcenter"><i class="fa fa-book"></i>Document Center</a></div>
-           
+
             <div class="item">
-                <a class="sub-btn"><i class="fa fa-users"></i>Employee<i
-                        class="fas fa-angle-right dropdown"></i></a>
+                <a class="sub-btn"><i class="fa fa-users"></i>Employee<i class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="{{url('onboard')}}" class="sub-item">Onboard</a>
-                    <a href="{{url('register')}}" class="sub-item"> Employee Registration </a>
+
+                    <div class="item">
+                        <a class="sub-btn" >Onboarding<i
+                                class="fas fa-angle-down dropdown" ></i></a>
+                        <div class="sub-menu">
+                            <a href="{{route('onboard.create')}}" class="sub-item" style="color: black">Onboard</a>
+                            <a href="{{route('onboard.index')}}" class="sub-item" style="color: black">Employees</a>
+        
+                        </div>
+                    </div>
+
+                    {{-- <a href="{{ route('onboard.create') }}" class="sub-item">Onboard</a> --}}
+                    <a href="{{ url('register') }}" class="sub-item"> Employee Registration </a>
 
                 </div>
 
@@ -674,32 +693,37 @@
             <div class="item"><a href="helpdesk"><i class="fa fa-info-circle"></i>Help Desk</a></div>
             <div class="item"><a><i class="fa fa-bar-chart"></i>Workflow Delegates</a></div>
 
-            <div class="item"><a href="{{url('leaveshow')}}"><i class="fa fa-bar-chart"></i> Show Leaves</a></div>
+            {{-- <div class="item"><a href="{{ url('leaveshow') }}"><i class="fa fa-bar-chart"></i> Show Leaves</a></div>
+                <div class="item"><a href="data"><i class="fa fa-bar-chart"></i> Data</a></div>
+             --}}
+
+            <div class="item"><a href="shifts"><i class="fa fa-bar-chart"></i> shifts </a></div>
         </div>
     </div>
 
 
 
     <script type="text/javascript">
-    $(document).ready(function() {
-        $('.sub-btn').click(function() {
-            $(this).next('.sub-menu').slideToggle();
-            $(this).find('.dropdown').toggleclass('rotate');
-        });
+        $(document).ready(function() {
+            $('.sub-btn').click(function() {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleclass('rotate');
+            });
 
-        $('.menu-btn').click(function() {
-            $('.menu-btn').css("visibility", "hidden");
-        });
-        $('.close-btn').click(function() {
-            $('.navtwo').removeClass('active');
-        });
+            $('.menu-btn').click(function() {
+                $('.menu-btn').css("visibility", "hidden");
+            });
+            $('.close-btn').click(function() {
+                $('.navtwo').removeClass('active');
+            });
 
-        $('.navbar-toggler').click(function() {
-            $('.navbar-toggler').css("visibility", "hidden%");
+            $('.navbar-toggler').click(function() {
+                $('.navbar-toggler').css("visibility", "hidden%");
+            });
         });
-    });
     </script>
 
+{{-- @include('flash-message') --}}
     @yield('content')
 
 </body>

@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('days');
             $table->string('reason');
             $table->string('status')->default('Pending');
+            $table->string('balance')->default(12);
             $table->timestamps();
         });
     }

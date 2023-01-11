@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Onboard;
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Models\Shifts;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Console\View\Components\Alert;
 
 class OnboardController extends Controller
 {
@@ -17,7 +19,9 @@ class OnboardController extends Controller
      */
     public function index()
     {
-        return view('onboard.index');
+
+        $data = Onboard::all();
+        return view('onboard.index', compact('data'));
     }
 
     /**
@@ -27,7 +31,7 @@ class OnboardController extends Controller
      */
     public function create()
     {
-        return view('onboard.index');
+        return view('onboard.create');
     }
 
     /**
@@ -38,89 +42,62 @@ class OnboardController extends Controller
      */
     public function store(Request $request)
     {
-        $onboarding = $request->validate([
-           
-            // 'employeeid' => 'required',
-            // 'name' => 'required',
-            // 'dateofbirth' => 'required',
-            // 'gender' => 'required',
-            // 'reportingmanager' => 'required',
-            // 'status' => 'required',
-            // 'dateofjoining' => 'required',
-            // 'probationperiod' => 'required',
 
-            'firstname' => 'required',
-            'middlename' => 'required',
-            'lastname' => 'required',
-            'jobtitle' => 'required',
-            // 'employenumber' => 'required',
-            'employeeid' => 'required',
-            'mobile' => 'required',
-            'email' => 'required',
-            'gender' => 'required',
-            'location' => 'required',
-            'extension' => 'required',
+        $request->validate(['profilepicture' => 'required|mimes:png,jpg,|max:1024']);
+       
+         $Profileimage =  $request->employeeid. '-'  . 'Profile' . '.' . $request->profilepicture->extension();
+        $request->profilepicture->move('public/profiles', $Profileimage);
 
-            
-            'dateofbirth' => 'required',
-            'personalemail' => 'required',
-            'fathername' => 'required',
-            'bloodgroup' => 'required',
-            'maritalstatus' => 'required',
-            'marriagedate' => 'required',
-            'spousename' => 'required',
-            'nationality' => 'required',
-            'residentialstatus' => 'required',
-            'placeofbirth' => 'required',
-            'countryoforigin' => 'required',
-            'religion' => 'required',
-            'internationalemployee' => 'required',
-            'physicallychallenged' => 'required',
+        $onboard = new Onboard();
+        $onboard->firstname = $request->firstname;
+        $onboard->lastname = $request->lastname;
+        $onboard->jobtitle = $request->jobtitle;
+        $onboard->employeeid = $request->employeeid;
+        $onboard->mobile = $request->mobile;
+        $onboard->email = $request->email;
+        $onboard->gender = $request->gender;
+        $onboard->address = $request->address;
+        $onboard->dateofbirth = $request->dateofbirth;
+        $onboard->joiningdate = $request->joiningdate;
+        $onboard->confirmationdate = $request->confirmationdate;
+        $onboard->probationperiod = $request->probationperiod;
+        $onboard->noticeperiod = $request->noticeperiod;
+        $onboard->designation = $request->designation;
+        $onboard->department = $request->department;
+        $onboard->officelocation = $request->officelocation;
+        $onboard->shifttype = $request->shifttype;
+        $onboard->reportingmanager = $request->reportingmanager;
+        $onboard->profilepicture = $Profileimage;
 
-            'joiningdate' => 'required',
-            'confirmationdate' => 'required',
-            'status' => 'required',
-            'probationperiod' => 'required',
-            'noticeperiod' => 'required',
-            'currentcompanyexperience' => 'required',
-            'previousexperience' => 'required',
-            'totalexperience' => 'required',
+        $onboard->save();
 
-            // 'confirmationdate' => 'required',
-            // 'title' => 'required',
-            // // 'email' => 'required',
-            // 'mobilenumber' => 'required',
-            // 'emergencycontactnumber' => 'required',
-            'designation' => 'required',
-            'department' => 'required',
-            'officelocation' => 'required',
-            'attendancescheme' => 'required',
-            'costcenter' => 'required',
-            'division' => 'required',
-            'grade' => 'required',
-            'reportingmanager' => 'required',
-            'bankname' => 'required',
-            'bankbranch' => 'required',
-            'accounttype' => 'required',
-            'paymenttype' => 'required',
-            'ddpayableat' => 'required',
-            'nameasperbankrecords' => 'required',
-            'pannumber' => 'required',
-            'uannumber' => 'required',
-            'aadhaarnumber' => 'required',
-            'bankaccountnumber' => 'required',
-            'ifsccode' => 'required',
-            'branchcode' => 'required',
-            'accesscardnumber' => 'required',
-            'accesscardvalidity' => 'required',
+        // $onboarding = $request->validate([
+        
+        //     'firstname' => 'required',
+        //     'lastname' => 'required',
+        //     'jobtitle' => 'required',
+        //     'employeeid' => 'required',
+        //     'mobile' => 'required',
+        //     'email' => 'required',
+        //     'gender' => 'required',
+        //     'location' => 'required',
+        //     'dateofbirth' => 'required',
+        //     'joiningdate' => 'required',
+        //     'confirmationdate' => 'required',
+        //     'probationperiod' => 'required',
+        //     'noticeperiod' => 'required',
+        //     'designation' => 'required',
+        //     'department' => 'required',
+        //     'officelocation' => 'required',
+        //     'attendancescheme' => 'required',
+        //     'reportingmanager' => 'required',
+        //     'profilepicture' => 'required',
           
-           
-           
-        ]);
+        // ]);
 
-        $onboard = Onboard::create($onboarding);
-
-        return back()->with('success', 'Onboard Successfull');
+        // $onboard = Onboard::create($onboarding);
+       
+        return redirect()->route('onboard.index')->with('success', 'Employee Onboarded successfully!');
     }
 
     /**
@@ -140,9 +117,9 @@ class OnboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit( Onboard $onboard)
     {
-        //
+        return view('onboard.edit', compact('onboard'));
     }
 
     /**
@@ -152,9 +129,36 @@ class OnboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Onboard $onboard)
     {
-        //
+        $request->validate([
+
+                'firstname' => 'required',
+                'lastname' => 'required',
+                'jobtitle' => 'required',
+                'employeeid' => 'required',
+                'mobile' => 'required',
+                'email' => 'required',
+                'gender' => 'required',
+                'address' => 'required',
+                'dateofbirth' => 'required|date',
+                'joiningdate' => 'required|date|after:confirmationdate',
+                'confirmationdate' => 'required|date|before:joiningdate',
+                'probationperiod' => 'required',
+                'noticeperiod' => 'required',
+                'designation' => 'required',
+                'department' => 'required',
+                'officelocation' => 'required',
+                'shifttype' => 'required',
+                'reportingmanager' => 'required',
+                'profilepicture' => 'required',
+
+        ]);
+
+        $onboard->update($request->all());
+        return redirect()->route('onboard.index')()->with('success', 'Details Submitted successfully!');
+
+
     }
 
     /**
@@ -167,4 +171,18 @@ class OnboardController extends Controller
     {
         //
     }
+
+    public function display($id){
+        $employe = Onboard::find($id);
+        return view('shiftedit', compact('employe'));
+    }
+
+    public function change(Request $request, $id){
+$employe = Onboard::find($id);
+$employe->shifttype = $request->shifttype;
+$employe->update();
+
+return redirect('employeshifts')->with('success', 'shift updated successfully');
+    }
+
 }

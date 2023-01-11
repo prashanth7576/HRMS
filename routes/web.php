@@ -14,7 +14,12 @@ use App\Http\Controllers\SampleController;
 use App\Http\Controllers\EmployementController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\LeaveController;
-use App\Http\Controllers\SearchController;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\AttendanceinfoController;
+use App\Http\Controllers\ShiftsController;
+use App\Models\Onboard;
+use App\Http\Controllers\RandomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +32,12 @@ use App\Http\Controllers\SearchController;
 |
 */
 
+
+Route::get('/employeshifts', function () {
+   
+    $data = DB::table('employes')->orderby('employeeid', 'ASC')->get();
+    return view('employeshifts', compact('data'));
+});
 
 
 Route::get('/feeds', function () {
@@ -110,8 +121,18 @@ Route::get('/ytd', function () {
 });
 
 
+Route::get('/hello', function () {
+    return view('hello');
+});
+
+
+
 
 Route::resource('task', TaskController::class);
+// Route::get('/task', [TaskController::class, 'task']);
+Route::get('/active/update', [TaskController::class, 'updateActive'])->name('update.active');
+
+
 Route::resource('helpdesk', HelpdeskController::class);
 
 Route::resource('/onboard', OnboardController::class);
@@ -119,7 +140,13 @@ Route::resource('/onboard', OnboardController::class);
 Route::post('/logout', [LogoutController::class, 'store']) ->name('logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
-    Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('auth');
+
+ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('auth');
+
+//     Route::get('/admin.create', [SigninController::class, 'index']) ->name('admin.create');
+// Route::post('/admin.create', [SigninController::class, 'in'])->name('admin') ;
+
+// Route::post('/signout', [SigninController::class, 'out']) ->name('signout');
 
     Route::get('/', [LoginController::class, 'index']) ->name('login');
 Route::post('/', [LoginController::class, 'redirectTo']);
@@ -159,6 +186,7 @@ Route::get('/pending/{id}', [LeaveController::class, 'pending']);
 Route::get('/approved/{id}', [LeaveController::class, 'approved']);
 Route::get('/canceled/{id}', [LeaveController::class, 'canceled']);
 
+
 Route::get('/pending', function () {
     return view('pending');
 });
@@ -170,5 +198,19 @@ Route::get('/leavehistory', function () {
 Route::get('/leavehistory', [LeaveController::class, 'leavehistory']);
 
 
+Route::resource('hello', JobController::class);
+
+// Route::get('/active/update', [JobController::class, 'updateActive'])->name('update.active');
+
+Route::get('/change-password', [PasswordController::class, 'changepassword']) ->name('change-password');
+Route::post('/change-password', [PasswordController::class, 'updatepassword']) ->name('update-password');
+
+Route::get('/attendanceinfo', [AttendanceinfoController::class, 'index']);
 
 
+
+Route::resource('shifts', ShiftsController::class);
+Route::get('shiftedit/{id}', [OnboardController::class, 'display']);
+Route::put('shiftedit/{id}', [OnboardController::class, 'change']);
+
+Route::get('random', [RandomController::class, 'index']);

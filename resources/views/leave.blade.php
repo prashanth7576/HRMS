@@ -911,6 +911,8 @@
 
     <body style="background-color: whitesmoke">
 
+        @include('flash-message')
+
         <div class="main_container">
             <div class="row">
                 <div id="links" class="col-md-2">
@@ -1100,7 +1102,7 @@
 
                                                 <div>
                                                     <label for="floatingInput"> Days*</label>
-                                                    <input type="number" class="form-control " id="floatinginput"
+                                                    <input type="text" class="form-control " id="floatinginput"
                                                         placeholder=" Number of Days" name="days">
                                                 </div>
 
@@ -1114,6 +1116,11 @@
 
                                                 </div>
 
+                                                {{-- <h1 id="consume">{{$balance - $pending}}</h1>
+                                                <h1 id="pending">{{$pending - $balance}}</h1>
+
+             --}}
+
                                                 <div class="button">
 
                                                     <button type="submit" class="btn btn-primary">Save</button>
@@ -1124,11 +1131,15 @@
 
                                         </div>
 
+                                    
+
 
                                     </div>
 
                                     <div class="tab-pane fade" id="pills-pending" role="tabpanel"
                                         aria-labelledby="pills-pending-tab">
+
+                                      
                                         @foreach ($data as $i)
                                             @if ($i->status == 'Pending')
                                                 <div class="content">
@@ -1168,6 +1179,10 @@
                                                         <button id="btn" class="btn btn-outline-primary"> <a
                                                                 href="{{url('pending/'. $i->id)}}"> <span>View Details</span>
                                                             </a> </button>
+
+                                                            @if (auth()->user()->role == 1)
+                                                                
+                                                            
                                                         <button class="btn btn-outline-primary"> <span>Forward</span>
                                                         </button>
                                                         <button class="btn btn-outline-primary"> <a
@@ -1176,6 +1191,7 @@
                                                         <button class="btn btn-primary"> <a
                                                                 href="{{ url('approved', $i->id) }}"
                                                                 style="color: white"> <span>Approve</span> </a> </button>
+                                                                @endif
                                                     </div>
                                                 </div>
                                                 <br>
@@ -1506,4 +1522,6 @@
     </body>
 
     </html>
+
+   
 @endsection

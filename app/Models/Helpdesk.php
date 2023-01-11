@@ -11,5 +11,5 @@ class Helpdesk extends Model
 
     protected $table = "Helpdesk";
 
-    protected $fillable = ['category', 'subjectline', 'description', 'priority'];
+    protected $fillable = ['category', 'subjectline', 'description', 'priority', 'addfile'];
 }

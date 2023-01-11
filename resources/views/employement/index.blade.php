@@ -12,19 +12,35 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
 
 
         <style>
-
-.main_container {
+            .main_container {
                 margin-top: -19%;
                 margin-left: 8%;
                 z-index: -1;
-                
+
 
             }
-          
+
+            .btn_remove {
+                margin-left: 17%
+            }
+
+            .btn_delete {
+                margin-left: 17%;
+                margin-top: 10px
+            }
+
+            .add-btn-head {
+                margin-left: 17%
+            }
+
 
             .navone {
                 height: 70px;
@@ -32,7 +48,7 @@
                 margin-left: 15.1%
             }
 
-            .navtwo{
+            .navtwo {
                 visibility: hidden;
                 z-index: 0;
             }
@@ -97,7 +113,7 @@
 
             .progress-step::before {
                 /* counter-increment: step;
-                    content: counter(step); */
+                            content: counter(step); */
 
             }
 
@@ -131,9 +147,9 @@
                 margin-top: -25%
             }
 
-           
 
-           
+
+
 
 
             .title {
@@ -272,20 +288,20 @@
             }
 
             /* .btn {
-                    padding: 0.75rem;
-                    display: block;
-                    text-decoration: none;
-                    background-color: var(--primary-color);
-                    color: #f3f3f3;
-                    text-align: center;
-                    border-radius: 0.25rem;
-                    cursor: pointer;
-                    transition: 0.3s;
-                } */
+                            padding: 0.75rem;
+                            display: block;
+                            text-decoration: none;
+                            background-color: var(--primary-color);
+                            color: #f3f3f3;
+                            text-align: center;
+                            border-radius: 0.25rem;
+                            cursor: pointer;
+                            transition: 0.3s;
+                        } */
 
             /* .btn:hover {
-                    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
-                } */
+                            box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+                        } */
 
 
 
@@ -459,71 +475,72 @@
             }
 
 
-            .employeid{
-            visibility: hidden;
-         }
+            .employeid {
+                visibility: hidden;
+            }
 
 
 
             @media screen and (max-width : 960px) {
 
                 /*
-                    .form-group.c1 {
-                        display: inline-block;
-                        width: 30%;
-                        margin-left: 17%;
-                    }
+                            .form-group.c1 {
+                                display: inline-block;
+                                width: 30%;
+                                margin-left: 17%;
+                            }
 
-                    .form-group.c2 {
+                            .form-group.c2 {
 
-                        display: inline-block;
-                        width: 30%;
-                        margin-left: 8%;
-
-
-                    }
+                                display: inline-block;
+                                width: 30%;
+                                margin-left: 8%;
 
 
-                    #employeeid {
-                        padding-top: 11%;
-                    }
-
-                    .progressbar {
-                        position: relative;
-                        display: flex;
-                        justify-content: space-between;
-                        counter-reset: step;
-                        margin: 2rem 5rem 4rem;
+                            }
 
 
-                    }
+                            #employeeid {
+                                padding-top: 11%;
+                            }
+
+                            .progressbar {
+                                position: relative;
+                                display: flex;
+                                justify-content: space-between;
+                                counter-reset: step;
+                                margin: 2rem 5rem 4rem;
+
+
+                            }
 
 
 
 
-         */
+                 */
 
-         .employeid{
-            visibility: hidden;
-         }
+                .employeid {
+                    visibility: hidden;
+                }
 
                 .main_container {
                     margin-top: 0%;
                     margin-left: 0%;
                     z-index: -1;
-                    
+
 
                 }
-                .navone{
+
+                .navone {
                     z-index: 0;
                     width: 100%;
                     margin-left: 0%;
                 }
 
-                .navtwo{
-                visibility: visible;
-                z-index: 1;
-            }
+                .navtwo {
+                    visibility: visible;
+                    z-index: 1;
+                }
 
                 .progressbar {
                     position: relative;
@@ -585,7 +602,7 @@
 
                 .progress-step::before {
                     /* counter-increment: step;
-                    content: counter(step); */
+                            content: counter(step); */
 
                 }
 
@@ -739,20 +756,20 @@
                 }
 
                 /* .btn {
-                    padding: 0.75rem;
-                    display: block;
-                    text-decoration: none;
-                    background-color: var(--primary-color);
-                    color: #f3f3f3;
-                    text-align: center;
-                    border-radius: 0.25rem;
-                    cursor: pointer;
-                    transition: 0.3s;
-                } */
+                            padding: 0.75rem;
+                            display: block;
+                            text-decoration: none;
+                            background-color: var(--primary-color);
+                            color: #f3f3f3;
+                            text-align: center;
+                            border-radius: 0.25rem;
+                            cursor: pointer;
+                            transition: 0.3s;
+                        } */
 
                 /* .btn:hover {
-                    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
-                } */
+                            box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+                        } */
 
 
 
@@ -868,70 +885,70 @@
 
 
                 .employeeicons {
-                margin-left: 400px;
-                margin-top: 0.5%;
-            }
+                    margin-left: 400px;
+                    margin-top: 0.5%;
+                }
 
-            #employeeinfo {
+                #employeeinfo {
 
-                font-size: 28px;
+                    font-size: 28px;
 
-            }
+                }
 
-            #employee_info {
+                #employee_info {
 
-                font-size: 28px;
-            }
+                    font-size: 28px;
+                }
 
-            .employementicons {
-                margin-left: 380px;
-                margin-top: 0.5%;
-            }
+                .employementicons {
+                    margin-left: 380px;
+                    margin-top: 0.5%;
+                }
 
-            #employementinfo {
+                #employementinfo {
 
-                font-size: 28px;
+                    font-size: 28px;
 
-            }
+                }
 
-            #employement_info {
+                #employement_info {
 
-                font-size: 28px;
-            }
+                    font-size: 28px;
+                }
 
-            .accounticons {
-                margin-left: 397px;
-                margin-top: 0.5%;
-            }
+                .accounticons {
+                    margin-left: 397px;
+                    margin-top: 0.5%;
+                }
 
-            #accountinfo {
+                #accountinfo {
 
-                font-size: 28px;
+                    font-size: 28px;
 
-            }
+                }
 
-            #account_info {
+                #account_info {
 
-                font-size: 28px;
-            }
+                    font-size: 28px;
+                }
 
-            /* hr {
-                margin-left: 4%;
-                width: 100%;
+                /* hr {
+                        margin-left: 4%;
+                        width: 100%;
 
-            } */
+                    } */
 
 
-            .data {
-                background-color: white;
-                border-radius: 5px;
-                margin: 20px;
-                width: 700px;
-                padding-top: 10px;
-                box-shadow: 0px 10px 50px rgba(173, 170, 170, 0.2);
-            }
+                .data {
+                    background-color: white;
+                    border-radius: 5px;
+                    margin: 20px;
+                    width: 700px;
+                    padding-top: 10px;
+                    box-shadow: 0px 10px 50px rgba(173, 170, 170, 0.2);
+                }
 
-        
+
 
 
 
@@ -947,6 +964,8 @@
     <body style="background-color: white;font-family: 'Montserrat', sans-serif;">
 
         <div id="main-container" class="main_container">
+
+            @include('flash-message')
 
             <div class="title">
                 <h3> Hi, JANAGAMA PRASHANTH GOUD </h3>
@@ -1009,8 +1028,9 @@
                             <div class="form-group c1">
                                 <div class="employeid">
                                     <label for=" Employe Id"> Employe Id </label>
-                                    <input type="text" class="form-control" placeholder=" Employe Id" value="{{auth()->user()->employeeid}}"
-                                        name="employeid" style=" font-size:15px;" required>
+                                    <input type="text" class="form-control" placeholder=" Employe Id"
+                                        value="{{ auth()->user()->employeeid }}" name="employeid" style=" font-size:15px;"
+                                        required>
 
 
                                 </div>
@@ -1329,45 +1349,73 @@
 
 
                                     <div id="qualification">
-                                        <div class="form-group c1">
-                                            <div class="">
-                                                <label for="Start Date"> Start Date </label>
-                                                <input type="date" class="form-control" placeholder=" Start Date "
-                                                    name="startdate" style="font-size:15px;">
+                                        <div id="first_row">
+
+                                          
+
+                                            <div class="address">
+                                               
+                                                <div class="form-floating">
+                                                    <input type="hidden"  name="employeid"
+                                                    value="{{ auth()->user()->employeeid }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group c1">
+                                                <div class="">
+                                                    <label for="Start Date"> Start Date </label>
+                                                    <input type="date" class="form-control" placeholder=" Start Date "
+                                                        name="startdate[]" style="font-size:15px;">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group c2">
+                                                <div class=" ">
+                                                    <label for=" End Date "> End Date </label>
+                                                    <input type="date" class="form-control" placeholder=" End Date "
+                                                        name="enddate[]" style=" font-size:15px;">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group c1">
+                                                <div class="">
+                                                    <label for="Institution"> Institution Name </label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder=" Institution Name " name="institution[]"
+                                                        style="font-size:15px;">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group c2">
+                                                <div class=" ">
+                                                    <label for=" Qualification "> Qualification </label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder=" Qualification " name="qualification[]"
+                                                        style=" font-size:15px;">
+
+                                                </div>
+                                            </div>
+
+                                            <div id="dynamic_field">
 
                                             </div>
-                                        </div>
+                                            <br>
 
-                                        <div class="form-group c2">
-                                            <div class=" ">
-                                                <label for=" End Date "> End Date </label>
-                                                <input type="date" class="form-control" placeholder=" End Date "
-                                                    name="enddate" style=" font-size:15px;">
+                                            <button type="button" id="btn_add_license"
+                                                class="btn btn-primary add-btn-head " title="Add More">Add
+                                                More Feilds </button>
 
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group c1">
-                                            <div class="">
-                                                <label for="Institution"> Institution Name </label>
-                                                <input type="text" class="form-control"
-                                                    placeholder=" Institution Name " name="institution"
-                                                    style="font-size:15px;">
-
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group c2">
-                                            <div class=" ">
-                                                <label for=" Qualification "> Qualification </label>
-                                                <input type="text" class="form-control" placeholder=" Qualification "
-                                                    name="qualification" style=" font-size:15px;">
-
-                                            </div>
+                                            <input type="hidden" name="license_count" id="license_count"
+                                                value="1">
                                         </div>
                                     </div>
 
+
                                 </div>
+
+
 
 
                                 <br>
@@ -1394,56 +1442,76 @@
                                 <br>
 
 
+                                <div id="first_row">
 
+                                    <div class="address">
+                                               
+                                        <div class="form-floating">
+                                            <input type="hidden"  name="employeid"
+                                            value="{{ auth()->user()->employeeid }}">
+                                        </div>
+                                    </div>
 
-                                <div class="form-group c1">
-                                    <div class="">
-                                        <label for="Company Name "> Comapny Name </label>
-                                        <input type="text" class="form-control" placeholder=" Company Name "
-                                            name="companyname" style="font-size:15px;">
+                                    <div class="form-group c1">
+                                        <div class="">
+                                            <label for="Company Name "> Comapny Name </label>
+                                            <input type="text" class="form-control" placeholder=" Company Name "
+                                                name="companyname[]" style="font-size:15px;">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group c2">
+                                        <div class=" ">
+                                            <label for=" Designation "> Designation </label>
+                                            <input type="text" class="form-control" placeholder=" Designation "
+                                                name="designation[]" style=" font-size:15px;">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group c1">
+                                        <div class="">
+                                            <label for="From Date"> From Date </label>
+                                            <input type="date" class="form-control" placeholder=" From Date "
+                                                name="fromdate[]" style="font-size:15px;">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group c2">
+                                        <div class=" ">
+                                            <label for=" To Date "> To Date </label>
+                                            <input type="date" class="form-control" placeholder=" To Date "
+                                                name="todate[]" style=" font-size:15px;">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="address">
+                                        <label for="floatingTextarea"> Company Address* </label>
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder=" Comapny Address" id="floatingTextarea" name="companyaddress[]"
+                                                style="height: 50px"></textarea>
+                                            <label id="title" for="floatingTextarea"> Enter Company Address.. </label>
+                                        </div>
+                                    </div>
+
+                                    <div id="dynamic">
 
                                     </div>
+                                    <br>
+
+                                    <button type="button" id="btn_field"
+                                        class="btn btn-primary add-btn-head " title="Add More">Add
+                                        More Feilds </button>
+
+                                    <input type="hidden" name="license_count" id="license"
+                                        value="1">
+
+
+
                                 </div>
-
-                                <div class="form-group c2">
-                                    <div class=" ">
-                                        <label for=" Designation "> Designation </label>
-                                        <input type="text" class="form-control" placeholder=" Designation "
-                                            name="designation" style=" font-size:15px;">
-
-                                    </div>
-                                </div>
-
-                                <div class="form-group c1">
-                                    <div class="">
-                                        <label for="From Date"> From Date </label>
-                                        <input type="date" class="form-control" placeholder=" From Date "
-                                            name="fromDate" style="font-size:15px;">
-
-                                    </div>
-                                </div>
-
-                                <div class="form-group c2">
-                                    <div class=" ">
-                                        <label for=" To Date "> To Date </label>
-                                        <input type="date" class="form-control" placeholder=" To Date "
-                                            name="todate" style=" font-size:15px;">
-
-                                    </div>
-                                </div>
-
-                                <div class="address">
-                                    <label for="floatingTextarea"> Company Address* </label>
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder=" Comapny Address" id="floatingTextarea" name="companyaddress"
-                                            style="height: 50px"></textarea>
-                                        <label id="title" for="floatingTextarea"> Enter Company Address.. </label>
-                                    </div>
-                                </div>
-
-
-
-
 
 
 
@@ -1990,7 +2058,7 @@
 
                                     </div>
 
-                                </div> 
+                                </div>
 
                                 <br>
                                 <div class="btns-group">
@@ -2230,4 +2298,74 @@
 
         });
     </script>
+
+    <script>
+        $(document).ready(function() {
+            var i = 1;
+
+            // Add form while clicking on add button
+            $('#btn_add_license').click(function() {
+                i++;
+                $('#dynamic_field').append(
+                    ' <div id="first_row' + i +
+                    '">  <div class="form-group c1" > <label for="start date"> Start Date </label> <input type="date" class=" form-control" name="startdate[]' +
+                    i +
+                    '" placeholder=" Start Date" maxlength="35" class="form-control name_list" aria-required="true" /> </div>                              <div class="form-group c2"> <label for="end date"> End Date </label> <input type="date" class="form-control" name="enddate[]' +
+                    i +
+                    '" placeholder="End Date" maxlength="35" class="form-control name_list" aria-required="true" /> </div>                               <div class="form-group c1">  <label for="institution"> Institution Name </label> <input type="text" class=" form-control" name="institution[]' +
+                    i +
+                    '" placeholder="Institution Name" maxlength="35" class="form-control name_list" aria-required="true" /> </div>     <div class="form-group c2"> <label for="quqlification">  Qualification </label> <input type="text" class=" form-control" name="qualification[]' +
+                    i +
+                    '" placeholder=" Qualification" maxlength="35" class="form-control name_list" aria-required="true" /> </div>     <div class="form-group ">  <button type="button" name="remove" id="' +
+                    i +
+                    '" class="btn btn-danger btn_remove">Remove</button>   </div> </div>  '
+                );
+
+                $('#license_count').val(i);
+            });
+
+            // remove license row on clicking remove btn
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#first_row' + button_id + '').remove();
+                i--;
+                $('#license_count').val(i);
+            });
+        });
+    </script>
+
+<script>
+    $(document).ready(function() {
+        var i = 1;
+
+        // Add form while clicking on add button
+        $('#btn_field').click(function() {
+            i++;
+            $('#dynamic').append(
+                ' <div id="first_row' + i +
+                '"> <br>  <div class="form-group c1" > <label for="Company Name"> Company Nmae </label> <input type="text" class=" form-control" name="companyname[]' +
+                i +
+                '" placeholder=" Company Name" maxlength="35" class="form-control name_list" aria-required="true" /> </div>                              <div class="form-group c2"> <label for="Designation"> Designation </label> <input type="text" class="form-control" name="designation[]' +
+                i +
+                '" placeholder="Designation" maxlength="35" class="form-control name_list" aria-required="true" /> </div>                               <div class="form-group c1">  <label for="From Date"> From Date </label> <input type="date" class=" form-control" name="fromdate[]' +
+                i +
+                '" placeholder="From Date" maxlength="35" class="form-control name_list" aria-required="true" /> </div>     <div class="form-group c2"> <label for="To Date">  To Date </label> <input type="date" class=" form-control" name="todate[]' +
+                i +
+                '" placeholder=" To Date" maxlength="35" class="form-control name_list" aria-required="true" /> </div>   <div class="address">                                          <label for="floatingTextarea"> Company Address* </label>   <div class="form-floating">                <textarea class="form-control" placeholder=" Comapny Address" id="floatingTextarea" name="companyaddress[]" style="height: 50px"></textarea>                                             <label id="title" for="floatingTextarea"> Enter Company Address.. </label> </div> </div>    <div class="form-group ">   <button type="button" name="remove" id="' +
+                i +
+                '" class="btn btn-danger btn_delete">Remove</button>   </div> </div>  '
+            );
+
+            $('#license').val(i);
+        });
+
+        // remove license row on clicking remove btn
+        $(document).on('click', '.btn_delete', function() {
+            var button_id = $(this).attr("id");
+            $('#first_row' + button_id + '').remove();
+            i--;
+            $('#license').val(i);
+        });
+    });
+</script>
 @endsection

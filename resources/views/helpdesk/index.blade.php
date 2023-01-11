@@ -90,6 +90,13 @@
             margin-top: 5%
         }
 
+        #addfile {
+            display: block;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+
         @media (max-width:960px) {
             .content{
                 margin-left: 0px;
@@ -105,9 +112,23 @@
 
 margin-left: 58%;
 }
+
+#addfile {
+            display: block;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
         }
 
             @media (max-width:480px) {
+
+                #addfile {
+            display: block;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
                  #submit{
 
                     margin-left: 58%;
@@ -159,6 +180,7 @@ margin-left: 58%;
                     margin-bottom: -10px
                 }
 
+              
              
             }
         </style>
@@ -168,6 +190,8 @@ margin-left: 58%;
 
 
         <div class="main_container">
+
+            @include('flash-message')
         <div class="content">
 
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -201,7 +225,7 @@ margin-left: 58%;
                                 <div class="offcanvas-body" style="margin-left:5%">
                                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
     
-                                        <form action="{{route('helpdesk.store')}}" method="POST">
+                                        <form action="{{route('helpdesk.store')}}" method="POST"  enctype="multipart/form-data">
 
                                             @csrf
 
@@ -246,7 +270,14 @@ margin-left: 58%;
                                                 </select>
     
                                             </div>
-    
+<br>
+                                            <input type="file" name="addfile" id="addfile">
+
+                                            <p style="color: rgb(63, 124, 246);  cursor: pointer"> Attach File</p>
+
+
+
+
     
                                             <button id="submit" type="submit" class="btn btn-primary">Save changes</button>
     
@@ -307,4 +338,11 @@ margin-left: 58%;
     </body>
 
     </html>
+
+    <script>
+        $('p').click(function() {
+            $('input').click();
+        });
+    </script>
+
 @endsection

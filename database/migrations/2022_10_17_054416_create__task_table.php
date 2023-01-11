@@ -17,11 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string('taskname',100 );
             $table->string('assignee', 300);
-            $table->string('checklist', 500);
+           
             $table->date('duedate', 15);
+          
             $table->string('priority',20 );
             $table->string('tags', 50);
             $table->string('description', 300);
+            $table->string('addfile');
+            $table->unsignedBigInteger( 'Active')->lenght(10);
             $table->timestamps();
         });
     }

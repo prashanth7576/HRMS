@@ -543,6 +543,9 @@
 
 
     <div id="main-container" class="main_container" style="background-color:smokewhite">
+
+        @include('flash-message')
+        
         <h3>Good Morning</h3>
         <div class="flex">
             <div class="two">

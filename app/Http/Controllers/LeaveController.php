@@ -19,8 +19,10 @@ class LeaveController extends Controller
         $user = Auth::user();
         $data = DB::table('leave')->where('employeid', $user->employeeid)->get();
 
+        $balance = DB::table('leave')->where('employeid', auth()->user()->employeeid)->where('status', 'approved')->where('leavetype', 'Casual Leave')->sum(DB::raw('leave.days'));
+        $pending = DB::table('companyleavemaster')->where('id', 1)->first([ 'casualleave'])->casualleave;
         
-        return view('leave', compact('data'));
+        return view('leave', compact('user', 'data', 'balance', 'pending'));
     }
 
     /**
@@ -50,10 +52,13 @@ class LeaveController extends Controller
         $leave->todatesession = $request->todatesession;
         $leave->days = $request->days;
         $leave->reason = $request->reason;
+        // $balance = DB::table('leave')->pluck('balance');
+        // $leave = DB::table('leave')->where('days' <= $balance);
 
+       
         $leave->save();
 
-        return redirect('feeds');
+        return back()->with('success', 'Leave applicarion Submitted successfully!');
 
     }
 
@@ -103,8 +108,8 @@ class LeaveController extends Controller
     }
 
     public function display(){
-        $leave = Leave::all();
-        return view('review', compact('leave'));
+        $data = Leave::all();
+        return view('review', compact('data'));
     }
 
     public function leavehistory(){
@@ -115,13 +120,16 @@ class LeaveController extends Controller
 
 
     public function pending($id){
+        $balance = DB::table('leave')->where('employeid', auth()->user()->employeeid)->where('status', 'approved')->where('leavetype', 'Casual Leave')->sum(DB::raw('leave.days'));
+        $taken = DB::table('companyleavemaster')->where('id', 1)->first([ 'casualleave'])->casualleave;
+        
         $pending = Leave::find($id);
-        return view('pending', compact('pending', 'id'));
+        return view('pending', compact('pending', 'id', 'balance', 'taken'));
     }
 
     public function approved($id){
         $leave = Leave::find($id);
-        $leave->status = 'approved';
+        $leave->status = '1';
         $leave->save();
         return redirect()->back();
 
@@ -129,11 +137,13 @@ class LeaveController extends Controller
 
     public function canceled($id){
         $leave = Leave::find($id);
-        $leave->status = 'canceled';
+        $leave->status = '0';
         $leave->save();
         return redirect()->back();
 
     }
+
+
 
    
 }

@@ -36,15 +36,7 @@ return new class extends Migration
             $table->string('district', 50);
             $table->string('state', 100);
             $table->string('pincode', 20);
-            $table->date('startdate',20 );
-            $table->date('enddate', 20);
-            $table->string('institution', 100);
-            $table->string('qualification', 100);
-            $table->string('companyname', 100);
-            $table->string('designation',30 );
-            $table->date('fromDate', 100);
-            $table->date('todate',100 );
-            $table->string('companyaddress', 300);
+           
             $table->unsignedBigInteger('accountnumber')->length(30)->unique();
             $table->unsignedBigInteger('confirmbankaccountnumber')->length(30)->unique();
             $table->string('country', 40);

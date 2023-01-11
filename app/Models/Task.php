@@ -12,5 +12,5 @@ class Task extends Model
     
     protected $table = "Task";
 
-    protected $fillable = ['taskname', 'assignee', 'checklist', 'duedate', 'priority', 'tags', 'description'];
+    protected $fillable = ['taskname', 'assignee', 'duedate', 'priority', 'tags', 'description', 'addfile', 'Active'];
 }

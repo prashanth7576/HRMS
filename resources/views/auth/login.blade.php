@@ -30,22 +30,27 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Montserrat&family=Quintessential&family=Ubuntu+Mono&display=swap"
         rel="stylesheet">
 
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body style="background-color:whitesmoke;font-family: 'Montserrat', sans-serif;">
-<div class="flex justify-center">
+    @include('flash-message')
 
-<img src="https://xsilica.com/images/xsilica_broucher_final_modified_05082016-2.png" alt="logo"
-                         style="width:150px;height:50px;text-align:center">
-</div>
     <div class="row justify-content-center" style="font-family: 'Montserrat', sans-serif;">
 
-    
+        <div class="flex justify-center" style="margin-top:7%; margin-bottom:1%">
+
+            <img src="https://xsilica.com/images/xsilica_broucher_final_modified_05082016-2.png" alt="logo"
+                                     style="width:150px;height:50px;text-align:center">
+            </div>
+
         <div class="col-md-6"
-            style="margin-top: 8%;background-color:white;width:500px;margin-bottom:5%;border-radius:10px; box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);">
+            style="margin-top: 0%;background-color:white;width:500px;margin-bottom:5%;border-radius:10px; box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);">
             <div style="padding-top:4%;padding-bottom:4%;border-radius:25px">
             
                 <div class="flex justify-center">
+                    
                     <h1 style="font-size:20px;font-weight:700">Hello there!</h1>
                 </div>
                 <br>

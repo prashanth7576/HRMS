@@ -17,69 +17,69 @@
 
         <style>
             /* .row {
-                                            margin-top: 2%;
-                                        } */
+                                                margin-top: 2%;
+                                            } */
 
 
 
 
             /* #title{
-                                            margin-top: 0%;
-                                            margin-left: 15.9%;
-                                            position: fixed;
-                                            background-color: white;
-                                            width: 100%;
-                                            padding: 3px;
-                                            border: 1px solid rgb(0, 0, 0, 0.1);
-                                        }
+                                                margin-top: 0%;
+                                                margin-left: 15.9%;
+                                                position: fixed;
+                                                background-color: white;
+                                                width: 100%;
+                                                padding: 3px;
+                                                border: 1px solid rgb(0, 0, 0, 0.1);
+                                            }
 
-                                        #feed{
-                                            background-color: white;
-                                            box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-                                            border-radius: 10px;
-                                            padding:10px;
-                                            margin-top: 10%;
-                                        }
+                                            #feed{
+                                                background-color: white;
+                                                box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
+                                                border-radius: 10px;
+                                                padding:10px;
+                                                margin-top: 10%;
+                                            }
 
-                                      
+                                          
 
-                                        #links {
-                                            background-color: red;
-                                            height: 725px;
-                                            padding-top: 15%;
-                                            border: 1px solid rgb(0, 0, 0, 0.2);
-                                            position: fixed;
-                                        }
+                                            #links {
+                                                background-color: red;
+                                                height: 725px;
+                                                padding-top: 15%;
+                                                border: 1px solid rgb(0, 0, 0, 0.2);
+                                                position: fixed;
+                                            }
 
-                                        #head {
-                                            background-color: white;
-                                            height: 120px;
-                                        }
+                                            #head {
+                                                background-color: white;
+                                                height: 120px;
+                                            }
 
-                                        .list{
-                                           
-                                                margin-top:100px;
-                                            
-                                        }
+                                            .list{
+                                               
+                                                    margin-top:100px;
+                                                
+                                            }
 
-                                        li {
-                                            cursor: pointer;
-                                            list-style: none;
-                                            margin-top: 15px;
-                                            font-size: 17px;
-                                            font-weight: 600;
-                                            margin-left: -20px;
+                                            li {
+                                                cursor: pointer;
+                                                list-style: none;
+                                                margin-top: 15px;
+                                                font-size: 17px;
+                                                font-weight: 600;
+                                                margin-left: -20px;
 
 
-                                        }
+                                            }
 
-                                        li.selected {
-                                            background-color: rgb(109, 123, 141, 0.5);
-                                            padding: 10px;
-                                            border-radius: 10px;
-                                            color: white;
+                                            li.selected {
+                                                background-color: rgb(109, 123, 141, 0.5);
+                                                padding: 10px;
+                                                border-radius: 10px;
+                                                color: white;
 
-                                        } */
+                                            } */
 
             #spanone {
                 margin-right: 60px;
@@ -190,14 +190,14 @@
                 border: 1px solid rgb(109, 123, 141, 0.5);
             }
 
-            #pills-active-tab:hover{
-                border: 1px solid  rgb(76, 67, 247);
-            } 
+            #pills-active-tab:hover {
+                border: 1px solid rgb(76, 67, 247);
+            }
 
-            
-            #pills-closed-tab:hover{
-                border: 1px solid  rgb(76, 67, 247);
-            } 
+
+            #pills-closed-tab:hover {
+                border: 1px solid rgb(76, 67, 247);
+            }
 
             .status {
                 margin-left: 40%;
@@ -205,13 +205,13 @@
             }
 
             /* .content {
-                    margin-left: 20.5%;
-                    border: 1px solid rgb(132, 127, 127, 0.5);
-                    height: 60vh;
-                    width: 130vh;
-                    background-color: white;
-                    border-radius: 5px;
-                } */
+                        margin-left: 20.5%;
+                        border: 1px solid rgb(132, 127, 127, 0.5);
+                        height: 60vh;
+                        width: 130vh;
+                        background-color: white;
+                        border-radius: 5px;
+                    } */
 
             h3 {
                 text-align: center;
@@ -223,14 +223,14 @@
             }
 
             /* .side-bar {
-                    margin-top: -9%
-                } */
+                        margin-top: -9%
+                    } */
 
             .content {
                 /* border: 1px solid lightgray;
-                    border-radius: 5px;
-                    background-color: white;
-                    margin-left: -5%; */
+                        border-radius: 5px;
+                        background-color: white;
+                        margin-left: -5%; */
 
                 margin-left: 18.5%;
                 border: 1px solid rgb(132, 127, 127, 0.5);
@@ -241,7 +241,7 @@
 
             }
 
-            .content:hover{
+            .content:hover {
                 border: 1px solid rgb(65, 147, 248);
             }
 
@@ -335,14 +335,14 @@
             @media (max-width:960px) {
 
 
-                #pills-active-tab:hover{
-                border: 1px solid  rgb(76, 67, 247);
-            } 
+                #pills-active-tab:hover {
+                    border: 1px solid rgb(76, 67, 247);
+                }
 
-            
-            #pills-closed-tab:hover{
-                border: 1px solid  rgb(76, 67, 247);
-            } 
+
+                #pills-closed-tab:hover {
+                    border: 1px solid rgb(76, 67, 247);
+                }
 
                 .tab {
                     width: 120px;
@@ -466,13 +466,13 @@
                 }
 
                 /* .content {
-                        margin-left: 22.5%;
-                        border: 1px solid rgb(132, 127, 127, 0.5);
-                        height: 60vh;
-                        width: 80vh;
-                        background-color: white;
-                        border-radius: 5px;
-                    } */
+                            margin-left: 22.5%;
+                            border: 1px solid rgb(132, 127, 127, 0.5);
+                            height: 60vh;
+                            width: 80vh;
+                            background-color: white;
+                            border-radius: 5px;
+                        } */
 
                 .tab-content {
                     margin-top: -4.5%
@@ -480,9 +480,9 @@
 
                 .content {
                     /* border: 1px solid lightgray;
-                        border-radius: 5px;
-                        background-color: white;
-                        margin-left: 0%; */
+                            border-radius: 5px;
+                            background-color: white;
+                            margin-left: 0%; */
 
 
                     margin-left: 21.5%;
@@ -592,14 +592,14 @@
 
             @media (max-width:480px) {
 
-                #pills-active-tab:hover{
-                border: 1px solid  rgb(76, 67, 247);
-            } 
+                #pills-active-tab:hover {
+                    border: 1px solid rgb(76, 67, 247);
+                }
 
-            
-            #pills-closed-tab:hover{
-                border: 1px solid  rgb(76, 67, 247);
-            } 
+
+                #pills-closed-tab:hover {
+                    border: 1px solid rgb(76, 67, 247);
+                }
 
 
                 h3 {
@@ -712,13 +712,13 @@
                 }
 
                 /* .content {
-                        margin-left: 32.5%;
-                        border: 1px solid rgb(132, 127, 127, 0.5);
-                        height: 60vh;
-                        width: 32vh;
-                        background-color: white;
-                        border-radius: 5px;
-                    } */
+                            margin-left: 32.5%;
+                            border: 1px solid rgb(132, 127, 127, 0.5);
+                            height: 60vh;
+                            width: 32vh;
+                            background-color: white;
+                            border-radius: 5px;
+                        } */
 
                 .tab-content {
                     margin-top: -4.5%
@@ -728,9 +728,9 @@
 
                 .content {
                     /* border: 1px solid lightgray;
-                        border-radius: 5px;
-                        background-color: white;
-                        margin-top: 0px; */
+                            border-radius: 5px;
+                            background-color: white;
+                            margin-top: 0px; */
 
                     margin-left: 32.5%;
                     border: 1px solid rgb(132, 127, 127, 0.5);
@@ -821,6 +821,8 @@
 
     <body style="background-color: whitesmoke">
         <div class="main_container">
+
+            @include('flash-message')
 
             <div class="row">
                 <div id="links" class="col-md-2">
@@ -1208,64 +1210,71 @@
                                         </div>
 
                                         <div>
+                                            @if (auth()->user()->role == 1)
+                                                @foreach ($data as $i)
+                                                    @if ($i->status == 'Pending')
+                                                        <div class="content">
+                                                            <div class="flex" style="padding-top: 6px">
+                                                                
+                                                                <h1 class="user">{{ $i->firstname }}
+                                                                    {{ $i->lastname }}</h1> 
+                                                                
+                                                                
+                                                                <h1 class="leave" style="color: rgb(113, 111, 111)">Leave
+                                                                    Type</h1>
+                                                                <h1 class="period" style="color: rgb(113, 111, 111)">
+                                                                    Period
+                                                                </h1>
+                                                            </div>
 
-                                            @foreach ($leave as $i)
-                                                @if ($i->status == 'Pending')
-                                                    <div class="content">
-                                                        <div class="flex" style="padding-top: 6px">
-                                                            <h1 class="user">{{ auth()->user()->firstname }}
-                                                                {{ auth()->user()->lastname }}</h1>
-                                                            <h1 class="leave" style="color: rgb(113, 111, 111)">Leave
-                                                                Type</h1>
-                                                            <h1 class="period" style="color: rgb(113, 111, 111)">Period
-                                                            </h1>
-                                                        </div>
+                                                            <div class="flex">
+                                                                <h1 class="employeid" style="color: rgb(113, 111, 111)">
+                                                                    #{{ $i->employeid }}</h1>
+                                                                <h1 class="leavetype"> {{ $i->leavetype }}</h1>
+                                                                <h1 class="perioddate">
+                                                                    {{ Carbon\Carbon::parse($i->fromdate)->format('d-m-Y') }}
+                                                                </h1>
+                                                            </div>
 
-                                                        <div class="flex">
-                                                            <h1 class="employeid" style="color: rgb(113, 111, 111)">
-                                                                #{{ $i->employeid }}</h1>
-                                                            <h1 class="leavetype"> {{ $i->leavetype }}</h1>
-                                                            <h1 class="perioddate">
-                                                                {{ Carbon\Carbon::parse($i->fromdate)->format('d-m-Y') }}
-                                                            </h1>
-                                                        </div>
+                                                            <hr>
 
-                                                        <hr>
-
-                                                        <p style="color: rgb(113, 111, 111)">No.of Days: <span
-                                                                style="color: black; font-size:17px;
+                                                            <p style="color: rgb(113, 111, 111)">No.of Days: <span
+                                                                    style="color: black; font-size:17px;
                                                     font-weight:550">
-                                                                {{ $i->days }} </span></p>
-                                                        <p style="color: rgb(113, 111, 111)">Balance:</p>
+                                                                    {{ $i->days }} </span></p>
+                                                            <p style="color: rgb(113, 111, 111)">Balance:</p>
 
-                                                        <hr>
+                                                            <hr>
 
-                                                        <div class="approve">
-                                                            <p class="applied" style="color: rgb(113, 111, 111)">Applied
-                                                                on:</p>
+                                                            <div class="approve">
+                                                                <p class="applied" style="color: rgb(113, 111, 111)">
+                                                                    Applied
+                                                                    on:</p>
 
-                                                            <p class="date">
-                                                                {{ Carbon\Carbon::parse($i->created_at)->format('d-m-Y') }}
-                                                            </p>
+                                                                <p class="date">
+                                                                    {{ Carbon\Carbon::parse($i->created_at)->format('d-m-Y') }}
+                                                                </p>
 
-                                                            <button id="btn" class="btn btn-outline-primary"> <a
-                                                                    href="{{url('pending/'. $i->id)}}"> <span>View
-                                                                        Details</span>
-                                                                </a> </button>
-                                                            <button class="btn btn-outline-primary"> <span>Forward</span>
-                                                            </button>
-                                                            <button class="btn btn-outline-primary"> <a
-                                                                    href="{{ url('canceled', $i->id) }}">
-                                                                    <span>Reject</span> </a> </button>
-                                                            <button class="btn btn-primary"> <a
-                                                                    href="{{ url('approved', $i->id) }}"
-                                                                    style="color: white"> <span>Approve</span> </a>
-                                                            </button>
+                                                                <button id="btn" class="btn btn-outline-primary"> <a
+                                                                        href="{{ url('pending/' . $i->id) }}"> <span>View
+                                                                            Details</span>
+                                                                    </a> </button>
+                                                                <button class="btn btn-outline-primary">
+                                                                    <span>Forward</span>
+                                                                </button>
+                                                                <button class="btn btn-outline-primary"> <a
+                                                                        href="{{ url('canceled', $i->id) }}">
+                                                                        <span>Reject</span> </a> </button>
+                                                                <button class="btn btn-primary"> <a
+                                                                        href="{{ url('approved', $i->id) }}"
+                                                                        style="color: white"> <span>Approve</span> </a>
+                                                                </button>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <br>
-                                                @endif
-                                            @endforeach
+                                                        <br>
+                                                    @endif
+                                                @endforeach
+                                            @endif
 
                                         </div>
                                     </div>
@@ -1293,67 +1302,70 @@
 
                                         <div>
 
-                                            @foreach ($leave as $i)
+                                            @if (auth()->user()->role == 1)
+                                                @foreach ($data as $i)
+                                                    @if ($i->status != 'Pending')
+                                                        <div class="content">
 
-                                            @if ($i->status != 'Pending')
-                                                
-                                           
-                                                <div class="content">
 
-                                                    
-                                                        <div class="flex" style="padding-top: 7px">
-                                                            <h1 class="user">{{ auth()->user()->firstname }}
-                                                                {{ auth()->user()->lastname }}</h1>
-                                                            <h1 class="leave" style="color: rgb(113, 111, 111)">Leave
-                                                                Type</h1>
-                                                            <h1 class="period" style="color: rgb(113, 111, 111)">Period
-                                                            </h1>
-                                                        </div>
+                                                            <div class="flex" style="padding-top: 7px">
+                                                               
+                                                                <h1 class="user">{{ $i->firstname }}
+                                                                    {{ $i->lastname }}</h1> 
+                                                               
+                                                                <h1 class="leave" style="color: rgb(113, 111, 111)">Leave
+                                                                    Type</h1>
+                                                                <h1 class="period" style="color: rgb(113, 111, 111)">
+                                                                    Period
+                                                                </h1>
+                                                            </div>
 
-                                                        <div class="flex" style="padding-bottom: 7px">
-                                                            <h1 class="employeid" style="color: rgb(113, 111, 111)">
-                                                                #{{ $i->employeid }}</h1>
-                                                            <h1 class="leavetype"> {{ $i->leavetype }}</h1>
-                                                            <h1 class="perioddate">
-                                                                {{ Carbon\Carbon::parse($i->fromdate)->format('d-m-Y') }}
-                                                            </h1>
-                                                        </div>
+                                                            <div class="flex" style="padding-bottom: 7px">
+                                                                <h1 class="employeid" style="color: rgb(113, 111, 111)">
+                                                                    #{{ $i->employeid }}</h1>
+                                                                <h1 class="leavetype"> {{ $i->leavetype }}</h1>
+                                                                <h1 class="perioddate">
+                                                                    {{ Carbon\Carbon::parse($i->fromdate)->format('d-m-Y') }}
+                                                                </h1>
+                                                            </div>
 
-                                                        <h5 id="status"
-                                                            style="color: rgb(83, 190, 83); font-size:20px; font-weight:500">
-                                                            {{ $i->status }}</h5>
+                                                            <h5 id="status"
+                                                                style="color: rgb(83, 190, 83); font-size:20px; font-weight:500">
+                                                                {{ $i->status }}</h5>
 
-                                                       
-                                                    
-                                                    
-                                                    
-                                                        <hr>
 
-                                                        <p style="color: rgb(113, 111, 111)">No.of Days: <span
-                                                                style="color: black; font-size:17px;
+
+
+
+                                                            <hr>
+
+                                                            <p style="color: rgb(113, 111, 111)">No.of Days: <span
+                                                                    style="color: black; font-size:17px;
                                                      font-weight:550">
-                                                                {{ $i['days'] }} </span></p>
-                                                        <p style="color: rgb(113, 111, 111)">Reason: <span
-                                                                style="color: black; font-size:17px; font-weight:550">
-                                                                {{ $i->reason }} </span></p>
+                                                                    {{ $i['days'] }} </span></p>
+                                                            <p style="color: rgb(113, 111, 111)">Reason: <span
+                                                                    style="color: black; font-size:17px; font-weight:550">
+                                                                    {{ $i->reason }} </span></p>
 
-                                                        <hr>
+                                                            <hr>
 
-                                                        <div class="approve">
-                                                            <p class="applied" style="color: rgb(113, 111, 111)">Applied
-                                                                on:</p>
+                                                            <div class="approve">
+                                                                <p class="applied" style="color: rgb(113, 111, 111)">
+                                                                    Applied
+                                                                    on:</p>
 
-                                                            <p class="date">
-                                                                {{ Carbon\Carbon::parse($i->created_at)->format('d-m-Y') }}
-                                                            </p>
+                                                                <p class="date">
+                                                                    {{ Carbon\Carbon::parse($i->created_at)->format('d-m-Y') }}
+                                                                </p>
 
+
+                                                            </div>
 
                                                         </div>
-                                                   
-                                                </div>
-                                                <br>
-                                                @endif
-                                            @endforeach
+                                                        <br>
+                                                    @endif
+                                                @endforeach
+                                            @endif
 
                                         </div>
                                     </div>

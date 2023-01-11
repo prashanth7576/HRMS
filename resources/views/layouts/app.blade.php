@@ -396,7 +396,16 @@
                     <option value="3" style="font-size:12px">Review Workflow</option>
                 </select>
                 <i class="fa-solid fa-bell"></i>
-                <i class="fas fa-sign-out"></i>
+                
+                
+
+                <form action="{{ route('logout') }}" method="POST" >
+
+                    @csrf
+                    <button style="border: none; background:none"> <i class="fas fa-sign-out"></i> </button>
+                
+
+                </form>
 
             </div>
 
@@ -525,13 +534,17 @@
             <br><br>
             <div class="item" style="display:flex;">
                 <br>
+ @foreach (DB::table('employes')->where('employeeid', auth()->user()->employeeid)->get() as $i)
+<img src="{{asset('public/profiles/' . $i->profilepicture)}}"
+style=" height:40px;width:40px;border-radius:50%">
+@endforeach 
+{{-- 
+<img src="{{asset('public/profiles/XSS0401-Profile.png')}}" style=" height:40px;width:40px;border-radius:50%"> --}}
+               
+                <p style="margin-left:4%;margin-top:2%;font-weight:550; font-size:15px; text-transform:uppercase">HI {{auth()->user()->lastname}}</p>
 
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEM9yrAx98tmTyjbwX9pqreHepJS2FnWEitrzkF-xxgBuGKdl88SBgUC4_U-8n_tUjWdE&usqp=CAU"
-                    style=" height:40px;width:25px">
-                <p style="margin-left:10%;margin-top:2%;font-weight:600">HI DYAGA</p>
 
-
-                <i class="fa fa-cog" aria-hidden="true" style="margin-top:7%;margin-left:15%"></i>
+                <a href="change-password" style="margin-top:-2%; margin-left:1%"><i class="fa fa-cog" aria-hidden="true" ></i></a>
             </div>
             <p style="margin-top:-8%;text-align:center;font-size:12px;color:blue;margin-right:20%">View My Info</p>
 
@@ -587,6 +600,9 @@
             <div class="item"><a><i class="fa fa-bar-chart"></i>Workflow Delegates</a></div>
             <div class="item"><a href="employement"><i class="fa fa-bar-chart"></i> employement</a></div>
             <div class="item"><a href="data"><i class="fa fa-bar-chart"></i> Data</a></div>
+          
+           
+            
         </div>
     </div>
 
@@ -610,6 +626,8 @@
         });
     });
 </script>
+
+{{-- @include('flash-message') --}}
 
 @yield('content')
    

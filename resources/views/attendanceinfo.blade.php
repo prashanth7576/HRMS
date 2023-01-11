@@ -20,15 +20,17 @@
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-       
+
 
 
         <style>
+            .main_container {
+                margin-top: -10%
+            }
 
-.main_container{
-    margin-top: -10%
-}
-
+            .side-bar {
+                margin-top: -19%
+            }
 
             .btn {
                 margin-left: 80%;
@@ -85,11 +87,11 @@
             }
 
             /* .ui-state-highlight,
-    .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-        border: 1px solid #dad55e;
-        background: red;
-        color: black;
-    } */
+        .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+            border: 1px solid #dad55e;
+            background: red;
+            color: black;
+        } */
 
             .ui-widget-header {
                 border: 1px solid #5bfec8 !important;
@@ -137,6 +139,7 @@
 
             #table {
                 margin-left: 20px;
+                width: 120%;
             }
 
             .content {
@@ -145,9 +148,9 @@
 
             @media (max-width:960px) {
 
-                .main_container{
-    margin-top: 2%
-}
+                .main_container {
+                    margin-top: 2%
+                }
 
                 .content {
                     margin-top: 0%;
@@ -157,7 +160,7 @@
                     margin-left: 75%;
                 }
 
-                .attendance{
+                .attendance {
                     margin-top: 1.5%
                 }
 
@@ -222,11 +225,11 @@
                 }
 
                 /* .ui-state-highlight,
-    .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-        border: 1px solid #dad55e;
-        background: red;
-        color: black;
-    } */
+        .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+            border: 1px solid #dad55e;
+            background: red;
+            color: black;
+        } */
 
                 .ui-widget-header {
                     border: 1px solid #5bfec8 !important;
@@ -320,7 +323,9 @@
 
                         <div class="row">
                             <div class="col-md-7">
-                                <div id="datepicker"></div>
+                                <div id="datepicker">
+
+                                </div>
 
                             </div>
 
@@ -346,6 +351,17 @@
                                                         <th> Excess hrs </th>
                                                     </tr>
                                                 </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                    </tr>
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
@@ -368,6 +384,12 @@
 
                                                 </tr>
                                             </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td> - </td>
+                                                    <td> - </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -394,6 +416,26 @@
 
                                                     </tr>
                                                 </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td> Session 1</td>
+                                                        <td> 10:00 - 14:00 </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td> Session 2 </td>
+                                                        <td> 14:00 - 19:00 </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                        <td> - </td>
+                                                    </tr>
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
@@ -418,6 +460,32 @@
 
                                                     </tr>
                                                 </thead>
+
+                                                <tbody>
+                                                    {{-- <h1>{{auth()->user()->employeeid}}</h1> --}}
+                                                    {{-- <h1>{{DB::table('logins')->latest('id')->where('employeeid', auth()->user()->employeeid)->first()->date}}</h1> --}}
+
+                                                    {{-- @foreach (DB::table('logins')->latest('id')->where('employeeid', auth()->user()->employeeid)->first() as $i) --}}
+                                                    <tr>
+                                                        @if (DB::table('logins')->latest('id')->where('employeeid', auth()->user()->employeeid)->first()->status == 'Signedin')
+                                                            <td> In </td>
+                                                            <td>{{ DB::table('logins')->latest('id')->where('employeeid', auth()->user()->employeeid)->first()->signin }}
+                                                            </td>
+                                                            <td> - </td>
+                                                        @endif
+
+                                                        @if (DB::table('logins')->latest('id')->where('employeeid', auth()->user()->employeeid)->first()->status == 'Signedout')
+                                                            <td> Out </td>
+                                                            <td>{{ DB::table('logins')->latest('id')->where('employeeid', auth()->user()->employeeid)->first()->signout }}
+                                                            </td>
+                                                            <td> - </td>
+                                                        @endif
+                                                    </tr>
+
+                                                    {{-- @endforeach  --}}
+
+
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
@@ -453,7 +521,7 @@
                                         <th class="sessiontwo"> Session 2 </th>
                                     </tr>
                                     <tr>
-                                        <th> Date </th>
+                                        {{-- <th> Date </th> --}}
                                         <th> Shift </th>
                                         <th> Attendance Scheme </th>
                                         <th> First In </th>
@@ -469,17 +537,60 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td></td>
-                                    </tr>
+
+
+                                    @foreach (DB::table('logins')->get() as $i)
+                                        <tr>
+                                            {{-- <td>{{ $i->date }} </td>  --}}
+                                            <td> 10:(GS) </td>
+                                            <td> 10:00Am To 07:00Pm </td>
+                                            <td>{{ $i->signin }}</td>
+                                            <td>{{ $i->signout }}</td>
+
+                                            <td></td>
+                                           
+                                            <td></td>
+                                            <td>{{ $i->status }}</td>
+                                            <td> info </td>
+                                            <td> No attention required </td>
+                                            <td></td>
+                                            <td>10:00 - 14:00</td>
+                                            <td>14:01 - 19:00</td>
+                                        </tr>
+                                    @endforeach
+
+
+
                                 </tbody>
                             </table>
                         </div>
+
+                       
+
+                        
+                        {{-- @foreach ($users as $i)
+
+                        <h1>{{$i->from_time}}</h1>
+                        <h1>{{$i->end_time}}</h1>    
+                        @endforeach --}}
+
+                    
                     </div>
                 </div>
 
             </div>
 
+            {{-- @foreach (DB::table('logins') as $i)
+
+            <h1>{{}}</h1>
+                
+            @endforeach --}}
+
+           
+    
+
+          
+        </div>
 
 
     </body>
@@ -586,4 +697,28 @@
 
         // });
     </script>
+{{-- 
+    <script>
+    
+
+    
+        
+  var datevalue = document.getElementById("signin").value;
+  var dateone = document.getElementById("signout").value;
+   var date = Math.abs((new Date(dateone).getTime() / 1000).toFixed(0));
+   var logout = Math.abs((new Date(datevalue).getTime() / 1000).toFixed(0));
+
+   var diff = Math.floor(date - logout);
+ 
+
+   var hours = Math.floor((diff / 3600) % 24);
+   var minutes = Math.floor((diff / 60) % 60);
+   var seconds = Math.floor(diff % 60);
+
+ document.getElementById("new").value = 100;
+
+
+
+    // document.getElementById('hello').value = 'hello';
+    </script> --}}
 @endsection

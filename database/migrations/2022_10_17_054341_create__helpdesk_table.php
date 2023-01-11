@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('subjectline', 300);
             $table->string('description', 500);
             $table->string('priority', 15);
-           
+            $table->string('addfile');
             $table->timestamps();
         });
     }

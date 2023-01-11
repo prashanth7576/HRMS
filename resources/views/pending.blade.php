@@ -685,6 +685,8 @@
     <body style="background-color: whitesmoke">
         <div class="main_container">
 
+            @include('flash-message')
+
             <div class="row">
                 <div class="col-md-8">
                     <div class="content">
@@ -725,7 +727,7 @@
                             </div>
 
                             <div class="balance">
-                                <p> <b>Balance: 03</b></p>
+                                <p> <b>Balance: {{$taken - $balance}}</b></p>
                                 <p class="leavetype">{{ $pending->leavetype }}</p>
                             </div>
 
@@ -787,17 +789,17 @@
                                 Transaction
                             </p>
 
-                            <select class="form-select" aria-label="Default select example" name="duration" id="duration">
+                            {{-- <select class="form-select" aria-label="Default select example" name="duration" id="duration">
 
                                 <option selected disabled value=""> Select Duration</option>
                                 <option value="Last Week"> Last Week </option>
                                 <option value="Last Month"> Last Month </option>
 
-                            </select>
+                            </select> --}}
 
                             <div class="leaves">
                                 <p> Total leaves taken </p>
-                                <p>03</p>
+                                <p>{{$balance }}</p>
                             </div>
 
                             <div class="table-responsive" id="table">
@@ -812,7 +814,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr style="text-align: center">
                                             <td>{{ $pending->leavetype }}</td>
                                             <td> {{ Carbon\Carbon::parse($pending->created_at)->format('d-m-Y') }}</td>
                                             <td> {{ Carbon\Carbon::parse($pending->fromdate)->format('d M, Y') }} -
@@ -849,6 +851,8 @@
                     </div>
                 </div>
             </div>
+
+            
 
         </div>
 

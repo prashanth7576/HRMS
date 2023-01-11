@@ -380,6 +380,8 @@
 <body style="background-color: whitesmoke">
     <div class="main_container">
 
+        @include('flash-message')
+
     <div class="row">
         <div id="links" class="col-md-2">
 

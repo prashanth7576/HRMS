@@ -35,18 +35,35 @@ class HelpdeskController extends Controller
      */
     public function store(Request $request)
     {
-        $helpdesk = $request->validate([
-           
-            'category' => 'required',
-            'subjectline' => 'required',
-            'description' => 'required',
-            'priority' => 'required',
-           
-           
-        ]);
 
-        $helpdesks = Helpdesk::create($helpdesk);
-        return redirect('/');
+        $request->validate(['addfile' => 'required|mimes:png,jpg,pdf,txt,xls,docx,ppt|max:1024']);
+       
+        $Addfile = auth()->user()->employeeid . '-'  . 'Help' . '.' . $request->addfile->extension();
+       $request->addfile->move('public/helpdesk', $Addfile);
+
+
+       $helpdesk = new Helpdesk();
+       $helpdesk->category = $request->category;
+       $helpdesk->subjectline = $request->subjectline;
+       $helpdesk->description = $request->description;
+       $helpdesk->priority = $request->priority;
+       $helpdesk->addfile = $Addfile;
+       $helpdesk->save();
+
+
+        // $helpdesk = $request->validate([
+           
+        //     'category' => 'required',
+        //     'subjectline' => 'required',
+        //     'description' => 'required',
+        //     'priority' => 'required',
+        //     'addfile' => 'required'
+           
+           
+        // ]);
+
+        // $helpdesks = Helpdesk::create($helpdesk);
+        return back()->with('success', 'Data Submitted successfully!');
     }
 
     /**
