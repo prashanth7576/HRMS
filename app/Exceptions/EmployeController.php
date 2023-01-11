@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Onboard;
 
-class OnboardController extends Controller
+use App\Models\Profiles;
+use Illuminate\Http\Request;
+
+class EmployeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class OnboardController extends Controller
      */
     public function index()
     {
-        return view('onboard.index');
+        return view('employe');
     }
 
     /**
@@ -24,7 +25,7 @@ class OnboardController extends Controller
      */
     public function create()
     {
-        return view('onboard.index');
+       return view('employe');
     }
 
     /**
@@ -35,33 +36,22 @@ class OnboardController extends Controller
      */
     public function store(Request $request)
     {
-        $onboarding = $request->validate([
-           
-            // 'employeeid' => 'required',
-            // 'name' => 'required',
-            // 'dateofbirth' => 'required',
-            // 'gender' => 'required',
-            // 'reportingmanager' => 'required',
-            // 'status' => 'required',
-            // 'dateofjoining' => 'required',
-            // 'probationperiod' => 'required',
-
+        $profiles = $request->validate([
+          
+            'jobtitle' => 'required',
             'firstname' => 'required',
             'middlename' => 'required',
             'lastname' => 'required',
-            'jobtitle' => 'required',
-            // 'employenumber' => 'required',
-            'employeeid' => 'required',
+            'employenumber' => 'required',
             'mobile' => 'required',
             'email' => 'required',
             'gender' => 'required',
-
-            
-            'dateofbirth' => 'required',
+            'dob' => 'required',
             'personalemail' => 'required',
             'fathername' => 'required',
             'bloodgroup' => 'required',
             'maritalstatus' => 'required',
+            
             'marriagedate' => 'required',
             'spousename' => 'required',
             'nationality' => 'required',
@@ -71,40 +61,32 @@ class OnboardController extends Controller
             'religion' => 'required',
             'internationalemployee' => 'required',
             'physicallychallenged' => 'required',
-
             'joiningdate' => 'required',
             'confirmationdate' => 'required',
+            
             'status' => 'required',
             'probationperiod' => 'required',
             'noticeperiod' => 'required',
             'currentcompanyexperience' => 'required',
             'previousexperience' => 'required',
             'totalexperience' => 'required',
-
-            // 'confirmationdate' => 'required',
-            // 'title' => 'required',
-            // // 'email' => 'required',
-            // 'mobilenumber' => 'required',
-            // 'emergencycontactnumber' => 'required',
+            'location' => 'required',
+            'grade' => 'required',
             'designation' => 'required',
             'department' => 'required',
-            'location' => 'required',
             'attendancescheme' => 'required',
-            'grade' => 'required',
-            'reportingmanager' => 'required',
-            'pannumber' => 'required',
-            'uannumber' => 'required',
-            'aadhaarnumber' => 'required',
-            'bankaccountnumber' => 'required',
+            'reportingto' => 'required',
+            'accountnumber' => 'required',
             'ifsccode' => 'required',
-            'branchcode' => 'required',
-          
+            'aadhaarnumber' => 'required',
+            'pannumber' => 'required',
            
            
         ]);
 
-        $onboard = Onboard::create($onboarding);
-        return redirect('/');
+        $profile = Profiles::create($profiles);
+    
+    return redirect('/');
     }
 
     /**

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="main_container">
+<div class="main_container" style="font-family: 'Montserrat', sans-serif;">
 
     <div class="item" style="display:flex;">
         <br>

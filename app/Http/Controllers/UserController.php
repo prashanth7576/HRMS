@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LeaveController extends Controller
+class UserController extends Controller
 {
     public function index(){
-        return view('/leave');
+        return view('user.index');
     }
 }

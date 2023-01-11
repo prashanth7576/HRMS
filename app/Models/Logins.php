@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Logins extends Model
 {
     use HasFactory;
+    public $timestamps = true;
     protected $table = "logins";
-    protected $fillable = ['employeeid', 'date','signin','signout' ];
+    protected $fillable = ['employeeid', 'logindate','signin','signout','firstname','lastname','creadted_at','updated_at' ];
 
     
 }

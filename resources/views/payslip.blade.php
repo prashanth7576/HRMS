@@ -127,8 +127,8 @@
     </style>
 </head>
 
-<body>
-    <div class="main_container">
+<body style="font-family: 'Montserrat', sans-serif;">
+    <div class="main_container" >
 
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li id="active" class="nav-item" role="presentation">
@@ -181,36 +181,39 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                       
                                         <tr>
                                             <td>BASIC</td>
-                                            <td style="float:right">000.00</td>
-
+                                            @foreach ($data as $i)
+                                            <td style="float:right">{{ $i->basicsalary}}</td>
+                                            
                                         </tr>
+                                       
                                         <tr>
                                             <td>HRA</td>
-                                            <td style="float:right">000.00</td>
+                                            <td style="float:right">{{ $i->hra}}</td>
 
                                         </tr>
                                         <tr>
                                             <td>CONVEYANCE</td>
-                                            <td style="float:right">000.00</td>
+                                            <td style="float:right">{{ $i->conveyance}}</td>
 
                                         </tr>
                                         <tr>
                                             <td>MEDICAL ALLOWANCE</td>
-                                            <td style="float:right">000.00</td>
+                                            <td style="float:right">{{ $i->medicalallowance}}</td>
 
                                         </tr>
 
                                         <tr>
                                             <td>SPECIAL ALLOWANCE</td>
-                                            <td style="float:right">000.00</td>
+                                            <td style="float:right">{{ $i->special}}</td>
 
                                         </tr>
 
                                         <tr style="background-color:#ecf2f9">
                                             <td style="font-weight:700">Total</td>
-                                            <td style="float:right;font-weight:700">000.00</td>
+                                            <td style="float:right;font-weight:700">{{ $i->total}}</td>
 
                                         </tr>
 
@@ -235,12 +238,12 @@
                                     <tbody>
                                         <tr>
                                             <td>PF</td>
-                                            <td style="float:right">000.00</td>
+                                            <td style="float:right">{{ $i->epf}}</td>
 
                                         </tr>
                                         <tr>
                                             <td>ESI</td>
-                                            <td style="float:right">000.00</td>
+                                            <td style="float:right">{{ $i->esi}}</td>
 
                                         </tr>
                                         <tr>
@@ -284,10 +287,10 @@
                                         <tr style="background-color:#ecf2f9;">
 
                                             <td style="font-weight:700">Total</td>
-                                            <td style="float:right;font-weight:700">000.00</td>
+                                            <td style="float:right;font-weight:700">{{ $i->totaldeductions}}</td>
 
                                         </tr>
-
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -300,51 +303,55 @@
                     <div class="col-md-4" style="background-color:#ffffe6;font-size:12px;padding:10px">
                         <p style="font-size:15px;font-weight:700">Employee Detail</p>
                         <table class="table table-borderless">
-
+                        @foreach ($form as $j)
                             <tbody>
                                 <tr>
                                     <td>Name<br>
-                                        <p style="font-size:13px;font-weight:600">DYAGA LIKHITHA</p>
+                                        <p style="font-size:13px;font-weight:600">{{$j->firstname}}</p>
                                     </td>
+                                   
                                     <td>Employee No<br>
-                                        <p style="font-size:13px;font-weight:600">XSS-004</p>
+                                        <p style="font-size:13px;font-weight:600">{{$j->employeeid }}</p>
                                     </td>
 
                                 </tr>
                                 <tr>
-                                    <td>Joining Date</td>
-                                    <td>Bank Name</td>
+                                    <td>Joining Date<br>
+                                    <p style="font-size:13px;font-weight:600">{{$j->joiningdate }}</p>
+                                </td>
+                               
+                                    <td>Bank Name <br> <p style="font-size:13px;font-weight:600">{{$j->bankname }}</p></td>
 
                                 </tr>
 
 
                                 <tr>
-                                    <td>Deignation</td>
-                                    <td>Bank Account No</td>
+                                    <td>Deignation <br> <p style="font-size:13px;font-weight:600">{{$j->designation }}</p></td>
+                                    <td>Bank Account No <br> <p style="font-size:13px;font-weight:600">{{$j->bankaccountnumber }}</p></td>
 
                                 </tr>
                                 <tr>
-                                    <td>Department</td>
-                                    <td>PAN Number</td>
+                                    <td>Department <br> <p style="font-size:13px;font-weight:600">{{$j->department }}</p></td>
+                                    <td>PAN Number <br> <p style="font-size:13px;font-weight:600">{{$j->pannumber }}</p></td>
 
                                 </tr>
                                 <tr>
-                                    <td>Location</td>
-                                    <td>PF No</td>
+                                    <td>Location <br> <p style="font-size:13px;font-weight:600">{{$j->location }}</p></td>
+                                    <td>PF No </td>
 
                                 </tr>
                                 <tr>
-                                    <td>Effective Work Days</td>
-                                    <td>PF UAN</td>
+                                    <td>Effective Work Days </td>
+                                    <td>PF UAN <br> <p style="font-size:13px;font-weight:600">{{$j->uannumber }}</p></td>
 
                                 </tr>
                                 <tr>
-                                    <td>LOP</td>
+                                    <td>LOP </td>
                                     <td></td>
 
                                 </tr>
 
-
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

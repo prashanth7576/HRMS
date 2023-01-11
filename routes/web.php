@@ -16,6 +16,21 @@ use App\Http\Controllers\DataController;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SigninController;
+use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmpController;
+
+
+use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\InfoController;
+use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\PayslipController;
+use App\Http\Controllers\YtdController;
+use App\Http\Controllers\ReportController;
+
+use App\Http\Controllers\AttandanceController;
+use App\Http\Controllers\StatusController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +42,89 @@ use App\Http\Controllers\SigninController;
 |
 */
 
+
+Route::get('/viewinfo', function () {
+    return view('viewinfo');
+});
+
+Route::get('/timeline', function () {
+    return view('timeline');
+});
+
+
+Route::get('/holidays', function () {
+    return view('holidays');
+});
+
+Route::get('/sample', function () {
+    return view('sample');
+});
+
+
+
+
+
+
+
+Route::get('/settings', function () {
+    return view('settings');
+});
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('user');
+Route::post('/home', [HomeController::class, 'in'])->name('home') ;
+Route::post('/signout', [HomeController::class, 'out']) ->name('signout');
+    Route::get('/leave', [App\Http\Controllers\LeaveController::class, 'index'])->name('leave');
+
+
+
+Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user')->middleware('user');
+
+
+Route::get('/', [LoginController::class, 'index']) ->name('login');
+Route::post('/', [LoginController::class, 'redirectTo']);
+
+Route::get('/register', [RegisterController::class, 'index']) ->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::resource('/emp', EmpController::class);
+
+
+Route::resource('/onboard', OnboardController::class)->middleware('admin');
+
+Route::post('/logout', [LogoutController::class, 'store']) ->name('logout');
+
+Route::get('forgot-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forgot.password.get');
+Route::post('forgot-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forgot.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
+Route::get('/info', [InfoController::class, 'index']) ->name('info');
+
+Route::get('/change-password', [PasswordController::class, 'changepassword']) ->name('change-password');
+Route::post('/change-password', [PasswordController::class, 'updatepassword']) ->name('update-password');
+
+
+Route::resource('/form', FormController::class);
+Route::get('/payslip', [PayslipController::class, 'index']) ->name('payslip');
+Route::resource('/ytd', YtdController::class);
+Route::get('/report', [ReportController::class, 'index']) ->name('report');
+
+Route::resource('customsearch', CustomSearchController::class);
+Route::get('filter', [ProductController::class, 'filterProduct'])->name('filter');
+
+
+Route::get('/admin.create', [SigninController::class, 'index']) ->name('admin.create');
+Route::post('/admin.create', [SigninController::class, 'in'])->name('admin') ;
+
+
+Route::post('/signout', [SigninController::class, 'out']) ->name('signout');
+
+Route::get('/attendance', [AttandanceController::class, 'index']) ;
+Route::get('/status', [StatusController::class, 'index']) ;
+
+Route::post('/status', [StatusController::class, 'search']) ->name('status');
 
 
 Route::get('/feeds', function () {

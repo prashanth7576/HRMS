@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.apps')
 
 @section('content')
 
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-   
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -35,7 +35,7 @@
         font-family: sans-serif;
     }
 
-    #main-container{
+    #main-container {
         margin-top: -20%;
         z-index: -1;
     }
@@ -117,7 +117,7 @@
         background-color: white;
         box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
         padding: 8px;
-        height:55px;
+        height: 55px;
         border-top-right-radius: 10px;
         z-index: 1;
 
@@ -143,7 +143,6 @@
 
     .navtwo {
         visibility: hidden;
-        z-index: 0;
     }
 
     .main_container {
@@ -152,7 +151,7 @@
         padding: 5px;
         margin-top: -10%;
         transition: all 0.3s ease;
-        
+
 
     }
 
@@ -175,7 +174,6 @@
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
             padding: 8px;
             border-top-right-radius: 10px;
-            z-index: 0;
 
         }
 
@@ -204,7 +202,6 @@
             position: static;
             visibility: visible;
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-            z-index: 0;
 
         }
 
@@ -245,7 +242,7 @@
             position: relative;
             padding: 5px;
             transition: all 0.3s ease;
-            z-index: -1;
+            z-index: 10;
         }
 
         /* .navtwo .navbar-toggler:active .main_container{
@@ -268,7 +265,7 @@
             position: relative;
             padding: 5px;
             transition: all 0.3s ease;
-            z-index: -1;
+            z-index: 10;
         }
 
         .side-bar {
@@ -284,7 +281,6 @@
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
             padding: 8px;
             border-top-right-radius: 10px;
-            z-index: 0;
 
         }
 
@@ -314,7 +310,6 @@
             visibility: visible;
 
             box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
-            z-index: 0;
 
         }
 
@@ -386,34 +381,34 @@
 
     }
 
-    .one {
+    .card {
         background-color: white;
         box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);
     }
 
-    .one.item {
+    .card.item {
         position: relative;
         cursor: pointer;
         font-size: 18px;
     }
 
-    .one .item a {
+    .card .item a {
         color: black;
         display: block;
         padding: 5px 20px;
         line-height: 32px;
     }
 
-    .one .item a:hover {
+    .card .item a:hover {
         background: white;
         transition: 0.3s ease;
     }
 
-    .car .item i {
+    .card .item i {
         margin-right: 15px;
     }
 
-    .one .item a .dropdown {
+    .card .item a .dropdown {
         position: absolute;
         margin: 10px;
         right: 0;
@@ -421,26 +416,67 @@
 
     }
 
-    .one .item .sub-menu {
+    .card .item .sub-menu {
         background: white;
 
         font-size: 13px;
     }
 
-    .one .item .sub-menu .a {
+    .card .item .sub-menu .a {
         padding-left: 80px;
 
     }
+
+    [data-tooltip] {
+  position: relative;
+  cursor:default;
+}
+
+
+[data-tooltip]::after {
+  
+  position: absolute;
+  width:140px;
+  left:calc(50% -70px);
+  top:115%;
+  text-align:center;
+  box-sizing:border-box;
+  content:attr(data-tooltip);
+  color:black;
+  background:#EEEEEE;
+  border-radius:5%;
+  padding:8px;
+  font-size:0.9em;
+  font-weight:bold;
+  visibility:hidden;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity 0.3s,transform 0.2s;
+}
+[data-tooltip]:hover::after{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.media {
+    border: 1px solid;
+}
     </style>
 </head>
 
 <body>
 
-  
+
 
 
     <div id="main-container" class="main_container" style="background-color:smokewhite">
-    <br><br>
+
+
+
+        <br><br>
+
+
         <h3>Good Morning</h3>
         <div class="flex" style="display:flex">
             <div class="two" style="width:700px">
@@ -470,15 +506,16 @@
                     </div>
                 </div>
 
-                
+
             </div>
-            <img src="https://img.freepik.com/free-vector/city-scene-with-office-buildings-park-illustration_1308-40905.jpg?size=626&ext=jpg&ga=GA1.2.95657150.1643557487&semt=sph" style="width:300px;height:150px">
+            <img src="https://img.freepik.com/free-vector/city-scene-with-office-buildings-park-illustration_1308-40905.jpg?size=626&ext=jpg&ga=GA1.2.95657150.1643557487&semt=sph"
+                style="width:300px;height:150px">
         </div>
         <br><br>
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="one"
+                    <div class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">Review</h5>
                         <br>
@@ -491,7 +528,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="one"
+                    <div class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">IT Declaration</h5>
                         <div style="display:flex">
@@ -502,7 +539,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="one"
+                    <div class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">POI</h5>
                         <div style="display:flex">
@@ -515,8 +552,95 @@
                     </div>
                     <br>
                 </div>
+
                 <div class="col-sm-4">
-                <div class="one"
+
+                    
+                <div class="card"
+                        style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
+                        <div>
+                            <h5 style="font-weight:600">Attendance Info</h5>
+                            <a>
+                                <i class="fa-solid fa-arrow-right" style="float:right;margin-top:-10%"></i></a>
+                        </div>
+
+                        <h5>Not Yet In ({{$dots}})</h5>
+                        <div  style ="display:flex">
+                        @foreach($test as $m)
+                       <span data-tooltip = "{{$m->firstname}}{{$m->lastname}}">
+                       <p class="media booty" style="height: 35px;width: 35px;border-radius: 50%;display: inline-block;border-color:#ff9999;border-style: solid;padding:5%">{{$m->firstname[0]}}{{$m->lastname[0]}}</p>
+                       
+</span>
+
+                        @endforeach
+                        </div>
+                        
+                        <h5>Late By ({{$login}})</h5>
+                        <div style ="display:flex">
+                        @foreach($loginDetils as $n)
+                        @if ($n->signin !== '10:00:00')
+                        <span data-tooltip = "{{$n->firstname}}{{$n->lastname}}">
+                        <p  style="height: 35px;width: 35px;border-radius: 50%;display: inline-block;border-color:#b3f0ff;border-style: solid;padding:1%">{{$n->firstname[0]}}{{$n->lastname[0]}}</p>
+</span>
+@endif
+                        @endforeach
+</div>
+                      
+                        <h5>Early By ({{$Detail}})</h5>
+                        <div style ="display:flex">
+                        @foreach($Details as $o)
+
+                        @if ($o->signin <= '10:00:00')
+                        <span data-tooltip = "{{$o->firstname}}{{$o->lastname}}">
+                        <p  style="height: 35px;width: 35px;border-radius: 50%;display: inline-block;border-color:#9fdfbf;border-style: solid;padding:2%">{{$o->firstname[0]}}{{$o->lastname[0]}}</p>
+</span>
+@endif
+                        @endforeach
+                       
+</div>
+                    </div>
+                    <br>
+                    <div class="card"
+                        style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
+                        <div>
+                            <h5 style="font-weight:600">Payslip</h5>
+                            <a href="{{url('payslip')}}">
+                                <i class="fa-solid fa-arrow-right" style="float:right;margin-top:-10%"></i></a>
+                        </div>
+                        <div style="display:flex">
+                            <canvas id="myChart" style="width:100%;max-width:400px;margin-left:-20%"></canvas>
+                            <ul style="margin-left:-10%;padding-top:15%">
+                                <p style="font-weight:600">{{$latest->date}}{{$latest->year}}</p>
+                                <p style="font-weight:600">30 </p>
+                                <p>Paid Days</p>
+                            </ul>
+                        </div>
+                        <br><br><br>
+                        <div style="display:flex">
+                            <ul>
+                                <p>Gross Pay</p>
+                                <p>Deduction</p>
+                                <p>Net Pay</p>
+                                <br><br>
+                                <p style="color:blue">Download</p>
+                            </ul>
+                            <ul style="margin-left:50%">
+
+                                <p><i class="fa fa-inr" aria-hidden="true"></i>{{$latest->total}}</p>
+                                <p><i class="fa fa-inr" aria-hidden="true"></i>{{$latest->totaldeductions}}</p>
+                                <p><i class="fa fa-inr" aria-hidden="true"></i>{{$latest->netpay}}</p>
+
+
+                                <br><br>
+                                <p style="color:blue">Show Salary</p>
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-sm-3">
+
+                <div class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <div class="flex" style="display:flex">
                             <input type="text" id="date" readonly style="width:15px;border:none">
@@ -629,63 +753,7 @@
 </div>
                     
                     <br>
-                    <div class="one"
-                        style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
-                        <div>
-                            <h5 style="font-weight:600">Payslip</h5>
-                            <a href="{{url('payslip')}}">
-                                <i class="fa-solid fa-arrow-right" style="float:right;margin-top:-10%"></i></a>
-                        </div>
-                        <div style="display:flex">
-                            <canvas id="myChart" style="width:100%;max-width:400px;margin-left:-20%"></canvas>
-                            <ul style="margin-left:-10%;padding-top:15%">
-                                <p style="font-weight:600">{{$latest->date}}{{$latest->year}}</p>
-                                <p style="font-weight:600">30 </p>
-                                <p>Paid Days</p>
-                            </ul>
-                        </div>
-                        <br><br><br>
-                        <div style="display:flex">
-                            <ul>
-                                <p>Gross Pay</p>
-                                <p>Deduction</p>
-                                <p>Net Pay</p>
-                                <br><br>
-                                <p style="color:blue">Download</p>
-                            </ul>
-                            <ul style="margin-left:50%">
-
-                                <p><i class="fa fa-inr" aria-hidden="true"></i>{{$latest->total}}</p>
-                                <p><i class="fa fa-inr" aria-hidden="true"></i>{{$latest->totaldeductions}}</p>
-                                <p><i class="fa fa-inr" aria-hidden="true"></i>{{$latest->netpay}}</p>
-
-
-                                <br><br>
-                                <p style="color:blue">Show Salary</p>
-                            </ul>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-                <div class="col-sm-3">
-                    <div class="one"
-                        style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
-                        <div>
-                            <h5 style="font-weight:600">Upcoming Holidays</h5>
-                            <a href="{{url('holidays')}}">
-                            <i class="fa-solid fa-arrow-right" style="float:right;margin-top:-10%"></i></a>
-                        </div>
-
-                        <h5>24 Oct Monday</h5>
-                        <p>Diwali</p>
-                        <h5>25 Oct Tuesday</h5>
-                        <p>Diwali</p>
-                        <h5>25 Dec Sunday</h5>
-                        <p>Christmas</p>
-
-                    </div>
-                    <br>
-                    <div class="one"
+                    <div class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">Quick Access</h5>
                         <br>
@@ -698,14 +766,15 @@
                                 <p>Loan Statement</p>
 
                             </ul>
-                            <p style="margin-left:15%;background-color:#fff2e6">Use quick access to view important
+                            <p style="margin-left:15%;background-color:#fff2e6;padding:5%">Use quick access to view
+                                important
                                 salary details.</p>
 
                         </div>
                     </div>
                     <br>
 
-                    <div class="one"
+                    <div class="card"
                         style=" background-color: white;box-shadow: 0px 10px 50px rgba(180, 174, 174, 0.7);padding:10px;border-radius:10px">
                         <h5 style="font-weight:600">Track</h5>
                         <div style="text-align:center">
@@ -721,29 +790,25 @@
             </div>
         </div>
         <br><br><br>
+
     </div>
 
 
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('.sub-btn').click(function() {
-            $(this).next('.sub-menu').slideToggle();
-            $(this).find('.dropdown').toggleclass('rotate');
-        });
 
-        $('.menu-btn').click(function() {
-            $('.menu-btn').css("visibility", "hidden");
-        });
-        $('.close-btn').click(function() {
-            $('.navtwo').removeClass('active');
-        });
+    <script labguage="javascript">
+    function enableDisable(objID) {
+        //check if login is clicked then make logout disable
+        if (objID == "btnLogin") {
+            document.getElementById("btnLogin").disabled = true;
+            document.getElementById("btnLogout").disabled = false;
+        } else //if logout clicked
+        {
+            document.getElementById("btnLogin").disabled = false;
+            document.getElementById("btnLogout").disabled = true;
+        }
 
-        $('.navbar-toggler').click(function() {
-            $('.navbar-toggler').css("visibility", "hidden%");
-        });
-    });
+    }
     </script>
-
 
     <script>
     var xValues = [];
@@ -772,7 +837,31 @@
     });
     </script>
 
+    <script>
+    $(document).ready(function() {
+        $('.sub-item').hide();
+        $('#close').hide();
+        $("#book").click(function() {
+            $("#book").hide();
+        });
 
+        $("#book").click(function() {
+            $(".sub-item").show();
+            $("#close").show();
+        });
+
+        $("#close").click(function() {
+            $(".sub-item").hide();
+            $("#close").hide();
+        });
+
+        $("#close").click(function() {
+            $("#book").show();
+
+        });
+
+    });
+    </script>
 
 </body>
 
@@ -805,4 +894,12 @@ $(function() {
     });
 })
 </script>
-@endsection()
+
+<script>
+        const colors = ["orange", "blue", "black", "yellow", "green"];               
+$(".booty").each((_, div) => {
+  const colorNumber = Math.floor((Math.random() * (colors.length)));          
+  $(div).css('border-color', colors[colorNumber]);
+});
+       </script>
+@endsection
